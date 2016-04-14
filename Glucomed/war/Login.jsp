@@ -18,9 +18,9 @@
       <h1>GLUCOMED</h1>
       <h2>Sistema de medición de glucosa</h2>
       <h3>Credenciales</h3>
-      <form method="post" action="/">
-        <p><input type="text" name="login" value="" placeholder="Usuario/e-mail"></p>
-        <p><input type="password" name="contraseña" value="" placeholder="Contraseña"></p>
+      <form method="post" action="login">
+        <p><input type="text" name="email" value="" placeholder="Usuario/e-mail"></p>
+        <p><input type="password" name="password" value="" placeholder="Contraseña"></p>
         <p class="recordar">
           <label>
             <input type="checkbox" name="recordar" id="remember_me">Recordar mis datos en este navegador

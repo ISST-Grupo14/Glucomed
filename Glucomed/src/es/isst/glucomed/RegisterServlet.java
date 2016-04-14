@@ -46,7 +46,13 @@ public class RegisterServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		String email = req.getParameter("email");
 		
+		boolean result = dao.createUser(nombre, apellidos, password, email);
 		
+		if (result) {
+			resp.sendRedirect("/login");
+		} else {
+			resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
+		}
 	
 		
 		/*Comprobar la contraseña*/
@@ -57,7 +63,7 @@ public class RegisterServlet extends HttpServlet {
 			resp.sendRedirect("/");
 		}
 		*/
-		resp.getWriter().println("nombre " + nombre);
+		// resp.getWriter().println("nombre " + nombre);
 
 	}
 }
