@@ -1,6 +1,8 @@
 package es.isst.glucomed;
 
-public class InsertDataServlet {
+import javax.servlet.http.HttpServlet;
+
+public class InsertDataServlet extends HttpServlet {
 
 	public InsertDataServlet() {
 		// TODO Auto-generated constructor stub

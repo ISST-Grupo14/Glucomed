@@ -49,7 +49,7 @@ public class RegisterServlet extends HttpServlet {
 		boolean result = dao.createUser(nombre, apellidos, password, email);
 		
 		if (result) {
-			resp.sendRedirect("/login.jsp");
+			resp.sendRedirect("/Login.jsp");
 		} else {
 			resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
 		}

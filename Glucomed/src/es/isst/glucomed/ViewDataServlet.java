@@ -1,6 +1,8 @@
 package es.isst.glucomed;
 
-public class ViewDataServlet {
+import javax.servlet.http.HttpServlet;
+
+public class ViewDataServlet extends HttpServlet {
 
 	public ViewDataServlet() {
 		// TODO Auto-generated constructor stub

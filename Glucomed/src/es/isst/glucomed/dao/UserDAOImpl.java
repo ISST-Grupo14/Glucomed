@@ -27,7 +27,8 @@ public class UserDAOImpl implements UserDAO{
 				
 		User u = new User (nombre, apellidos, password, email);
 		
-		boolean testUser = SuccessLogin (email,password);
+		//boolean testUser = SuccessLogin (email,password);
+		boolean testUser = false;
 		
 		if (!testUser) { 
 		

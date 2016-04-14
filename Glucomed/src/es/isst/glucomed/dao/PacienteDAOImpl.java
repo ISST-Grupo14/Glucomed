@@ -8,8 +8,17 @@ import es.isst.glucomed.dao.*;
 
 public class PacienteDAOImpl implements PacienteDAO {
 
-	public PacienteDAOImpl() {
+	private static PacienteDAOImpl instance;
+	
+	
+	private PacienteDAOImpl(){
 		
+	}
+	
+	public static  PacienteDAOImpl getInstance(){
+		if(instance==null)
+			instance = new PacienteDAOImpl();
+		return instance;
 	}
 
 	@Override
@@ -29,9 +38,9 @@ public class PacienteDAOImpl implements PacienteDAO {
 		}
 	}
 
-	@Override
-	public Paciente getPaciente(User user) {
-	
-	}
+	//@Override
+	//public Paciente getPaciente(r) {
+	//	return null;
+	//}
 
 }
