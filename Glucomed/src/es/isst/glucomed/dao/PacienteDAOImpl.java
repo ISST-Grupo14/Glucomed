@@ -23,13 +23,13 @@ public class PacienteDAOImpl implements PacienteDAO {
 	@Override
 	public boolean insertData(User user, String fecha, String hora,
 			String valorGlucosa) {
-		UserDAO dao = (UserDAO) UserDAOImpl.getInstance(); //coger del sessión
+		UserDAO dao = (UserDAO) UserDAOImpl.getInstance(); //coger del sessiï¿½n
 		
 		boolean testUser = dao.SuccessLogin (user.getEmail(),user.getPassword());
 		
 		Paciente paciente = new Paciente (user.getNombre(), fecha, hora, valorGlucosa);
 		
-		if (testUser) { //no hace falta		
+		if (testUser) { 
 			EntityManager em = EMFService.get().createEntityManager();
 			em.persist(paciente);
 			em.close(); 
