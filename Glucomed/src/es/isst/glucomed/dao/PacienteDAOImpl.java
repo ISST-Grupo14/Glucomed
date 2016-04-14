@@ -23,7 +23,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 	@Override
 	public boolean insertData(User user, String fecha, String hora,
 			String valorGlucosa) {
-		UserDAO dao = (UserDAO) UserDAOImpl.getInstance(); //coger del session
+		UserDAO dao = (UserDAO) UserDAOImpl.getInstance(); //coger del sessión
 		
 		boolean testUser = dao.SuccessLogin (user.getEmail(),user.getPassword());
 		
