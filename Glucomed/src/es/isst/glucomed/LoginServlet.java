@@ -43,12 +43,12 @@ public class LoginServlet extends HttpServlet {
 	
 		if(dao.SuccessLogin(email, password)){
 			session.setAttribute("user", email);
-			resp.sendRedirect("/index.html");
+			resp.sendRedirect("/dashboard.jsp");
 		}else{
-			resp.sendRedirect("/");
+			//resp.sendRedirect("/");
+			
+			resp.getWriter().println("login error " + email);
 		}
-		
-
 	}
 	
 

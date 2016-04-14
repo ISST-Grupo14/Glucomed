@@ -43,13 +43,22 @@ public class UserDAOImpl implements UserDAO{
 		Query q = em.createQuery("select item from User item where item.email = :email and item.password = :password");
 		q.setParameter("email", email);
 		q.setParameter("password", password);
-
+		
+		if(password == null || email ==null){
+			return false;	
+			}
+		
 		if(q.getResultList().isEmpty()){
 			return false;
 		} else {
 			return true;	
-		}
+				
+				
+			
 
+		
+		}
+		
 	}
 	
 
