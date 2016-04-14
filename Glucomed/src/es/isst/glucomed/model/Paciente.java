@@ -14,6 +14,7 @@ public class Paciente implements Serializable{
 	private String fecha;
 	private String hora;
 	private String valorGlucosa;
+	
 
 	public Paciente (String nombre, String fecha, String hora, String valorGlucosa) {
 		this.nombre=nombre;
