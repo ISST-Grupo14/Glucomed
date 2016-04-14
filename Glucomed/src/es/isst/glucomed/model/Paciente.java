@@ -21,6 +21,7 @@ public class Paciente implements Serializable{
 		this.hora=hora;
 		this.valorGlucosa=valorGlucosa;
 		
+		
 	}
 	public String getNombre() {
 		return nombre;
