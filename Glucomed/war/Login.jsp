@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE html>
@@ -17,29 +18,15 @@
       <h1>GLUCOMED</h1>
       <h2>Sistema de medición de glucosa</h2>
       <h3>Credenciales</h3>
-      <form method="post" >
-        <p><input id = "correo" type="text" name="email" value="" placeholder="Usuario/e-mail"></p>
-        
-        <p><input id ="pass" type="password" name="password" value="" placeholder="Contraseña"></p>
-        <p id ="error" style="display:none">*Credenciales no válidos</p>
-        
-        <script type="text/javascript">
-        function ir(){
-        if((document.getElementById("correo").value="") && (document.getElementById("pass").value="")){
-        	document.getElementById("error").style.display= "initial";
-        	
-        }
-        }
-        
-        </script>
-        
+      <form method="post" action="login">
+        <p><input type="text" name="email" value="" placeholder="Usuario/e-mail"></p>
+        <p><input type="password" name="password" value="" placeholder="Contraseña"></p>
         <p class="recordar">
           <label>
-          
             <input type="checkbox" name="recordar" id="remember_me">Recordar mis datos en este navegador
    		</label>
         </p>
-        <p class="submit"><input onclick="ir()" type="submit" name="commit" value="Aceptar"></p>
+        <p class="submit"><input type="submit" name="commit" value="Aceptar"></p>
         <p class="registro"><a href="/Registro.jsp"> Registro <a/></p>
      
 

@@ -39,16 +39,17 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
-		UserDAO dao = UserDAOImpl.getInstance();
+		UserDAO dao = (UserDAO) UserDAOImpl.getInstance();
 	
 		if(dao.SuccessLogin(email, password)){
 			session.setAttribute("user", email);
 			resp.sendRedirect("/dashboard.jsp");
 		}else{
 			//resp.sendRedirect("/");
-			
 			resp.getWriter().println("login error " + email);
 		}
+		
+
 	}
 	
 

@@ -46,7 +46,14 @@ public class RegisterServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		String email = req.getParameter("email");
 		
+		boolean result = dao.createUser(nombre, apellidos, password, email);
 		
+		if (result) {
+			resp.sendRedirect("/login.jsp");
+		} else {
+			resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
+		}
+	
 		
 		/*Comprobar la contraseña*/
 		/*if(dao.SuccessLogin(email, password)){
