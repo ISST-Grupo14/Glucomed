@@ -24,7 +24,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 	@Override
 	public boolean insertData(User user, String fecha, String hora,
 			String valorGlucosa) {
-		UserDAO dao = (UserDAO) UserDAOImpl.getInstance();
+		UserDAO dao = UserDAOImpl.getInstance();
 		boolean testUser = dao.SuccessLogin (user.getEmail(),user.getPassword());
 		Paciente paciente = new Paciente (user.getNombre(), fecha, hora, valorGlucosa);
 		

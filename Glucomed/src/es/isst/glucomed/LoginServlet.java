@@ -16,7 +16,6 @@ import es.isst.glucomed.dao.UserDAOImpl;
 @SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
 	
-	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
@@ -39,7 +38,7 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
-		UserDAO dao = (UserDAO) UserDAOImpl.getInstance();
+		UserDAO dao = UserDAOImpl.getInstance();
 	
 		if(dao.SuccessLogin(email, password)){
 			session.setAttribute("user", email);

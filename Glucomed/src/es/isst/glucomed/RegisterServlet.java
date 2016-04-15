@@ -44,23 +44,29 @@ public class RegisterServlet extends HttpServlet {
 		
 		String nombre = req.getParameter("nombre");
 		String apellidos = req.getParameter("apellidos");
-		
-		
-		
 		String password = req.getParameter("password");
+		String password2 = req.getParameter("password_repeat");
 		String passCifrado = Utilities.cifradoMD5(password);
+		String email = req.getParameter("email");
 		
 		/*Habilitar este método si se quiere comprobar el cifrado de la contraseña
 		System.out.println("contraseña cifrada: "+ passCifrado);
 		*/
-		String email = req.getParameter("email");
+		System.out.println("Password1: "+password + " Password2: " + password2);
+		
+		if (!password.equals(password2)){
+			System.out.println("Password1: "+password + " Password2: " + password2);
+			resp.getWriter().println("Las contraseñas no son iguales");
+			
+		}else{
 		
 		boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
 		
-		if (result) {
+			if (result) {
 			resp.sendRedirect("/Login.jsp");
-		} else {
+			} else {
 			resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
+			}
 		}
 	
 		
