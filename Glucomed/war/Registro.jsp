@@ -18,7 +18,7 @@
       <h1>Registro de usuario </h1>
       
       
-      <form method="post" action="registro">
+      <form method="post" action="registro" onsubmit="return checkPassword();">
         <p>Nombre: <input type="text" name="nombre" value="" placeholder="Nombre"> </p>
         <p>Apellidos: <input type="text" name="apellidos" value="" placeholder="Apellidos"></p>
         
