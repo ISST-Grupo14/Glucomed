@@ -3,6 +3,13 @@ package es.isst.glucomed.utilities;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 public class Utilities {
 	
 public static String cifradoMD5(String passLimpia){
@@ -31,4 +38,7 @@ public static String cifradoMD5(String passLimpia){
 		}
 		return h.toString();
 		}
+
+
+
 }

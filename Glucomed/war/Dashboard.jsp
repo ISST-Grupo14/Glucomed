@@ -24,12 +24,12 @@
 		<section class="row-nav">
 		<nav class="menu">
 		<ul>
-			<li><a href ="/Login.jsp">Login</a></li>
-			<li><a href ="/Registro.jsp">Registro</a></li>
+			<li><a href ="/login">Login</a></li>
+			<li><a href ="/registro">Registro</a></li>
 			<li class="active" href="/dashboard"><a href="" >DashBoard</a></li>
-			<li><a href="/insertData.jsp">Introduce datos</a></li>
-			<li><a href="/viewData.jsp">Ver datos</a></li>
-			<li><a href="/salir.jsp">Salir</a></li>
+			<li><a href="/insertData">Introduce datos</a></li>
+			<li><a href="/viewData">Ver datos</a></li>
+			<li><a href="/salir">Salir</a></li>
 		</ul>
 		</nav>
 		</section>

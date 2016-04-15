@@ -19,7 +19,28 @@ public class LoginServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
-		RequestDispatcher view = req.getRequestDispatcher("Login.jsp");
+		
+		/*Comprobamos con el user session si el usuario esta logueado
+		 * 		si esta logueado va a un sitio
+		 * 		si no esta logueado va a login o registro dependiendo
+		 * */
+		HttpSession session = req.getSession();
+		String urlLogueado="Dashboard.jsp";
+		String urlNoLogueado="Login.jsp";
+		String url="";
+		//String email = (String) session.getAttribute("user");
+		//System.out.println(email);
+		if(session.getAttribute("user") == null){
+			//System.out.println("sin loguear");
+			url = urlNoLogueado;
+		}else{
+			//System.out.println("logueado");
+			url = urlLogueado;
+		}
+		
+		RequestDispatcher view = req.getRequestDispatcher(url);
+		
+		
 		try {
 			
 			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
