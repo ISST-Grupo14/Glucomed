@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
 import es.isst.glucomed.model.User;
+import es.isst.glucomed.utilities.*;
 
 
 @SuppressWarnings("serial")
@@ -43,10 +44,18 @@ public class RegisterServlet extends HttpServlet {
 		
 		String nombre = req.getParameter("nombre");
 		String apellidos = req.getParameter("apellidos");
+		
+		
+		
 		String password = req.getParameter("password");
+		String passCifrado = Utilities.cifradoMD5(password);
+		
+		/*Habilitar este método si se quiere comprobar el cifrado de la contraseña
+		System.out.println("contraseña cifrada: "+ passCifrado);
+		*/
 		String email = req.getParameter("email");
 		
-		boolean result = dao.createUser(nombre, apellidos, password, email);
+		boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
 		
 		if (result) {
 			resp.sendRedirect("/Login.jsp");

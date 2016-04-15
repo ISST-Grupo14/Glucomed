@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
 	
 		if(dao.SuccessLogin(email, password)){
 			session.setAttribute("user", email);
-			resp.sendRedirect("/dashboard.jsp");
+			resp.sendRedirect("/Dashboard.jsp");
 		}else{
 			// intentar que sea en la misma pagina
 			//resp.sendRedirect("/");
