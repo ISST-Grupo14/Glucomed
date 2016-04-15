@@ -12,10 +12,7 @@ public class UserDAOImpl implements UserDAO{
 	
 	private static UserDAOImpl instance;
 	
-	
-	private UserDAOImpl(){
-		
-	}
+	private UserDAOImpl(){}
 	
 	public static  UserDAOImpl getInstance(){
 		if(instance==null)

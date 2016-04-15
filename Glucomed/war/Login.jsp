@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Sistema de medición de glucosa Glucomer.</title>
+	<title>Sistema de medición de glucosa Glucomed.</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css" /> 
 </head>
 

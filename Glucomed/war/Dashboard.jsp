@@ -29,7 +29,7 @@
 			<li class="active" href="/dashboard"><a href="" >DashBoard</a></li>
 			<li><a href="/insertData.jsp">Introduce datos</a></li>
 			<li><a href="/viewData.jsp">Ver datos</a></li>
-			<li><a href="/salir.jsp">Ver datos</a></li>
+			<li><a href="/salir.jsp">Salir</a></li>
 		</ul>
 		</nav>
 		</section>

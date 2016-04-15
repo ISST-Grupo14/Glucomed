@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
-
+import es.isst.glucomed.utilities.*;
 
 @SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
@@ -38,9 +38,10 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
+		String password2 = Utilities.cifradoMD5(password);
 		UserDAO dao = UserDAOImpl.getInstance();
 	
-		if(dao.SuccessLogin(email, password)){
+		if(dao.SuccessLogin(email, password2)){
 			session.setAttribute("user", email);
 			resp.sendRedirect("/Dashboard.jsp");
 		}else{
