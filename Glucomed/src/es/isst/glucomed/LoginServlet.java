@@ -45,6 +45,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("user", email);
 			resp.sendRedirect("/dashboard.jsp");
 		}else{
+			// intentar que sea en la misma pagina
 			//resp.sendRedirect("/");
 			resp.getWriter().println("login error " + email);
 		}
