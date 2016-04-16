@@ -31,9 +31,10 @@ public class LoginServlet extends HttpServlet {
 		String url="";
 		
 		String email = (String) session.getAttribute("email");
+		String pass = (String) session.getAttribute("password");
 		//System.out.println(email);
 		
-		if(email == null){
+		if(email == null || pass ==null){
 			
 			//System.out.println("sin loguear");
 			
@@ -76,10 +77,11 @@ public class LoginServlet extends HttpServlet {
 	
 		if(dao.SuccessLogin(email, password2)){
 			session.setAttribute("email", email);
+			session.setAttribute("password",password2);
 			resp.sendRedirect("/Dashboard.jsp");
 			session.setAttribute("error_code", "");
 		}else{
-			session.setAttribute("error_code", "Usuario / Contraseña no Valido");
+			session.setAttribute("error_code", "Usuario / ContraseÃ±a no Valido");
 			resp.sendRedirect("/Login.jsp");			
 		}
 
