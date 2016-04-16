@@ -9,24 +9,24 @@ import javax.persistence.Id;
 public class Paciente implements Serializable{
 	private static final long serialVersionUID = 01L;
 	@Id
-	private String nombre;
+	private String email;
 	private String fecha;
 	private String hora;
 	private String valorGlucosa;
 
-	public Paciente (String nombre, String fecha, String hora, String valorGlucosa) {
-		this.nombre=nombre;
+	public Paciente (String email, String fecha, String hora, String valorGlucosa) {
+		this.email=email;
 		this.fecha=fecha;
 		this.hora=hora;
 		this.valorGlucosa=valorGlucosa;
 		
 	}
-	public String getNombre() {
-		return nombre;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setEmail(String nombre) {
+		this.email = nombre;
 	}
 	
 	public String getFecha() {

@@ -3,8 +3,6 @@ package es.isst.glucomed.dao;
 import javax.persistence.EntityManager;
 
 import es.isst.glucomed.model.Paciente;
-import es.isst.glucomed.model.User;
-import es.isst.glucomed.dao.*;
 
 public class PacienteDAOImpl implements PacienteDAO {
 
@@ -19,21 +17,51 @@ public class PacienteDAOImpl implements PacienteDAO {
 	}
 
 	@Override
-	public boolean insertData(String user, String fecha, String hora,
-			String valorGlucosa) {
-		
-		Paciente paciente = new Paciente(user, fecha, hora, valorGlucosa);
-		
+	public boolean insertData(String email, String fecha, String hora, String valorGlucosa) {
+				
 		EntityManager em = EMFService.get().createEntityManager();
-		em.persist(paciente);
+		
+		// Verificamos si el paciente existe
+		
+		Paciente paciente = em.find(Paciente.class, email);
+		
+		if (paciente == null) {
+			
+			// paciente aun sin datos
+			em.persist(paciente);
+			
+		} else {
+			
+			// Actualizamos datos
+
+			Paciente pacienteFind = em.find(Paciente.class, email);
+			
+			pacienteFind.setFecha(fecha);
+			pacienteFind.setHora(hora);
+			pacienteFind.setValorGlucosa(valorGlucosa);
+			
+		}
+		
 		em.close();
+
 		return true; 
 			
 	}
+	
+	public Paciente viewData (String email){
 
-	//@Override
-	//public Paciente getPaciente(r) {
-	//	return null;
-	//}
+		EntityManager em = EMFService.get().createEntityManager();
+		
+		Paciente paciente = em.find(Paciente.class, email);
+		
+		em.close();
+		
+		if (paciente == null) {
+			return null;
+		} else {
+			return paciente;
+		}
+
+	}
 
 }

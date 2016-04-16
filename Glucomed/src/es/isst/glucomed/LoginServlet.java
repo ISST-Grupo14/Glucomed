@@ -25,30 +25,42 @@ public class LoginServlet extends HttpServlet {
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
 		HttpSession session = req.getSession();
+		
 		String urlLogueado="Dashboard.jsp";
 		String urlNoLogueado="Login.jsp";
 		String url="";
-		//String email = (String) session.getAttribute("user");
+		
+		String email = (String) session.getAttribute("email");
 		//System.out.println(email);
-		if(session.getAttribute("user") == null){
+		
+		if(email == null){
+			
 			//System.out.println("sin loguear");
+			
 			url = urlNoLogueado;
+			session.setAttribute("error_code", "");
+			
 		}else{
+			
 			//System.out.println("logueado");
+			
 			url = urlLogueado;
+			
+			if (session.getAttribute("error_code").equals("Error Registro. El usuario " + email + " ya existe en la base de datos !!")) {
+				session.setAttribute("error_code", "");
+			} else if (session.getAttribute("error_code").equals("Las contraseÃ±as no son iguales")) {
+				session.setAttribute("error_code", "");
+			}
+			
 		}
-		
-		RequestDispatcher view = req.getRequestDispatcher(url);
-		
+
+		RequestDispatcher view = req.getRequestDispatcher(url);		
 		
 		try {
-			
 			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
-		view.forward(req, resp);
+			view.forward(req, resp);
 		} catch (ServletException e) {
-			
 			e.printStackTrace();
-				
 		}
 
 	}
@@ -63,16 +75,14 @@ public class LoginServlet extends HttpServlet {
 		UserDAO dao = UserDAOImpl.getInstance();
 	
 		if(dao.SuccessLogin(email, password2)){
-			session.setAttribute("user", email);
+			session.setAttribute("email", email);
 			resp.sendRedirect("/Dashboard.jsp");
+			session.setAttribute("error_code", "");
 		}else{
-			// intentar que sea en la misma pagina
-			//resp.sendRedirect("/");
-			resp.getWriter().println("login error " + email);
+			session.setAttribute("error_code", "Usuario / Contraseña no Valido");
+			resp.sendRedirect("/Login.jsp");			
 		}
-		
 
 	}
-	
 
 }

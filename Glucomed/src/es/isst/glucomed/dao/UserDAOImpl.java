@@ -1,12 +1,8 @@
 package es.isst.glucomed.dao;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
 import es.isst.glucomed.model.User;
-import es.isst.glucomed.dao.EMFService;
 
 public class UserDAOImpl implements UserDAO{
 	
@@ -24,11 +20,10 @@ public class UserDAOImpl implements UserDAO{
 				
 		User u = new User (nombre, apellidos, password, email);
 		
-		//boolean testUser = SuccessLogin (email,password);
-		boolean testUser = false;
+		boolean testUser = SuccessLogin (email,password);
+		//boolean testUser = false;
 		
 		if (!testUser) { 
-		
 			EntityManager em = EMFService.get().createEntityManager();
 			em.persist(u);
 			em.close(); 
@@ -43,15 +38,29 @@ public class UserDAOImpl implements UserDAO{
 	public boolean SuccessLogin (String email, String password){
 		
 		EntityManager em = EMFService.get().createEntityManager();
+		
+		User user = em.find(User.class, email);
+		
+		em.close();
+		
+		if (user == null) {
+			return false;
+		} else {
+			return true;
+		}
+		
+		/*
 		Query q = em.createQuery("select item from User item where item.email = :email and item.password = :password");
 		q.setParameter("email", email);
 		q.setParameter("password", password);
-
+		
 		if(q.getResultList().isEmpty()){
 			return false;
 		} else {
 			return true;	
 		}
+		
+		*/
 		
 	}
 	
