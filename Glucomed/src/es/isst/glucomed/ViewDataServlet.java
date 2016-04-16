@@ -1,6 +1,8 @@
 package es.isst.glucomed;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,27 +25,31 @@ public class ViewDataServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
+		String urlLogueado="viewData.jsp";
+		String urlNoLogueado="Login.jsp";
+		String url="";
+		//String email = (String) session.getAttribute("email");
+		//System.out.println(email);
+		if(session.getAttribute("email") == null){
+			//System.out.println("sin loguear");
+			url = urlNoLogueado;
+		}else{
+			//System.out.println("logueado");
+			url = urlLogueado;
+		}
+		
+		//==================================================
+		
+		//HttpSession session = req.getSession();
 		PacienteDAO dao = PacienteDAOImpl.getInstance();
 		
 		String emailSession = (String) session.getAttribute("email");
 		
-		Paciente paciente = dao.viewData(emailSession);
+		List<Paciente> pacienteDatos = dao.viewData(emailSession);
 
-		if (paciente == null){
-			
-			session.setAttribute("fecha", "Sin Datos");
-			session.setAttribute("hora", "Sin Datos");
-			session.setAttribute("valorGlucosa", "Sin Datos");
-			
-		} else {
-			
-			session.setAttribute("fecha", paciente.getFecha());
-			session.setAttribute("hora", paciente.getHora());
-			session.setAttribute("valorGlucosa", paciente.getValorGlucosa());
-			
-		}
-
-		RequestDispatcher view = req.getRequestDispatcher("viewData.jsp");
+		session.setAttribute( "pacienteDatos" , new ArrayList<Paciente>( pacienteDatos ));
+	
+		RequestDispatcher view = req.getRequestDispatcher(url);
 		
 		try {
 			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.

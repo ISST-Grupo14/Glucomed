@@ -64,7 +64,7 @@ public class InsertDataServlet extends HttpServlet {
 		String valorGlucosa = req.getParameter("valorGlucosa");
 				
 		dao.insertData(email, fecha, hora, valorGlucosa);
-		//System.out.println(email + " " + fecha + " " + hora + " " + valorGlucosa);
+		//System.out.println(emailSession + " " + fecha + " " + hora + " " + valorGlucosa);
 		
 		resp.sendRedirect("Dashboard.jsp");
 

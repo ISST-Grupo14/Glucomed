@@ -1,6 +1,9 @@
 package es.isst.glucomed.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import es.isst.glucomed.model.Paciente;
 
@@ -16,53 +19,29 @@ public class PacienteDAOImpl implements PacienteDAO {
 		return instance;
 	}
 
+	
 	@Override
 	public boolean insertData(String email, String fecha, String hora, String valorGlucosa) {
-				
+		
+		Paciente u = null;
 		EntityManager em = EMFService.get().createEntityManager();
-		
-		// Verificamos si el paciente existe
-		
-		Paciente paciente = em.find(Paciente.class, email);
-		
-		if (paciente == null) {
-			
-			// paciente aun sin datos
-			Paciente nuevoPaciente = new Paciente (email,fecha,hora,valorGlucosa);
-			em.persist(nuevoPaciente);
-			
-		} else {
-			
-			// Actualizamos datos
-
-			//Paciente pacienteFind = em.find(Paciente.class, email);
-			
-			paciente.setFecha(fecha);
-			paciente.setHora(hora);
-			paciente.setValorGlucosa(valorGlucosa);
-			
-		}
-		
+		u = new Paciente (email, fecha, hora, valorGlucosa);
+		em.persist(u);
 		em.close();
-
-		return true; 
-			
+		return true;
+		
 	}
-	
-	public Paciente viewData (String email){
 
+	@Override
+	public List<Paciente> viewData(String email) {
+
+		//hay que usar el email para filtrar en la query
 		EntityManager em = EMFService.get().createEntityManager();
-		
-		Paciente paciente = em.find(Paciente.class, email);
-		
+		Query q = em.createQuery("select m " + "from Paciente m " + "where m.email LIKE '" + email + "%'");
+		List<Paciente> res = q.getResultList();
 		em.close();
+		return res;
 		
-		if (paciente == null) {
-			return null;
-		} else {
-			return paciente;
-		}
-
 	}
 
 }

@@ -23,27 +23,21 @@
 				<h3>Datos Paciente</h3>
 				
 				<table>
+					<tr>
+							<td><strong>Email</strong></td>
+							<td><strong>Fecha</strong></td>
+							<td><strong>Hora</strong></td>
+							<td><strong>Valor</strong></td>
+					</tr>
+					<c:forEach items="${pacienteDatos}" var="datos">
+						<tr>
+							<td> <c:out value = "${datos.email}"/> </td>
+							<td> <c:out value = "${datos.fecha}"/> </td>
+							<td> <c:out value = "${datos.hora}"/> </td>
+							<td> <c:out value = "${datos.valorGlucosa}"/> </td>
+						</tr>
+					</c:forEach>
 				
-					<tr>
-						<td>Email</td>
-						<td><c:out value = "${email}" /></td>
-					</tr>
-					
-					<tr>
-						<td>Fecha</td>
-						<td><c:out value = "${fecha}" /></td>
-					</tr>
-					
-					<tr>
-						<td>Hora</td>
-						<td><c:out value = "${hora}" /></td>
-					</tr>
-					
-					<tr>
-						<td>Valor de Glucosa</td>
-						<td><c:out value = "${valorGlucosa}" /></td>
-					</tr>
-					
 				</table>
 				
 	        	<p class="submit">
