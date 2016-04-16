@@ -11,8 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
-import es.isst.glucomed.model.User;
-import es.isst.glucomed.utilities.*;
+import es.isst.glucomed.utilities.Utilities;
 
 
 @SuppressWarnings("serial")
@@ -23,21 +22,31 @@ public class RegisterServlet extends HttpServlet {
 			throws IOException {
 		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
 		
-		/*Comprobamos con el user session si el usuario esta logueado
+		/*Comprobamos con el email session si el usuario esta logueado
 		 * 		si esta logueado va a un sitio
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
+		
 		HttpSession session = req.getSession();
 		String urlLogueado="Dashboard.jsp";
 		String urlNoLogueado="Registro.jsp";
 		String url="";
-		//String email = (String) session.getAttribute("user");
+		
+		String email = (String) session.getAttribute("email");
 		//System.out.println(email);
-		if(session.getAttribute("user") == null){
+		
+		if(email == null){
 			//System.out.println("sin loguear");
 			url = urlNoLogueado;
+			session.setAttribute("error_code", "");
 		}else{
+			
 			//System.out.println("logueado");
+			
+			if (session.getAttribute("error_code").equals("Usuario / Contrase�a no Valido")) {
+				session.setAttribute("error_code", "");
+			}
+			
 			url = urlLogueado;
 		}
 		
@@ -69,30 +78,39 @@ public class RegisterServlet extends HttpServlet {
 		String passCifrado = Utilities.cifradoMD5(password);
 		String email = req.getParameter("email");
 		
-		/*Habilitar este método si se quiere comprobar el cifrado de la contraseña
+		HttpSession session = req.getSession();
+		
+		/*Habilitar este metodo si se quiere comprobar el cifrado de la contraseña
 		System.out.println("contraseña cifrada: "+ passCifrado);
 		*/
 		System.out.println("Password1: "+password + " Password2: " + password2);
 		
 		if (!password.equals(password2)){
 			System.out.println("Password1: "+password + " Password2: " + password2);
-			resp.getWriter().println("Las contraseñas no son iguales");
+			
+			session.setAttribute("error_code", "Las contraseñas no son iguales");
+			resp.sendRedirect("/Registro.jsp");
+			
+			//resp.getWriter().println("Las contraseñas no son iguales");
 			
 		}else{
 		
-		boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
-		
+			boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
+			
 			if (result) {
-			resp.sendRedirect("/Login.jsp");
+				session.setAttribute("error_code", "");
+				resp.sendRedirect("/Login.jsp");
 			} else {
-			resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
+				session.setAttribute("error_code", "Error Registro. El usuario " + email + " ya existe en la base de datos !!");
+				resp.sendRedirect("/Registro.jsp");
+				//resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
 			}
 		}
 	
 		
 		/*Comprobar la contraseña*/
 		/*if(dao.SuccessLogin(email, password)){
-			session.setAttribute("user", email);
+			session.setAttribute("email", email);
 			resp.sendRedirect("/index.html");
 		}else{
 			resp.sendRedirect("/");

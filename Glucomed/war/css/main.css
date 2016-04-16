@@ -28,10 +28,9 @@ body {
   line-height: 1;
 }
 
-
-
 .about {
-  margin: 70px auto 40px;
+  
+  margin: 30px auto;
   padding: 8px;
   width: 260px;
   font: 10px/18px 'Lucida Grande', Arial, sans-serif;
@@ -49,12 +48,10 @@ body {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .about-author {
-
-  margin-top: 5px;
+  margin-top: 0px;
 }
+
 .about-author > a {
   padding: 1px 3px;
   margin: 0 -1px;
@@ -67,7 +64,7 @@ body {
 }
 
 .container {
-  margin: 80px auto;
+  margin: 30px auto;
   width: 640px;
 }
 
@@ -107,46 +104,50 @@ body {
   font-size: 13px;
   font-weight: bold;
   color: #555;
-  text-align: left;
+  text-align: center;
   text-shadow: 0 1px white;
   -webkit-box-shadow: 0 1px whitesmoke;
   box-shadow: 0 1px whitesmoke;
 }
+
 .login p {
-  margin: 15px 0 0;
-
-
+  margin: 8px 0 0;
 }
+
 .login input[type=text], .login input[type=password] {
   width: 278px;
 }
+
 .login p.recordar {
   margin: 15px;
-  float: left;
+  text-align: center;
   line-height: 31px;
 }
+
 .login p.recordar label {
 
   font-size: 12px;
   color: #777;
   cursor: pointer;
 }
+
 .login p.recordar input {
   position: relative;
   bottom: 1px;
   margin-right: 4px;
   vertical-align: middle;
 }
+
 .login p.submit {
   text-align: center;
 }
+
 .login p.registro {
   text-align: center;
-
 }
-.login p.login-forgot  {
-text-align: center;
 
+.login p.login-forgot  {
+  text-align: center;
 }
 
 :-moz-placeholder {
@@ -179,13 +180,12 @@ input[type=text], input[type=password] {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
 }
+
 input[type=text]:focus, input[type=password]:focus {
   border-color: #7dc9e2;
   outline-color: #dceefc;
   outline-offset: 0;
 }
-
-
 
 input[type=submit][name=commit] {
   padding: 0 18px;
@@ -232,6 +232,7 @@ input[type=submit][name=registro] {
   -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
 }
+
 input[type=submit]:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
@@ -239,7 +240,162 @@ input[type=submit]:active {
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-
 .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
   line-height: 34px;
+}
+
+.row-nav {
+  margin: 30px auto;
+  width: 640px;
+}
+
+.main_menu {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.main_menu h1, h2 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.main_menu h3 { 
+  margin: -15px 7px 5px;
+  line-height: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.main_menu ul {
+  text-align: center;
+}
+
+.main_menu p {
+  margin: 8px 0 0;
+}
+
+.viewdata_section {
+  margin: 30px auto;
+  width: 640px;
+}
+
+.viewdata_div {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 310px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.viewdata_div h1, h2 {
+  margin: -20px -20px 21px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.viewdata_div h3 { 
+  margin: -15px 7px 5px;
+  line-height: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  -webkit-box-shadow: 0 1px whitesmoke;
+  box-shadow: 0 1px whitesmoke;
+}
+
+.viewdata_div ul {
+  text-align: center;
+}
+
+.viewdata_div p {
+  margin: 15px 0 0;
+}
+
+.viewdata_div p.submit {
+  text-align: center;
+}
+
+.viewdata_div table{
+	border: 1px solid black;
+    border-collapse: collapse;
+	border-spacing: 0;
+	width:100%;
+	height:100%;
+	margin:0px;padding:0px;
+	
+}
+
+.viewdata_div tr:hover td{
+	background-color:#ffffff;
+}
+.viewdata_div td{
+	vertical-align:middle;
+	background-color:#ffffff;
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#000000;
+}
+
+.viewdata_div tr:hover td{
+	background:-o-linear-gradient(bottom, #ff7f00 5%, #ff7f00 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ff7f00), color-stop(1, #ff7f00) );
+	background:-moz-linear-gradient( center top, #ff7f00 5%, #ff7f00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff7f00", endColorstr="#ff7f00");	
+	background: -o-linear-gradient(top,#ff7f00,ff7f00);
+	background-color:#ff7f00;
+}
+
+.error p {
+	text-align:center;
+	font-size:18px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ff0000;
 }
