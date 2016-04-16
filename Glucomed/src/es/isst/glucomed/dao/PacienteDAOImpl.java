@@ -28,17 +28,18 @@ public class PacienteDAOImpl implements PacienteDAO {
 		if (paciente == null) {
 			
 			// paciente aun sin datos
-			em.persist(paciente);
+			Paciente nuevoPaciente = new Paciente (email,fecha,hora,valorGlucosa);
+			em.persist(nuevoPaciente);
 			
 		} else {
 			
 			// Actualizamos datos
 
-			Paciente pacienteFind = em.find(Paciente.class, email);
+			//Paciente pacienteFind = em.find(Paciente.class, email);
 			
-			pacienteFind.setFecha(fecha);
-			pacienteFind.setHora(hora);
-			pacienteFind.setValorGlucosa(valorGlucosa);
+			paciente.setFecha(fecha);
+			paciente.setHora(hora);
+			paciente.setValorGlucosa(valorGlucosa);
 			
 		}
 		
