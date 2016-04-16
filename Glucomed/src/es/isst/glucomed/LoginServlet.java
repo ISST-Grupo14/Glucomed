@@ -50,7 +50,10 @@ public class LoginServlet extends HttpServlet {
 			if (session.getAttribute("error_code").equals("Error Registro. El usuario " + email + " ya existe en la base de datos !!")) {
 				session.setAttribute("error_code", "");
 			} else if (session.getAttribute("error_code").equals("Las contraseñas no son iguales")) {
-				session.setAttribute("error_code", "");
+				session.setAttribute("error_code", "");		
+				}
+			else if(session.getAttribute("error_code").equals("Debe rellenar todos los campos")){
+				session.setAttribute("error_code", "");	
 			}
 			
 		}

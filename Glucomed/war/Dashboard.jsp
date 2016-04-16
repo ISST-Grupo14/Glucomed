@@ -11,7 +11,7 @@
 		<title>Dashboard</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	  		<script type="text/javascript" src="/js/chart.js"></script>
+	  	
 		<meta charset="utf-8">
 	</head>
 	

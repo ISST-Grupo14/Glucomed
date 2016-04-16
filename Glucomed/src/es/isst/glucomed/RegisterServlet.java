@@ -43,7 +43,7 @@ public class RegisterServlet extends HttpServlet {
 			
 			//System.out.println("logueado");
 			
-			if (session.getAttribute("error_code").equals("Usuario / Contraseña no Valido")) {
+			if (session.getAttribute("error_code").equals("Usuario / Contraseï¿½a no Valido")) {
 				session.setAttribute("error_code", "");
 			}
 			
