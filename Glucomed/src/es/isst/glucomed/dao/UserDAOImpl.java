@@ -25,9 +25,9 @@ public class UserDAOImpl implements UserDAO{
 		boolean resultado;
 		//boolean testUser = false;
 		
-		if (testUser==true) { 
+		if (testUser == false) { 
 			em.persist(u);
-			resultado =true;
+			resultado = true;
 			
 		} else {
 			resultado = false;

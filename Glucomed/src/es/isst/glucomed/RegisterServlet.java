@@ -38,15 +38,9 @@ public class RegisterServlet extends HttpServlet {
 		if(email == null){
 			//System.out.println("sin loguear");
 			url = urlNoLogueado;
-			session.setAttribute("error_code", "");
 		}else{
 			
 			//System.out.println("logueado");
-			
-			if (session.getAttribute("error_code").equals("Usuario / Contrase�a no Valido")) {
-				session.setAttribute("error_code", "");
-			}
-			
 			url = urlLogueado;
 		}
 		
@@ -64,12 +58,13 @@ public class RegisterServlet extends HttpServlet {
 
 	}
 	
+	
+	
+	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
 		UserDAO dao = UserDAOImpl.getInstance();
-		
-		//HttpSession session = req.getSession();
 		
 		String nombre = req.getParameter("nombre");
 		String apellidos = req.getParameter("apellidos");
@@ -85,13 +80,16 @@ public class RegisterServlet extends HttpServlet {
 		*/
 		System.out.println("Password1: "+password + " Password2: " + password2);
 		
-		if (!password.equals(password2)){
+		if ( !password.equals(password2) ){
+			
 			System.out.println("Password1: "+password + " Password2: " + password2);
+			session.setAttribute("error_code", "Introduce passwords iguales");
+			resp.sendRedirect("/registro");
 			
-			session.setAttribute("error_code", "Las contraseñas no son iguales");
-			resp.sendRedirect("/Registro.jsp");
+		} else if(nombre.equals("") || apellidos.equals("") || password.equals("") || password2.equals("") || email.equals("")){
 			
-			//resp.getWriter().println("Las contraseñas no son iguales");
+			session.setAttribute("error_code", "Rellena todos los campos");
+			resp.sendRedirect("/registro");
 			
 		}else{
 		
@@ -99,24 +97,13 @@ public class RegisterServlet extends HttpServlet {
 			
 			if (result) {
 				session.setAttribute("error_code", "");
-				resp.sendRedirect("/Login.jsp");
+				resp.sendRedirect("/login");
 			} else {
 				session.setAttribute("error_code", "Error Registro. El usuario " + email + " ya existe en la base de datos !!");
-				resp.sendRedirect("/Registro.jsp");
+				resp.sendRedirect("/registro");
 				//resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
 			}
 		}
-	
-		
-		/*Comprobar la contraseña*/
-		/*if(dao.SuccessLogin(email, password)){
-			session.setAttribute("email", email);
-			resp.sendRedirect("/index.html");
-		}else{
-			resp.sendRedirect("/");
-		}
-		*/
-		// resp.getWriter().println("nombre " + nombre);
 
 	}
 }

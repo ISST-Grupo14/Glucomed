@@ -22,7 +22,7 @@
 				<h2>Sistema de medición de glucosa</h2>
 				<h3>Registro de usuario</h3>
       
-				<form method="post" action="registro" onsubmit="return checkPassword();">
+				<form method="post" action="registro">
 				
 					<p>Nombre: <input type="text" name="nombre" value="" placeholder="Nombre"> </p>
 					<p>Apellidos: <input type="text" name="apellidos" value="" placeholder="Apellidos"></p>
@@ -36,7 +36,7 @@
         
 					<p class="submit">
 						<input type="submit" name="commit" value="Aceptar">
-						<input type="submit" name="commit" value="Volver" onClick="history.go(-1);return true;">
+						<input type="button" name="registro" value="Volver" onClick="history.go(-1);return true;" >
 					</p>
 				</form>
 
