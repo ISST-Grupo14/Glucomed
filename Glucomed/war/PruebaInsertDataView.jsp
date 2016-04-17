@@ -8,71 +8,75 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Sistema de medición de glucosa Glucomer.</title>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
-   	<link rel='stylesheet' href='css/dashboardStyle.css' />
+	<title>Glucomed</title>
+	<link rel='stylesheet' href='css/dashboardStyle.css'/>
    	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
+
 </head>
 
 <body>
+
+<!-- ========= MENU ======== -->
+	<div class="menu">
+		<div class="container">
+			<a href="dashboard" class="boton-menu"><span class="only-movil"><i
+					class="fa fa-align-left small"></i></span><br class="only-movil" />
+				Inicio</a>
+			<!-- fa fa-align-left fa fa-home-->
+			<a href="insertData" class="boton-menu"><span class="only-movil"><i
+					class="fa fa-pencil-square-o small"></i></span><br class="only-movil" />
+				Introducir</a> 
+			<a href="viewData" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> Historial</a> 
+			<!--   
+			<a href="#" class="boton-menu"><span
+				class="only-movil"><i class="fa fa fa-cog small"></i></span><br
+				class="only-movil" /> Config. </a> 
+			-->
+			<a href="salir" class="boton-menu"><span
+				class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
+				class="only-movil" /> Logout</a>
+		</div>
+	</div>
+
+<!-- ========= CONTENEDOR ======== -->
 
 	<div class="container">
 		<div class="container-tabla">
 
 			<!-- ========= BANNER ======== -->
 			<div class="header">
-				<span class="only-movil" style="font-size: 100%; color: #FFFFFF">GLUCOMED</span>
-				<span class="only-tablet" style="font-size: 100%; color: #CCCCCC">GLUCOMED</span>
-				<span class="only-screen" style="font-size: 100%; color: #CCCCCC">GLUCOMED</span>
-			</div>
-
-			<!-- ========= MENU ======== -->
-			<div class="menu">
-				<div class="container">
-					<a href="dashboard" class="boton-menu"><span class="only-movil"><i
-							class="fa fa-align-left small"></i></span><br class="only-movil" />
-						Inicio</a>
-					<!-- fa fa-align-left fa fa-home-->
-					<a href="insertData" class="boton-menu"><span class="only-movil"><i
-							class="fa fa-pencil-square-o small"></i></span><br class="only-movil" />
-						Introducir</a> 
-					<a href="viewData" class="boton-menu"><span
-						class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-						class="only-movil" /> Historial</a> 
-					<!--   
-					<a href="#" class="boton-menu"><span
-						class="only-movil"><i class="fa fa fa-cog small"></i></span><br
-						class="only-movil" /> Config. </a> 
-					-->
-					<a href="salir" class="boton-menu"><span
-						class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
-						class="only-movil" /> Logout</a>
-				
-				
-				</div>
-			</div>
-
+		    	<img class="image-header only-movil" src="img/logo-movil.png" />
+		    	<img class="image-header only-screen" src="img/logo-screen.png" />
+    		</div>
 		
-		    <div class="caja-titulo col-12"><span class="titulo">Inicio</span></div>
+		    <div class="caja-titulo col-12"><span class="titulo">Introduce Datos</span></div>
 		    
-		    <div class="col-8">
+		    <div class="section col-12">
 		    <!-- ==========AQUI VA TODO======== -->
 		    
+		    	<div class="col-3">
 		    	<form method="post" action="insertData">
 		        	<p class="input-titulo"><input type="text" name="fecha" value="" placeholder="Fecha"></p>
 					<p class="input-titulo"><input type="text" name="hora" value="" placeholder="Hora"></p>
 					<p class="input-titulo"><input type="text" name="valorGlucosa" value="" placeholder="valorGlucosa"></p>
 		        	<p class="submit">
 		        		<input type="submit" name="commit" value="Aceptar">
-		        		<input type="submit" name="commit" value="Volver" onClick="history.go(-1);return true;">
+		        		<input type="button" name="commit" value="Volver" onClick="history.go(-1);return true;">
 	        		</p>
 		    	</form>
+		    	</div>
 				
 			<!-- ==========FIN AQUI VA TODO======== -->
 		    </div>
 
 		
-		    <div class='col-12 paginacion'></div>
+		    <div class='col-12 paginacion'>
+		    <!-- ========= PAGINACION ======== -->
+		    <!-- ========= FIN PAGINACION ======== -->
+		    </div>
 		
 		    <div class="footer col-12">
 				<p></p>

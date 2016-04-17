@@ -8,10 +8,10 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>Sistema de medición de glucosa Glucomed.</title>
+		<title>Glucomed</title>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/login-register.css" />
-		
+		<link rel='stylesheet' href='css/dashboardStyle.css' media='none'/>
 	</head>
 
 	<body>
