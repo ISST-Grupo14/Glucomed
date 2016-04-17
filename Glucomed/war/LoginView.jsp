@@ -9,7 +9,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Sistema de medición de glucosa Glucomed.</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/login-register.css" />
 		
 	</head>
 
@@ -25,8 +26,8 @@
 				
 				<form method="post" action="login">
 				
-					<p><input type="text" name="email" value="" placeholder="E-Mail"></p>
-					<p><input type="password" name="password" value="" placeholder="Contraseña"></p>
+					<p class="input-titulo"><input type="text" name="email" value="" placeholder="E-Mail"></p>
+					<p class="input-titulo"><input type="password" name="password" value="" placeholder="Contraseña"></p>
 					<p class="recordar">
 					<label>
 						<input type="checkbox" name="recordar" id="remember_me">Recordar mis datos en este navegador
