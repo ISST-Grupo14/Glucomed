@@ -1,46 +1,89 @@
-
-<!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@page isELIgnored="false"%>
+
+<!DOCTYPE html>
 
 <html>
 
-	<head>
-		<title>Dashboard</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	  	
-		<meta charset="utf-8">
-	</head>
-	
-	<body>
-					
-		<!--  <h1>Hola <c:out value="${name}" /></h1>-->
+<head>
+	<meta charset="UTF-8">
+	<title>Glucomed</title>
+	<link rel='stylesheet' href='css/dashboardStyle.css'/>
+   	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
+
+</head>
+
+<body>
+
+<!-- ========= MENU ======== -->
+	<div class="menu">
+		<div class="container">
+			<a href="dashboard" class="boton-menu"><span class="only-movil"><i
+					class="fa fa-align-left small"></i></span><br class="only-movil" />
+				Inicio</a>
+			<!-- fa fa-align-left fa fa-home-->
+			<a href="insertData" class="boton-menu"><span class="only-movil"><i
+					class="fa fa-pencil-square-o small"></i></span><br class="only-movil" />
+				Introducir</a> 
+			<a href="viewData" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> Historial</a> 
+			<!--   
+			<a href="#" class="boton-menu"><span
+				class="only-movil"><i class="fa fa fa-cog small"></i></span><br
+				class="only-movil" /> Config. </a> 
+			-->
+			<a href="salir" class="boton-menu"><span
+				class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
+				class="only-movil" /> Logout</a>
+		</div>
+	</div>
+
+<!-- ========= CONTENEDOR ======== -->
+
+	<div class="container">
+		<div class="container-tabla">
+
+			<!-- ========= BANNER ======== -->
+			<div class="header">
+		    	<img class="image-header only-movil" src="img/logo-movil.png" />
+		    	<img class="image-header only-screen" src="img/logo-screen.png" />
+    		</div>
 		
-		<section class="row-nav">
-			<div class="main_menu">
-			
-				<h1>GLUCOMED</h1>
-				<h2>Sistema de medición de glucosa</h2>
-				<h3>Menu de control</h3>
+		    <div class="caja-titulo col-12"><span class="titulo">Dashboard</span></div>
+		    
+		    <div class="section col-12">
+		    <!-- ==========AQUI VA TODO======== -->
+		    	<div class="col-4"></div>
+		    
+		    	<div class="col-4">
+		    	
+		    	<h1 style="text-align:center; color:#253A7A">Bienvenido a: </h1>
 				
-				<ul>
-					<!--<li><a href ="/login">Login</a></li>-->
-					<!--<li><a href ="/registro">Registro</a></li>-->
-					<p><a href="/dashboard">Dashboard</a></p>
-					<p><a href="/insertData">Introduce datos</a></p>
-					<p><a href="/viewData">Ver datos</a></p>
-					<p><a href="/salir">Salir</a></p>
-				</ul>
-			</div>
-		</section>
+				<img alt="" src="img/logo.png" style="width:100%;">
+		    	</div>
+		    	
+			<!-- ==========FIN AQUI VA TODO======== -->
+		    </div>
+
 		
-		<section class="about">
-			<p class="about-author"> &copy; 2015&ndash;2016 <a>ISST-Grupo 14</a>
-		</section>
+		    <div class='col-12 paginacion'>
+		    <!-- ========= PAGINACION ======== -->
+		    <!-- ========= FIN PAGINACION ======== -->
+		    </div>
 		
-	</body>
-	
+		    <div class="footer col-12">
+				<p></p>
+		    </div>
+		
+		  
+		</div>
+	</div>
+		
+		    	
+
+</body>
+
 </html>

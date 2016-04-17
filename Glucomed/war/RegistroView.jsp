@@ -36,6 +36,10 @@
 					<p class="input-titulo">Contraseña: <br><input type="password" name="password" value="" placeholder=""></p>
 					<p class="input-titulo">Repita la contraseña: <br><input type="password" name="password_repeat" value="" placeholder=""></p>
         
+        			<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
+						<c:out value = "${error_code_registro}" /> 
+					</p>
+        
 					<p class="submit">
 						<input type="submit" name="commit" value="Aceptar">
 						<input type="button" name="registro" value="Volver" onClick="history.go(-1);return true;" >
@@ -46,10 +50,7 @@
 			</div>
 			
 		</section>
-		
-		<div class="error">
-			<p> <c:out value = "${error_code_registro}" /> </p>
-		</div>
+	
 		
 		<section class="about">
 			<p class="about-author">
