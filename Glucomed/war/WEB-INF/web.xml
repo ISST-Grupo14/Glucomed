@@ -6,12 +6,12 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
 	<servlet>
-		<servlet-name>Glucomed</servlet-name>
-		<servlet-class>es.isst.glucomed.GlucomedServlet</servlet-class>
+		<servlet-name>DashboardServlet</servlet-name>
+		<servlet-class>es.isst.glucomed.DashboardServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Glucomed</servlet-name>
-		<url-pattern>/glucomed</url-pattern>
+		<servlet-name>DashboardServlet</servlet-name>
+		<url-pattern>/dashboard</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>Login</servlet-name>

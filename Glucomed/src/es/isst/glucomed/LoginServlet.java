@@ -25,38 +25,22 @@ public class LoginServlet extends HttpServlet {
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
 		HttpSession session = req.getSession();
-		
 		String urlLogueado="Dashboard.jsp";
 		String urlNoLogueado="Login.jsp";
 		String url="";
 		
 		String email = (String) session.getAttribute("email");
-		String pass = (String) session.getAttribute("password");
 		//System.out.println(email);
 		
-		if(email == null || pass ==null){
-			
+		if(email == null){
 			//System.out.println("sin loguear");
-			
 			url = urlNoLogueado;
-			session.setAttribute("error_code", "");
-			
 		}else{
 			
 			//System.out.println("logueado");
-			
 			url = urlLogueado;
-			
-			if (session.getAttribute("error_code").equals("Error Registro. El usuario " + email + " ya existe en la base de datos !!")) {
-				session.setAttribute("error_code", "");
-			} else if (session.getAttribute("error_code").equals("Las contraseñas no son iguales")) {
-				session.setAttribute("error_code", "");		
-				}
-			else if(session.getAttribute("error_code").equals("Debe rellenar todos los campos")){
-				session.setAttribute("error_code", "");	
-			}
-			
 		}
+			
 
 		RequestDispatcher view = req.getRequestDispatcher(url);		
 		
@@ -84,7 +68,7 @@ public class LoginServlet extends HttpServlet {
 			resp.sendRedirect("/Dashboard.jsp");
 			session.setAttribute("error_code", "");
 		}else{
-			session.setAttribute("error_code", "Usuario / Contraseña no Valido");
+			session.setAttribute("error_code", "Usuario / Password no Valido");
 			resp.sendRedirect("/Login.jsp");			
 		}
 
