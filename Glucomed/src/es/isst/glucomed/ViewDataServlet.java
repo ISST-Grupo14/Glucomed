@@ -25,8 +25,8 @@ public class ViewDataServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
-		String urlLogueado="viewData.jsp";
-		String urlNoLogueado="Login.jsp";
+		String urlLogueado="DataView.jsp";
+		String urlNoLogueado="LoginView.jsp";
 		String url="";
 		//String email = (String) session.getAttribute("email");
 		//System.out.println(email);

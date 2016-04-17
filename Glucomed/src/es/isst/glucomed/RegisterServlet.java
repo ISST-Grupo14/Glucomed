@@ -28,8 +28,8 @@ public class RegisterServlet extends HttpServlet {
 		 * */
 		
 		HttpSession session = req.getSession();
-		String urlLogueado="Dashboard.jsp";
-		String urlNoLogueado="Registro.jsp";
+		String urlLogueado="DashboardView.jsp";
+		String urlNoLogueado="RegistroView.jsp";
 		String url="";
 		
 		String email = (String) session.getAttribute("email");
@@ -83,24 +83,24 @@ public class RegisterServlet extends HttpServlet {
 		if ( !password.equals(password2) ){
 			
 			System.out.println("Password1: "+password + " Password2: " + password2);
-			session.setAttribute("error_code", "Introduce passwords iguales");
-			resp.sendRedirect("/registro");
+			session.setAttribute("error_code_registro", "Introduce passwords iguales");
+			resp.sendRedirect("registro");
 			
 		} else if(nombre.equals("") || apellidos.equals("") || password.equals("") || password2.equals("") || email.equals("")){
 			
-			session.setAttribute("error_code", "Rellena todos los campos");
-			resp.sendRedirect("/registro");
+			session.setAttribute("error_code_registro", "Rellena todos los campos");
+			resp.sendRedirect("registro");
 			
 		}else{
 		
 			boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
 			
 			if (result) {
-				session.setAttribute("error_code", "");
-				resp.sendRedirect("/login");
+				session.setAttribute("error_code_registro", "");
+				resp.sendRedirect("login");
 			} else {
-				session.setAttribute("error_code", "Error Registro. El usuario " + email + " ya existe en la base de datos !!");
-				resp.sendRedirect("/registro");
+				session.setAttribute("error_code_registro", "Error Registro. El usuario " + email + " ya existe en la base de datos !!");
+				resp.sendRedirect("registro");
 				//resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
 			}
 		}

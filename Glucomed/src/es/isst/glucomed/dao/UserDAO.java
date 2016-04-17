@@ -4,5 +4,6 @@ public interface UserDAO {
 	
 	public boolean createUser (String nombre, String apellidos, String password, String email);
 	public boolean SuccessLogin (String email, String password);
+	public boolean SuccessRegister (String email);
 
 }

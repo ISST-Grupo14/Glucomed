@@ -24,8 +24,8 @@ public class InsertDataServlet extends HttpServlet {
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
 		HttpSession session = req.getSession();
-		String urlLogueado="insertData.jsp";
-		String urlNoLogueado="Login.jsp";
+		String urlLogueado="InsertDataView.jsp";
+		String urlNoLogueado="LoginView.jsp";
 		String url="";
 		//String email = (String) session.getAttribute("email");
 		//System.out.println(email);
@@ -66,7 +66,7 @@ public class InsertDataServlet extends HttpServlet {
 		dao.insertData(email, fecha, hora, valorGlucosa);
 		//System.out.println(emailSession + " " + fecha + " " + hora + " " + valorGlucosa);
 		
-		resp.sendRedirect("Dashboard.jsp");
+		resp.sendRedirect("dashboard");
 
 	}
 	

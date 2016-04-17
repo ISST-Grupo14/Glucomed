@@ -21,7 +21,7 @@ public class UserDAOImpl implements UserDAO{
 				
 		EntityManager em = EMFService.get().createEntityManager();
 		User u = new User (nombre, apellidos, password, email);
-		boolean testUser = SuccessLogin (email,password);
+		boolean testUser = SuccessRegister (email);
 		boolean resultado;
 		//boolean testUser = false;
 		
@@ -37,6 +37,19 @@ public class UserDAOImpl implements UserDAO{
 	} 
 	
 	
+	public boolean SuccessRegister (String email){
+		
+		EntityManager em = EMFService.get().createEntityManager();
+		Query q = em.createQuery("select item from User item where item.email = :email");
+		q.setParameter("email", email);
+		
+		if(q.getResultList().isEmpty()){
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
 	public boolean SuccessLogin (String email, String password){
 				
 		EntityManager em = EMFService.get().createEntityManager();
@@ -45,9 +58,9 @@ public class UserDAOImpl implements UserDAO{
 		q.setParameter("password", password);
 		
 		if(q.getResultList().isEmpty()){
-			return false;
+			return false; //si no tiene ninguno de los dos campos devuelve false
 		} else {
-			return true;	
+			return true; //si alguno de los dos campos esta relleno devuelve true
 		}
 	}
 		

@@ -25,8 +25,8 @@ public class LoginServlet extends HttpServlet {
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
 		HttpSession session = req.getSession();
-		String urlLogueado="Dashboard.jsp";
-		String urlNoLogueado="Login.jsp";
+		String urlLogueado="DashboardView.jsp";
+		String urlNoLogueado="LoginView.jsp";
 		String url="";
 		
 		String email = (String) session.getAttribute("email");
@@ -65,11 +65,11 @@ public class LoginServlet extends HttpServlet {
 		if(dao.SuccessLogin(email, password2)){
 			session.setAttribute("email", email);
 			session.setAttribute("password",password2);
-			resp.sendRedirect("/Dashboard.jsp");
-			session.setAttribute("error_code", "");
+			resp.sendRedirect("dashboard");
+			session.setAttribute("error_code_login", "");
 		}else{
-			session.setAttribute("error_code", "Usuario / Password no Valido");
-			resp.sendRedirect("/Login.jsp");			
+			session.setAttribute("error_code_login", "Usuario / Password no Valido");
+			resp.sendRedirect("login");			
 		}
 
 	}

@@ -34,7 +34,7 @@
 					</p>
 					<p class="submit"><input type="submit" name="commit" value="Aceptar"></p>
 					<p class="registro"><input type="button" name="registro" value="Registro" onClick="location.href='/registro'" ></p>
-					<p class="login-forgot"> <a href="Login.jsp">He olvidado la contraseña</a> </p>
+					<p class="login-forgot"> <a href="">He olvidado la contraseña</a> </p>
 				</form>
 				
 			</div>
@@ -42,7 +42,7 @@
 		</section>
 		
 		<div class="error">
-			<p> <c:out value = "${error_code}" /> </p>
+			<p> <c:out value = "${error_code_login}" /> </p>
 		</div>
 		
 		<section class="about">

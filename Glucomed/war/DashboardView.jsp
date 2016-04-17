@@ -29,7 +29,7 @@
 				<ul>
 					<!--<li><a href ="/login">Login</a></li>-->
 					<!--<li><a href ="/registro">Registro</a></li>-->
-					<!--<li class="active" href="/dashboard"><a href="" >DashBoard</a></li>-->
+					<p><a href="/dashboard">Dashboard</a></p>
 					<p><a href="/insertData">Introduce datos</a></p>
 					<p><a href="/viewData">Ver datos</a></p>
 					<p><a href="/salir">Salir</a></p>

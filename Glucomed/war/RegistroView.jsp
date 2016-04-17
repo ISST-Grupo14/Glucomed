@@ -46,7 +46,7 @@
 		</section>
 		
 		<div class="error">
-			<p> <c:out value = "${error_code}" /> </p>
+			<p> <c:out value = "${error_code_registro}" /> </p>
 		</div>
 		
 		<section class="about">
