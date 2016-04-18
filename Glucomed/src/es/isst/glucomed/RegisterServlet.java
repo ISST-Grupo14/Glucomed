@@ -68,6 +68,7 @@ public class RegisterServlet extends HttpServlet {
 		
 		String nombre = req.getParameter("nombre");
 		String apellidos = req.getParameter("apellidos");
+		String tipoUser = req.getParameter("tipoUser");
 		String password = req.getParameter("password");
 		String password2 = req.getParameter("password_repeat");
 		String passCifrado = Utilities.cifradoMD5(password);
@@ -78,22 +79,24 @@ public class RegisterServlet extends HttpServlet {
 		/*Habilitar este metodo si se quiere comprobar el cifrado de la contraseña
 		System.out.println("contraseña cifrada: "+ passCifrado);
 		*/
-		System.out.println("Password1: "+password + " Password2: " + password2);
-		
+				
 		if ( !password.equals(password2) ){
 			
 			System.out.println("Password1: "+password + " Password2: " + password2);
 			session.setAttribute("error_code_registro", "Introduce passwords iguales");
 			resp.sendRedirect("registro");
 			
-		} else if(nombre.equals("") || apellidos.equals("") || password.equals("") || password2.equals("") || email.equals("")){
-			
+		} else if(nombre.equals("") || apellidos.equals("") || password.equals("") || password2.equals("") 
+					|| email.equals("")	|| tipoUser.equals("")){
 			session.setAttribute("error_code_registro", "Rellena todos los campos");
 			resp.sendRedirect("registro");
 			
+		}else if (!email.matches("[-\\w\\.]+@\\w+\\.\\w+") ){
+			session.setAttribute("error_code_registro", "mail no valido");
+			resp.sendRedirect("registro");
+			
 		}else{
-		
-			boolean result = dao.createUser(nombre, apellidos, passCifrado, email);
+			boolean result = dao.createUser(nombre, apellidos, tipoUser, passCifrado, email);
 			
 			if (result) {
 				session.setAttribute("error_code_registro", "");

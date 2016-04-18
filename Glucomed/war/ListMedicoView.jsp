@@ -32,16 +32,15 @@
 				Introducir</a> 
 			<a href="viewData" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-				class="only-movil" /> 
-				Historial</a> 
+				class="only-movil" /> Historial</a> 
 			<a href="listMedico" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-				class="only-movil" /> 
-				Medico</a>
-				
-			<!--  <a href="#" class="boton-menu"><span
+				class="only-movil" /> Medicos</a> 
+			<!--   
+			<a href="#" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-cog small"></i></span><br
-				class="only-movil" /> Config. </a> 	-->
+				class="only-movil" /> Config. </a> 
+			-->
 			<a href="salir" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
 				class="only-movil" /> Logout</a>
@@ -59,7 +58,7 @@
 		    	<img class="image-header only-screen" src="img/logo-screen.png" />
     		</div>
 		
-		    <div class="caja-titulo col-12"><span class="titulo">Historial de Datos</span></div>
+		    <div class="caja-titulo col-12"><span class="titulo">Listado de Medicos</span></div>
 		    
 		    <div class="section col-12">
 		    <!-- ==========AQUI VA TODO======== -->
@@ -73,15 +72,15 @@
 							<td>Usuario: <c:out value = "${email}"/></td>
 						</tr> -->
 			            <tr>             
-							<td><strong>Fecha</strong></td>
-							<td><strong>Hora</strong></td>
-							<td><strong>Valor</strong></td>
+							<td><strong>Nombre</strong></td>
+							<td><strong>Apellidos</strong></td>
+							<td><strong>Mail</strong></td>
 			            </tr>
 					</thead>
 		
 					<tbody id="myTable">
 					
-						<c:forEach items="${pacienteDatos}" var="datos">
+						<c:forEach items="${medicoDatos}" var="datos">
 							<tr>
 								<td> <c:out value = "${datos.fecha}"/> </td>
 								<td> <c:out value = "${datos.hora}"/> </td>

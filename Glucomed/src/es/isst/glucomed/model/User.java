@@ -11,13 +11,15 @@ public class User implements Serializable {
 	@Id
 	private String nombre;
 	private String apellidos;
+	private String tipoUser;
 	private String password;
 	private String email;
 		
-public User (String nombre, String apellidos, String password, String email) {
+public User (String nombre, String apellidos, String tipoUser, String password, String email) {
 	
 	this.nombre=nombre;
 	this.apellidos=apellidos;
+	this.tipoUser = tipoUser;
 	this.password=password;
 	this.email=email;
 	
@@ -37,6 +39,14 @@ public String getApellidos() {
 
 public void setApellidos(String apellidos) {
 	this.apellidos = apellidos;
+}
+
+public String getTipoUser() {
+	return tipoUser;
+}
+
+public void setTipoUser (String tipoUser){
+	this.nombre = tipoUser;
 }
 
 public String getPassword() {

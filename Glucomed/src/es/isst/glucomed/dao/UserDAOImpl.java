@@ -1,8 +1,10 @@
 package es.isst.glucomed.dao;
 
-import javax.persistence.EntityManager;
+import java.util.List;
+
 import javax.persistence.*;
 
+import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
 public class UserDAOImpl implements UserDAO{
@@ -17,10 +19,10 @@ public class UserDAOImpl implements UserDAO{
 		return instance;
 	}
 	
-	public boolean createUser(String nombre, String apellidos, String password, String email) { 
+	public boolean createUser(String nombre, String apellidos, String tipoUser, String password, String email) { 
 				
 		EntityManager em = EMFService.get().createEntityManager();
-		User u = new User (nombre, apellidos, password, email);
+		User u = new User (nombre, apellidos, tipoUser, password, email);
 		boolean testUser = SuccessRegister (email);
 		boolean resultado;
 		//boolean testUser = false;
@@ -62,6 +64,17 @@ public class UserDAOImpl implements UserDAO{
 		} else {
 			return true; //si alguno de los dos campos esta relleno devuelve true
 		}
+	}
+
+	public List<User> viewMedico(String medico) {
+		
+		//String tipoUser = User.getTipoUser();
+					//hay que usar el email para filtrar en la query
+			EntityManager em = EMFService.get().createEntityManager();
+			Query q = em.createQuery("select m " + "from User m " + "where m.tipoUser LIKE '" + medico + "%'");
+			List<User> res = q.getResultList();
+			em.close();
+			return res;
 	}
 		
 	

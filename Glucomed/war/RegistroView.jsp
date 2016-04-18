@@ -28,8 +28,20 @@
 				
 					<p class="input-titulo">Nombre: <br><input type="text" name="nombre" value="" placeholder="Nombre"> </p>
 					<p class="input-titulo">Apellidos: <br><input type="text" name="apellidos" value="" placeholder="Apellidos"></p>
+					<p class="input-titulo">Tipo de usuario: <br>
+					<select type="text" name="tipoUser">
+    					<option value="Médico">Médico</option>
+    					<option value="Paciente">Paciente</option>
+    					</select>
+  
+  <!--
+					 <datalist id="tipoUser">
+    					<option value="Médico">
+    					<option value="Paciente">
+    				</datalist>
+
         
-					<!--   <p>Fecha de nacimiento: <input type="text" name="fecha" placeholder="dd/mm/aaaa"></input></p>
+					   <p>Fecha de nacimiento: <input type="text" name="fecha" placeholder="dd/mm/aaaa"></input></p>
 					<p>Tipo de usuario: <input type="text" name="usuario" placeholder="Médico/Paciente"></input></p>-->
         
 					<p class="input-titulo">Correo electrónico: <br><input type="text" name="email" value="" placeholder="ejemplo@ejemplo.com"></p>
