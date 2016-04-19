@@ -173,6 +173,7 @@ input {
 select {
   font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
   font-size: 12px;
+  width: 300px;
 }
 .input-titulo {
   padding: 0% 0% 0% 8%;

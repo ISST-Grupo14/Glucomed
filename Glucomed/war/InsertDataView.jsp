@@ -37,6 +37,11 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medico</a>
+			<a href="descagar" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Descargar csv</a>
+				
 			<!--   
 			<a href="#" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-cog small"></i></span><br

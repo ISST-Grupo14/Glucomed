@@ -32,10 +32,17 @@
 				Introducir</a> 
 			<a href="viewData" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-				class="only-movil" /> Historial</a> 
+				class="only-movil" /> 
+				Historial</a> 
 			<a href="listMedico" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-				class="only-movil" /> Medicos</a> 
+				class="only-movil" /> 
+				Medicos</a> 
+			<a href="descagar" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Descargar csv</a>
+				
 			<!--   
 			<a href="#" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-cog small"></i></span><br

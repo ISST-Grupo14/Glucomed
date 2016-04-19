@@ -12,12 +12,15 @@
 	<link rel='stylesheet' href='css/dashboardStyle.css'/>
    	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no" />
+	
+	<script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/download.js"></script>
 
 </head>
 
 <body>
 
-<!-- ========= MENU ======== -->
+	<!-- ========= MENU ======== -->
 	<div class="menu">
 		<div class="container">
 			<a href="dashboard" class="boton-menu"><span class="only-movil"><i
@@ -29,69 +32,57 @@
 				Introducir</a> 
 			<a href="viewData" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
-				class="only-movil" /> Historial</a> 
+				class="only-movil" /> 
+				Historial</a> 
 			<a href="listMedico" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
-				Medico</a> 
+				Medico</a>
 			<a href="descargar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>
 				
-			<!--   
-			<a href="#" class="boton-menu"><span
+			<!--  <a href="#" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-cog small"></i></span><br
-				class="only-movil" /> Config. </a> 
-			-->
+				class="only-movil" /> Config. </a> 	-->
 			<a href="salir" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
 				class="only-movil" /> Logout</a>
 		</div>
 	</div>
 
-<!-- ========= CONTENEDOR ======== -->
-
-	<div class="container">
-		<div class="container-tabla">
-
-			<!-- ========= BANNER ======== -->
-			<div class="header">
-		    	<img class="image-header only-movil" src="img/logo-movil.png" />
-		    	<img class="image-header only-screen" src="img/logo-screen.png" />
-    		</div>
+	<!-- =========FIN MENU ======== -->
 		
-		    <div class="caja-titulo col-12"><span class="titulo">Dashboard</span></div>
+	  
+			    <div class="caja-titulo col-12"><span class="titulo">Historial de Datos</span></div>
 		    
 		    <div class="section col-12">
 		    <!-- ==========AQUI VA TODO======== -->
-		    	<div class="col-4"></div>
-		    
-		    	<div class="col-4">
+		    	<div class="col-4 view-data"></div>
 		    	
-		    	<h1 style="text-align:center; color:#253A7A">Bienvenido a: </h1>
-				
-				<img alt="" src="img/logo.png" style="width:100%;">
-		    	</div>
-		    	
-			<!-- ==========FIN AQUI VA TODO======== -->
-		    </div>
+		    	<div class="col-4 view-data">
 
-		
-		    <div class='col-12 paginacion'>
-		    <!-- ========= PAGINACION ======== -->
-		    <!-- ========= FIN PAGINACION ======== -->
-		    </div>
-		
-		    <div class="footer col-12">
+		<h2>Type the data you want to save as csv:</h2>
+
+		<form name="csv_form" method="post" action="descargar">
+			<textarea name="csv_data"cols="80" rows="10"></textarea>
+			<br>
+			Filename:<input type="text" name="file_name" value="data.csv"/>
+			<br>
+			<input type="submit"> </input>
+		</form>
+	</div>
+	</div>
+	<!--  
+		<h2>Test Simulating a hidden form with jQuery</h2>
+		<input type="button" value="Using Hidden Form" id="xx"></input>
+	-->
+	
+	<div class="footer col-12">
 				<p></p>
 		    </div>
-		
-		  
-		</div>
-	</div>
-		
-		    	
+ 	
 
 </body>
 
