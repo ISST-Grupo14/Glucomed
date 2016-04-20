@@ -15,6 +15,7 @@ import es.isst.glucomed.dao.PacienteDAO;
 import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.model.Paciente;
 
+
 @SuppressWarnings("serial")
 public class ViewDataServlet extends HttpServlet {
 

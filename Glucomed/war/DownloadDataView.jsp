@@ -65,8 +65,8 @@
 
 		<h2>Type the data you want to save as csv:</h2>
 
-		<form name="csv_form" method="post" action="descargar">
-			<textarea name="csv_data"cols="80" rows="10"></textarea>
+		<form name="csv_form" method="post" action="csv.jsp">
+			<textarea name="csv_data" cols="80" rows="10"></textarea>
 			<br>
 			Filename:<input type="text" name="file_name" value="data.csv"/>
 			<br>

@@ -38,7 +38,7 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medicos</a> 
-			<a href="descagar" class="boton-menu"><span
+			<a href="guardar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>

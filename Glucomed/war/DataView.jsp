@@ -38,7 +38,7 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medico</a>
-					<a href="descargar" class="boton-menu"><span
+					<a href="guardar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>
@@ -95,10 +95,16 @@
 					
 					</tbody>
 		        </table>
-		        
+		       		<p class="submit">
+		       		<br>
+		       		<input type="button" value="Guardar" onclick="window.location.href = 'csv.jsp';"/> 
+		   			<input type="button" name="commit" value="Subir" >
+		   			 </p>
+		       			
 		    	</div>
 				
 			<!-- ==========FIN AQUI VA TODO======== -->
+			
 		    </div>
 
 		

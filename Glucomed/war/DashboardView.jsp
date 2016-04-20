@@ -34,7 +34,7 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medico</a> 
-			<a href="descargar" class="boton-menu"><span
+			<a href="DownloadDataView.jsp" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>
