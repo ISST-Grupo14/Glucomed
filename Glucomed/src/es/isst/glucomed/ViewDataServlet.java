@@ -47,6 +47,7 @@ public class ViewDataServlet extends HttpServlet {
 		String emailSession = (String) session.getAttribute("email");
 		
 		List<Paciente> pacienteDatos = dao.viewData(emailSession);
+		System.out.println(pacienteDatos);
 
 		session.setAttribute( "pacienteDatos" , new ArrayList<Paciente>( pacienteDatos ));
 	

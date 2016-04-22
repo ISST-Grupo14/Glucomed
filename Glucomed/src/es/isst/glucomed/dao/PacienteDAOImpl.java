@@ -38,6 +38,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 		//hay que usar el email para filtrar en la query
 		EntityManager em = EMFService.get().createEntityManager();
 		Query q = em.createQuery("select m " + "from Paciente m " + "where m.email LIKE '" + email + "%'");
+		System.out.println(q);
 		List<Paciente> res = q.getResultList();
 		em.close();
 		return res;

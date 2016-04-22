@@ -48,13 +48,16 @@ public class ListMedicoServlet extends HttpServlet {
 		//==================================================
 	
 		//HttpSession session = req.getSession();
+		System.out.println("tipoUser");
+		
 		UserDAO dao = UserDAOImpl.getInstance();
 		
-		String medico = "medico";
+	
 		
-		List<User> viewMedico = dao.viewMedico(medico);
+		List<User> viewMedico = dao.viewMedico();
+		System.out.println(dao.viewMedico());
 		
-		session.setAttribute( "viewMedicos" , new ArrayList<User>( viewMedico ));
+		session.setAttribute( "viewMedico" , new ArrayList<User>( viewMedico ));
 	
 		RequestDispatcher view = req.getRequestDispatcher(url);
 		

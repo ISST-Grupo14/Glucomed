@@ -87,11 +87,11 @@
 		
 					<tbody id="myTable">
 					
-						<c:forEach items="${medicoDatos}" var="datos">
+						<c:forEach items="${viewMedico}" var="user">
 							<tr>
-								<td> <c:out value = "${datos.fecha}"/> </td>
-								<td> <c:out value = "${datos.hora}"/> </td>
-								<td> <c:out value = "${datos.valorGlucosa}"/> </td>
+								<td> <c:out value = "${user.nombre}"/> </td>
+								<td> <c:out value = "${user.apellidos}"/> </td>
+								<td> <c:out value = "${user.email}"/> </td>
 							</tr>
 						</c:forEach>
 					

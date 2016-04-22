@@ -79,7 +79,7 @@ public class RegisterServlet extends HttpServlet {
 		/*Habilitar este metodo si se quiere comprobar el cifrado de la contraseña
 		System.out.println("contraseña cifrada: "+ passCifrado);
 		*/
-				
+		System.out.println(tipoUser);		
 		if ( !password.equals(password2) ){
 			
 			System.out.println("Password1: "+password + " Password2: " + password2);

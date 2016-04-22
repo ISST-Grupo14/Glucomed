@@ -38,7 +38,7 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medico</a>
-			<a href="descargar" class="boton-menu"><span
+			<a href="guardar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>
@@ -66,7 +66,14 @@
 		<h2>Type the data you want to save as csv:</h2>
 
 		<form name="csv_form" method="post" action="csv.jsp">
-			<textarea name="csv_data" cols="80" rows="10"></textarea>
+			<textarea name="csv_data" cols="80" rows="10">		    	
+				                      
+			Fecha,Hora,Valor,
+			<c:forEach items="${pacienteDatos}" var="datos">
+			<c:out value = "${datos.fecha}"/>,<c:out value = "${datos.hora}"/>,<c:out value = "${datos.valorGlucosa}"/> 
+			</c:forEach>
+							
+			</textarea>
 			<br>
 			Filename:<input type="text" name="file_name" value="data.csv"/>
 			<br>

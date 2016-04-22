@@ -66,12 +66,14 @@ public class UserDAOImpl implements UserDAO{
 		}
 	}
 
-	public List<User> viewMedico(String medico) {
+	public List<User> viewMedico() {
 		
 		//String tipoUser = User.getTipoUser();
 					//hay que usar el email para filtrar en la query
 			EntityManager em = EMFService.get().createEntityManager();
-			Query q = em.createQuery("select m " + "from User m " + "where m.tipoUser LIKE '" + medico + "%'");
+			
+			Query q = em.createQuery("select m " + "from User m " + "where m.tipoUser LIKE '" + "medico" + "%'");
+			System.out.println(q);
 			List<User> res = q.getResultList();
 			em.close();
 			return res;

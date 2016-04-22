@@ -3,6 +3,8 @@ package es.isst.glucomed;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,5 +28,15 @@ public class DescargarServlet extends HttpServlet {
 			//System.out.println("logueado");
 			url = urlLogueado;
 		}
+		RequestDispatcher view = req.getRequestDispatcher(url);
+		try {
+			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
+			view.forward(req, resp);
+		} catch (ServletException e) {
+			
+			e.printStackTrace();
+				
+		}
 	}
-}
+	
+	}

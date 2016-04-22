@@ -30,8 +30,8 @@
 					<p class="input-titulo">Apellidos: <br><input type="text" name="apellidos" value="" placeholder="Apellidos"></p>
 					<p class="input-titulo">Tipo de usuario: <br>
 					<select type="text" name="tipoUser">
-    					<option value="Médico">Médico</option>
-    					<option value="Paciente">Paciente</option>
+    					<option value="medico">Médico</option>
+    					<option value="paciente">Paciente</option>
     					</select>
   
   <!--
@@ -41,7 +41,7 @@
     				</datalist>
 
         
-					   <p>Fecha de nacimiento: <input type="text" name="fecha" placeholder="dd/mm/aaaa"></input></p>
+				    <p>Fecha de nacimiento: <input type="text" name="fecha" placeholder="dd/mm/aaaa"></input></p>
 					<p>Tipo de usuario: <input type="text" name="usuario" placeholder="Médico/Paciente"></input></p>-->
         
 					<p class="input-titulo">Correo electrónico: <br><input type="text" name="email" value="" placeholder="ejemplo@ejemplo.com"></p>
