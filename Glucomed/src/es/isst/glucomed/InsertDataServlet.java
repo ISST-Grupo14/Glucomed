@@ -62,13 +62,32 @@ public class InsertDataServlet extends HttpServlet {
 		String fecha = req.getParameter("fecha");
 		String hora = req.getParameter("hora");
 		String valorGlucosa = req.getParameter("valorGlucosa");
-				
+		
+	
+		if(fecha.equals("") || hora.equals("") || valorGlucosa.equals("") ){
+		session.setAttribute("error_code_registro", "Rellena todos los campos");
+		resp.sendRedirect("insertData");
+		
+		} else if ( !fecha.matches("([0-9]{2}/[0-9]{2}/[0-9]{4})")) {
+			session.setAttribute("error_code_registro", "Introduce la fecha dd/mm/aaaa");
+			resp.sendRedirect("insertData");
+			
+		} else if ( !hora.matches("[0-9]{2}:[0-9]{2}")) {
+			session.setAttribute("error_code_registro", "Introduce la hora hh:mm");
+			resp.sendRedirect("insertData");
+		
+		} else if ( !valorGlucosa.matches("[0-9]+")) {
+			session.setAttribute("error_code_registro", "introduce un valor correcto");
+			resp.sendRedirect("insertData");
+			
+		
+		}else{
+		
 		dao.insertData(email, fecha, hora, valorGlucosa);
 		//System.out.println(emailSession + " " + fecha + " " + hora + " " + valorGlucosa);
 		
 		resp.sendRedirect("dashboard");
 
 	}
-	
-	
+}	
 }

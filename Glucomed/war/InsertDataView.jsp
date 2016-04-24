@@ -73,13 +73,16 @@
 		    
 		    	<div class="col-4">
 		    	<form method="post" action="insertData">
-		        	<p class="input-titulo"><input type="text" name="fecha" value="" placeholder="Fecha"></p>
-					<p class="input-titulo"><input type="text" name="hora" value="" placeholder="Hora"></p>
-					<p class="input-titulo"><input type="text" name="valorGlucosa" value="" placeholder="valorGlucosa"></p>
+		        	<p class="input-titulo"> Fecha:<input type="text" name="fecha" value="" placeholder="dd/mm/aaaa"></p>
+					<p class="input-titulo"> Hora: <input type="text" name="hora" value="" placeholder="hh:mm"></p>
+					<p class="input-titulo"> Valor(mg/l): <input type="text" name="valorGlucosa" value="" placeholder="105"></p>
 		        	<p class="submit">
 		        		<input type="submit" name="commit" value="Aceptar">
 		        		<input type="button" name="commit" value="Volver" onClick="history.go(-1);return true;">
 	        		</p>
+	        		<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
+						<c:out value = "${error_code_registro}" /> 
+					</p>
 		    	</form>
 		    	</div>
 				
