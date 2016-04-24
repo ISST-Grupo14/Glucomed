@@ -32,15 +32,9 @@
 					<select type="text" name="tipoUser">
     					<option value="medico">Médico</option>
     					<option value="paciente">Paciente</option>
-    					</select>
+    				</select></p>
   
-  <!--
-					 <datalist id="tipoUser">
-    					<option value="Médico">
-    					<option value="Paciente">
-    				</datalist>
-
-        
+  <!--        
 				    <p>Fecha de nacimiento: <input type="text" name="fecha" placeholder="dd/mm/aaaa"></input></p>
 					<p>Tipo de usuario: <input type="text" name="usuario" placeholder="Médico/Paciente"></input></p>-->
         
