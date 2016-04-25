@@ -97,7 +97,16 @@
 					
 					</tbody>
 		        </table>
-		        
+		        <br>
+		        <form method="post" action="listMedico">
+					<p class="input-titulo"> Medico:<input type="text" name="MedicoMail" value="" placeholder="medio@mail.com"></p>
+					<p class="submit">
+						<input type="submit" name="commit" value="Aceptar">
+					</p>
+					<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
+						<c:out value = "${error_code_registro}" /> 
+					</p>
+				</form>
 		    	</div>
 				
 			<!-- ==========FIN AQUI VA TODO======== -->

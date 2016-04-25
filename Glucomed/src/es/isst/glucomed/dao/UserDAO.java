@@ -11,5 +11,7 @@ public interface UserDAO {
 	public boolean SuccessLogin (String email, String password);
 	public boolean SuccessRegister (String email);
 	public List<User> viewMedico();
+	public List<User> viewUser();
+	public void addMedico(String medicoMail, String emailSession);
 
 }

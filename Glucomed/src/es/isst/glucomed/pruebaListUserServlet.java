@@ -1,5 +1,6 @@
 package es.isst.glucomed;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,21 +16,14 @@ import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
 import es.isst.glucomed.model.User;
 
-
-
-
 @SuppressWarnings("serial")
-public class ListMedicoServlet extends HttpServlet {
-
-	public ListMedicoServlet() {
-		// TODO Auto-generated constructor stub
-	}
+public class pruebaListUserServlet extends HttpServlet{
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		
 		HttpSession session = req.getSession();
-		String urlLogueado="ListMedicoView.jsp";
+		String urlLogueado="PruebaUser.jsp";
 		String urlNoLogueado="LoginView.jsp";
 		String url="";
 		//String email = (String) session.getAttribute("email");
@@ -46,9 +40,9 @@ public class ListMedicoServlet extends HttpServlet {
 
 		UserDAO dao = UserDAOImpl.getInstance();
 			
-		List<User> viewMedico = dao.viewMedico();
+		List<User> viewUser = dao.viewUser();
 			
-		session.setAttribute( "viewMedico" , new ArrayList<User>( viewMedico ));
+		session.setAttribute( "viewUser" , new ArrayList<User>( viewUser ));
 	
 		RequestDispatcher view = req.getRequestDispatcher(url);
 		
@@ -62,38 +56,4 @@ public class ListMedicoServlet extends HttpServlet {
 		}
 
 	}
-	
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
-		
-		UserDAO dao = UserDAOImpl.getInstance();
-		HttpSession session = req.getSession();
-	
-		String medicoMail = req.getParameter("MedicoMail");
-		String emailSession = (String) session.getAttribute("email");
-		
-		if(medicoMail.equals("")||!medicoMail.matches("[-\\w\\.]+@\\w+\\.\\w+")){
-			session.setAttribute("error_code_registro", "Elige un médico de la lista");
-			resp.sendRedirect("listMedico");
-		}
-	
-		else{
-			
-			 dao.addMedico(medicoMail, emailSession);
-			 resp.sendRedirect("/pruebaUser");
-			/*	
-			if (result) {
-				session.setAttribute("error_code_registro", "");
-				resp.sendRedirect("dashboard");
-			} else {
-				session.setAttribute("error_code_registro", "Error en la elección de medico");
-				resp.sendRedirect("listMedico");
-				//resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
-			}
-		}
-		
-		*/
-			 }
-		}
-
 }

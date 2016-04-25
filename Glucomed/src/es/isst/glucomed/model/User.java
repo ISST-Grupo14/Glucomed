@@ -14,15 +14,16 @@ public class User implements Serializable {
 	private String tipoUser;
 	private String password;
 	private String email;
+	private String medicoAsociado;
 		
-public User (String nombre, String apellidos, String tipoUser, String password, String email) {
-	
+public User (String nombre, String apellidos, String tipoUser, String password, String email){
 	this.nombre=nombre;
 	this.apellidos=apellidos;
 	this.tipoUser = tipoUser;
 	this.password=password;
 	this.email=email;
-	
+	this.medicoAsociado = " Sin asignar";
+		
 }
 
 public String getNombre() {
@@ -65,4 +66,11 @@ public void setEmail(String email) {
 	this.email = email;
 }
 
+public void setmedicoAsociado(String medicoAsociado) {
+	this.medicoAsociado = medicoAsociado ;
+}
+
+public String getmedicoAsociado() {
+	return medicoAsociado;
+}
 }
