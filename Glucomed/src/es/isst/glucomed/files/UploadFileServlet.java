@@ -15,6 +15,9 @@ import com.google.appengine.api.blobstore.BlobKey;
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 
+import es.isst.glucomed.dao.UserDAO;
+import es.isst.glucomed.dao.UserDAOImpl;
+
 public class UploadFileServlet extends HttpServlet {
     private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 
@@ -30,7 +33,7 @@ public class UploadFileServlet extends HttpServlet {
 		String urlNoLogueado="LoginView.jsp";
 		String url="";
 		if(session.getAttribute("email") == null){
-			url = urlLogueado;
+			url = urlNoLogueado;
 		}else{
 			url = urlLogueado;
 		}
@@ -51,13 +54,21 @@ public class UploadFileServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)
         throws ServletException, IOException {
 
+    	UserDAO dao = UserDAOImpl.getInstance();
+    	HttpSession session = req.getSession();
+    	String email = (String) session.getAttribute("email");
+    	
         Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(req);
         List<BlobKey> blobKeys = blobs.get("myFile");
+        
 
         if (blobKeys == null || blobKeys.isEmpty()) {
             res.sendRedirect("/");
         } else {
-            res.sendRedirect("/successupload?blob-key=" + blobKeys.get(0).getKeyString());
+        	String blob = blobKeys.get(0).getKeyString();
+        	System.out.println(blob);
+        	dao.addFilePath(email, blob);
+            res.sendRedirect("/successupload?blob-key=" + blob);
         }
     }
 }

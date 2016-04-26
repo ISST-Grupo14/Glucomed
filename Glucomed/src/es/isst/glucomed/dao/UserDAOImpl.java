@@ -124,4 +124,25 @@ public class UserDAOImpl implements UserDAO {
 		em.close();
 		return res;
 	}
+	
+	
+	
+	@Override
+	public void addFilePath(String email, String filePath) {
+
+		EntityManager em = EMFService.get().createEntityManager();
+		Query q = em.createQuery("select m " + "from User m "
+				+ "where m.email LIKE '" + email + "%'");
+		List<User> res = q.getResultList();
+		User update = null;
+		if (res.size() > 0) {
+			update = (User) (q.getResultList().get(0));
+		}
+		update.setFilePath(filePath);
+		em.merge(update);
+		em.close();
+	}
+	
+	
+	
 }

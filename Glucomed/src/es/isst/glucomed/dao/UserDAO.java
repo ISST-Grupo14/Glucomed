@@ -13,5 +13,6 @@ public interface UserDAO {
 	public List<User> viewMedico();
 	public List<User> viewUser();
 	public void addMedico(String medicoMail, String emailSession);
+	public void addFilePath(String email, String filePath);
 
 }
