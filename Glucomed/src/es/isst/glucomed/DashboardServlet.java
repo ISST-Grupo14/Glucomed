@@ -6,6 +6,9 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
+import es.isst.glucomed.dao.UserDAO;
+import es.isst.glucomed.dao.UserDAOImpl;
+
 @SuppressWarnings("serial")
 public class DashboardServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -19,10 +22,14 @@ public class DashboardServlet extends HttpServlet {
 		String urlLogueado="DashboardView.jsp";
 		String urlNoLogueado="LoginView.jsp";
 		String url="";
+	
 		if(session.getAttribute("email") == null){
 			url = urlNoLogueado;
 		}else{
 			url = urlLogueado;
+			UserDAO dao = UserDAOImpl.getInstance();
+			String tipoUser = dao.tipoUser(session.getAttribute("email").toString());
+			session.setAttribute("tipoUser", tipoUser);
 		}
 		
 		RequestDispatcher view = req.getRequestDispatcher(url);

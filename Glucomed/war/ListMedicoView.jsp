@@ -27,6 +27,15 @@
 					class="fa fa-align-left small"></i></span><br class="only-movil" />
 				Inicio</a>
 			<!-- fa fa-align-left fa fa-home-->
+			<c:if test="${'medico' == tipoUser}">
+									
+			<a href="listMedico" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Pacientes</a> 
+			</c:if>	
+			
+			<c:if test="${'paciente' == tipoUser}">
 			<a href="insertData" class="boton-menu"><span class="only-movil"><i
 					class="fa fa-pencil-square-o small"></i></span><br class="only-movil" />
 				Introducir</a> 
@@ -34,10 +43,13 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Historial</a> 
+						
 			<a href="listMedico" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medicos</a> 
+			</c:if>	
+			
 			<a href="guardar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
@@ -65,14 +77,27 @@
 		    	<img class="image-header only-screen" src="img/logo-screen.png" />
     		</div>
 		
+	<!-- devuelven false no se el motivo -->
+			
+		
+		<c:if test="${tipoUser  == 'paciente' }">
+		
 		    <div class="caja-titulo col-12"><span class="titulo">Listado de Medicos</span></div>
 		    
+		</c:if>
+
+		<c:if test="${'medico' == tipoUser}">
+		
+		    <div class="caja-titulo col-12"><span class="titulo">Listado de Pacientes</span></div>
+		</c:if>    
+		  
 		    <div class="section col-12">
 		    <!-- ==========AQUI VA TODO======== -->
 		    	<div class="col-4 view-data"></div>
 		    	
 		    	<div class="col-4 view-data">
 		    	
+		
 		    	<table>
 					<thead>
 						<!--  <tr>
@@ -98,15 +123,31 @@
 					</tbody>
 		        </table>
 		        <br>
-		        <form method="post" action="listMedico">
-					<p class="input-titulo"> Medico:<input type="text" name="MedicoMail" value="" placeholder="medio@mail.com"></p>
+		        <c:if test="${tipoUser  == 'paciente' }">
+		       	 <form method="post" action="listMedico">
+					<p class="input-titulo"> Medico:<input type="text" name="MedicoMail" value="" placeholder="medico@mail.com"></p>
 					<p class="submit">
 						<input type="submit" name="commit" value="Aceptar">
 					</p>
 					<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
 						<c:out value = "${error_code_registro}" /> 
 					</p>
+				
 				</form>
+				</c:if>
+				
+	     		<c:if test="${tipoUser  == 'medico'}">
+		       	 <form method="post" action="listMedico">
+					<p class="input-titulo">Paciente:<input type="text" name="PacienteMail" value="" placeholder="paciente@mail.com"></p>
+					<p class="submit">
+						<input type="submit" name="commit" value="Aceptar">
+					</p>
+					<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
+						<c:out value = "${error_code_registro}" /> 
+					</p>	
+				</form>
+				</c:if>
+				
 		    	</div>
 				
 			<!-- ==========FIN AQUI VA TODO======== -->

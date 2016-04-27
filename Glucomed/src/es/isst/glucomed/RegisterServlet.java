@@ -17,7 +17,6 @@ import es.isst.glucomed.utilities.Utilities;
 @SuppressWarnings("serial")
 public class RegisterServlet extends HttpServlet {
 	
-	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
@@ -46,20 +45,14 @@ public class RegisterServlet extends HttpServlet {
 		
 		RequestDispatcher view = req.getRequestDispatcher(url);
 		
-		
 		try {
 			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
 		view.forward(req, resp);
 		} catch (ServletException e) {
 			
-			e.printStackTrace();
-				
+			e.printStackTrace();	
 		}
-
 	}
-	
-	
-	
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {

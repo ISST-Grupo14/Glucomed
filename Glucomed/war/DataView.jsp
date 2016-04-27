@@ -27,6 +27,15 @@
 					class="fa fa-align-left small"></i></span><br class="only-movil" />
 				Inicio</a>
 			<!-- fa fa-align-left fa fa-home-->
+			
+		<c:if test="${'medico' == tipoUser}">
+			<a href="listMedico" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Pacientes</a> 
+			</c:if>	
+			
+			<c:if test="${'paciente' == tipoUser}">
 			<a href="insertData" class="boton-menu"><span class="only-movil"><i
 					class="fa fa-pencil-square-o small"></i></span><br class="only-movil" />
 				Introducir</a> 
@@ -34,14 +43,18 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Historial</a> 
+						
 			<a href="listMedico" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
-				Medico</a>
-					<a href="guardar" class="boton-menu"><span
+				Medicos</a> 
+			</c:if>	
+			
+			<a href="guardar" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Descargar csv</a>
+				
 				
 			<!--  <a href="#" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-cog small"></i></span><br

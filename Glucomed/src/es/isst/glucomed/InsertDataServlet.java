@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 
 import es.isst.glucomed.dao.PacienteDAO;
 import es.isst.glucomed.dao.PacienteDAOImpl;
+import es.isst.glucomed.dao.UserDAO;
+import es.isst.glucomed.dao.UserDAOImpl;
 
 @SuppressWarnings("serial")
 public class InsertDataServlet extends HttpServlet {
