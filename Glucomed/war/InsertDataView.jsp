@@ -2,6 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
+ 
+<%
+BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+%>
+
 <!DOCTYPE html>
 
 <html>
@@ -80,12 +87,16 @@
 		        		<input type="submit" name="commit" value="Aceptar">
 		        		<input type="button" name="commit" value="Volver" onClick="history.go(-1);return true;">
 	        		</p>
+	        							
 	        		<p class="login-forgot" style="font-size:18px; font-family:Arial; font-weight:bold; color:#ff0000;"> 
 						<c:out value = "${error_code_registro}" /> 
 					</p>
 		    	</form>
 		    	</div>
-				
+		    	
+		    	<!-- ==========FIN AQUI VA TODO======== -->
+		    	
+		    					
 			<!-- ==========FIN AQUI VA TODO======== -->
 		    </div>
 
