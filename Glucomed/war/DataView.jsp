@@ -99,7 +99,7 @@
 		       		<br>
 		       		
 		       		<input type="button" value="Guardar" onclick="window.location.href = 'saveFile.jsp';"/> 
-		   			<input type="button" name="commit" value="Subir" onclick="window.location.href = 'uploadFile.jsp';"/ >
+		   			<input type="button" name="commit" value="Subir" onclick="window.location.href = '/upload';"/ >
 		   			 </p>
 		       			
 		    	</div>
