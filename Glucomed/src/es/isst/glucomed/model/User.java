@@ -15,6 +15,7 @@ public class User implements Serializable {
 	private String password;
 	private String email;
 	private String medicoAsociado;
+	private String filePath;
 		
 public User (String nombre, String apellidos, String tipoUser, String password, String email){
 	this.nombre=nombre;
@@ -23,6 +24,7 @@ public User (String nombre, String apellidos, String tipoUser, String password, 
 	this.password=password;
 	this.email=email;
 	this.medicoAsociado = " Sin asignar";
+	this.setFilePath("");
 		
 }
 
@@ -72,5 +74,13 @@ public void setmedicoAsociado(String medicoAsociado) {
 
 public String getmedicoAsociado() {
 	return medicoAsociado;
+}
+
+public String getFilePath() {
+	return filePath;
+}
+
+public void setFilePath(String filePath) {
+	this.filePath = filePath;
 }
 }

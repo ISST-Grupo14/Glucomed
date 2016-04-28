@@ -12,7 +12,8 @@ public interface UserDAO {
 	public boolean SuccessRegister (String email);
 	public List<User> viewMedico(String email);
 	public List<User> viewUser();
-	public boolean addMedico(String medicoMail, String emailSession);
 	public String tipoUser(String email) ;
-
+	public boolean addMedico(String medicoMail, String emailSession);
+	public void addFilePath(String email, String filePath);
+	
 }
