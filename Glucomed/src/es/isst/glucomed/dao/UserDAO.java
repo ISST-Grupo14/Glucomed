@@ -15,5 +15,6 @@ public interface UserDAO {
 	public String tipoUser(String email) ;
 	public boolean addMedico(String medicoMail, String emailSession);
 	public void addFilePath(String email, String filePath);
+	public boolean viewDataFromMedico(String email, String emailPaciente);
 	
 }
