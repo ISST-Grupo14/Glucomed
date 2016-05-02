@@ -66,8 +66,9 @@ public class UploadFileServlet extends HttpServlet {
             res.sendRedirect("/");
         } else {
         	String blob = blobKeys.get(0).getKeyString();
-        	System.out.println(blob);
-        	dao.addFilePath(email, blob);
+        	//System.out.println(blob);
+        	dao.addBlobKey(email, blob);
+        	dao.readBlobKey(email);
             res.sendRedirect("/successupload?blob-key=" + blob);
         }
     }

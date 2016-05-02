@@ -50,8 +50,10 @@ public class UserDAOImpl implements UserDAO {
 		q.setParameter("email", email);
 
 		if (q.getResultList().isEmpty()) {
+			em.close();
 			return false;
 		} else {
+			em.close();
 			return true;
 		}
 	}
@@ -65,13 +67,15 @@ public class UserDAOImpl implements UserDAO {
 		q.setParameter("password", password);
 
 		if (q.getResultList().isEmpty()) {
+			em.close();
 			return false; // si no tiene ninguno de los dos campos devuelve
 							// false
-		} else {
-
+		}else{
+			em.close();
 			return true; // si alguno de los dos campos esta relleno devuelve
 							// true
 		}
+
 	}
 
 	public List<User> viewMedico(String email) {
@@ -109,6 +113,7 @@ public class UserDAOImpl implements UserDAO {
 		w.setParameter("email", medicoMail);
 		if (w.getResultList().isEmpty()) {
 			// El médico no esta en la lista o se introducido mal el mail
+			em.close();
 			return false;
 
 		} else {
@@ -148,6 +153,7 @@ public class UserDAOImpl implements UserDAO {
 				+ "  WHERE m.email = '" + email
 				+ "' AND m.tipoUser = 'paciente'");
 		List<User> res = q.getResultList();
+		em.close();
 
 		if (res.size() > 0) {
 			return "paciente";
@@ -157,19 +163,22 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public void addFilePath(String email, String filePath) {
-
+	public void addBlobKey(String email, String blobKey) {
 		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em.createQuery("select m " + "from User m "
-				+ "where m.email LIKE '" + email + "%'");
-		List<User> res = q.getResultList();
-		User update = null;
-		if (res.size() > 0) {
-			update = (User) (q.getResultList().get(0));
-		}
-		update.setFilePath(filePath);
+		User update = em.find(User.class, email);
+		update.setBlobKey(blobKey);
 		em.merge(update);
 		em.close();
+	}
+
+	@Override
+	public String readBlobKey(String email) {
+		EntityManager em = EMFService.get().createEntityManager();
+		User findKey = em.find(User.class, email);
+		String result = findKey.getBlobKey();
+		em.close();
+		System.out.println("Blob almacenada(metodo readFile): " + result);
+		return result;
 	}
 
 	public boolean viewDataFromMedico(String email, String emailPaciente) {
@@ -180,6 +189,7 @@ public class UserDAOImpl implements UserDAO {
 				+ "  WHERE m.email = '" + emailPaciente
 				+ "' AND m.medicoAsociado= '" + email + "'");
 		List<User> res = q.getResultList();
+		em.close();
 
 		if (res.size() > 0) { // medico autorizado
 			return true;

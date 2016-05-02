@@ -9,22 +9,23 @@ import javax.persistence.Id;
 public class User implements Serializable {
 	private static final long serialVersionUID = 01L;
 	@Id
+	private String email;
 	private String nombre;
 	private String apellidos;
 	private String tipoUser;
 	private String password;
-	private String email;
 	private String medicoAsociado;
-	private String filePath;
+	private String blobKey;
 		
-public User (String nombre, String apellidos, String tipoUser, String password, String email){
+public User (String nombre, String apellidos, String tipoUser,
+		String password, String email){
+	this.email=email;
 	this.nombre=nombre;
 	this.apellidos=apellidos;
 	this.tipoUser = tipoUser;
-	this.password=password;
-	this.email=email;
+	this.password = password;
 	this.medicoAsociado = " Sin asignar";
-	this.setFilePath("");
+	this.blobKey = "";
 		
 }
 
@@ -76,11 +77,11 @@ public String getmedicoAsociado() {
 	return medicoAsociado;
 }
 
-public String getFilePath() {
-	return filePath;
+public String getBlobKey() {
+	return blobKey;
 }
 
-public void setFilePath(String filePath) {
-	this.filePath = filePath;
+public void setBlobKey(String blobKey) {
+	this.blobKey = blobKey;
 }
 }

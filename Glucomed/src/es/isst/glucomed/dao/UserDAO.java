@@ -14,7 +14,8 @@ public interface UserDAO {
 	public List<User> viewUser();
 	public String tipoUser(String email) ;
 	public boolean addMedico(String medicoMail, String emailSession);
-	public void addFilePath(String email, String filePath);
+	public void addBlobKey(String email, String blobKey);
 	public boolean viewDataFromMedico(String email, String emailPaciente);
+	public String readBlobKey(String email);
 	
 }
