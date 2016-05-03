@@ -2,6 +2,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory"%>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreService"%>
+
+<% BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService(); %>
+
+<%@ page import="java.util.*" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -20,7 +27,8 @@
 
 <body>
 
-<!-- ========= MENU ======== -->
+	<!-- ========= MENU ======== -->
+
 	<div class="menu">
 		<div class="container">
 			<a href="dashboard" class="boton-menu"><span class="only-movil"><i
@@ -50,10 +58,10 @@
 				Medicos</a> 
 			</c:if>	
 			
-			<a href="guardar" class="boton-menu"><span
+			<a href="download" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
-				Descargar csv</a>
+				Descargar CSV</a>
 				
 				
 			<!--  <a href="#" class="boton-menu"><span
@@ -62,15 +70,19 @@
 			<a href="salir" class="boton-menu"><span
 				class="only-movil"><i class="fa fa fa-hand-spock-o small"></i></span><br
 				class="only-movil" /> Logout</a>
+				
 		</div>
+		
 	</div>
 
-<!-- ========= CONTENEDOR ======== -->
+	<!-- ========= CONTENEDOR ======== -->
 
 	<div class="container">
+	
 		<div class="container-tabla">
 
 			<!-- ========= BANNER ======== -->
+			
 			<div class="header">
 		    	<img class="image-header only-movil" src="img/logo-movil.png" />
 		    	<img class="image-header only-screen" src="img/logo-screen.png" />
@@ -79,7 +91,9 @@
 		    <div class="caja-titulo col-12"><span class="titulo">Historial de Datos</span></div>
 		    
 		    <div class="section col-12">
+		    
 		    <!-- ==========AQUI VA TODO======== -->
+		    
 		    	<div class="col-4 view-data"></div>
 		    	
 		    	<div class="col-4 view-data">
@@ -108,35 +122,50 @@
 					
 					</tbody>
 		        </table>
-		       		<p class="submit">
-		       		<br>
-		       		
-		       		<input type="button" value="Guardar" onclick="window.location.href = 'saveFile.jsp';"/> 
-		   			<input type="button" name="commit" value="Subir" onclick="window.location.href = '/upload';"/ >
-		   			 </p>
-		       			
+		        	
+	      			<p class="submit">
+	      				<br>
+	      				<input type="button" value="Guardar" onclick="window.location.href = 'saveFile.jsp';"/> 
+	  					<input type="button" name="commit" value="Subir" onclick="window.location.href = '/upload';"/ >
+		   				<input type="button" name="commit" value="Descargar CSV" onclick="window.location.href = '/guardar';"/ >
+				    </p>
+					    
+		        	<form action="<%= blobstoreService.createUploadUrl("/subir") %>" method="post" enctype="multipart/form-data">
+		        						    
+						<p class="submit">
+			       		<br>
+						<input type="file" name="myFile">
+						</p>
+						
+						<p class="submit">
+						<br>
+						<input type="submit" value="Subir CSV">
+						</p>
+						
+					</form>
+
 		    	</div>
 				
-			<!-- ==========FIN AQUI VA TODO======== -->
-			
+				<!-- ==========FIN AQUI VA TODO======== -->
+
 		    </div>
 
 		
 		    <div class='col-12 paginacion'>
-		    <!-- ========= PAGINACION ======== -->
-		    <ul class="pagination pagination-lg pager" id="myPager"></ul>
-		    <!-- ========= FIN PAGINACION ======== -->
+		    
+		    	<!-- ========= PAGINACION ======== -->
+		    	<ul class="pagination pagination-lg pager" id="myPager"></ul>
+		    	<!-- ========= FIN PAGINACION ======== -->
+		    	
 		    </div>
 		
 		    <div class="footer col-12">
 				<p></p>
-		    </div>
-		
-		  
+			</div>
+
 		</div>
-	</div>
 		
-		    	
+	</div>
 
 </body>
 

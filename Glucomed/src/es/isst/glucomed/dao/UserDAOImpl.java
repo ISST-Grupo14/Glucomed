@@ -85,6 +85,8 @@ public class UserDAOImpl implements UserDAO {
 		Query q = em.createQuery("SELECT m " + "FROM User m "
 				+ "  WHERE m.email = '" + email
 				+ "' AND m.tipoUser = 'paciente'");
+		
+		@SuppressWarnings("unchecked")
 		List<User> res = q.getResultList();
 
 		if (res.size() > 0) {
@@ -92,6 +94,8 @@ public class UserDAOImpl implements UserDAO {
 			// asi que mostramos medicos
 			Query w = em.createQuery("select m " + "from User m "
 					+ "where m.tipoUser LIKE '" + "medico" + "%'");
+			
+			@SuppressWarnings("unchecked")
 			List<User> result = w.getResultList();
 			em.close();
 			return result;
@@ -99,6 +103,8 @@ public class UserDAOImpl implements UserDAO {
 			// como es un medico mostramos los pacientes que tiene asignados
 			Query w = em.createQuery("select m " + "from User m "
 					+ "  WHERE m.medicoAsociado = '" + email + "'");
+			
+			@SuppressWarnings("unchecked")
 			List<User> result = w.getResultList();
 			em.close();
 			return result;
@@ -120,6 +126,8 @@ public class UserDAOImpl implements UserDAO {
 			// El medico esta registrado procedemos al cambio
 			Query q = em.createQuery("select m " + "from User m "
 					+ "where m.email LIKE '" + emailSession + "%'");
+			
+			@SuppressWarnings("unchecked")
 			List<User> res = q.getResultList();
 			User update = null;
 			if (res.size() > 0) {
@@ -140,6 +148,7 @@ public class UserDAOImpl implements UserDAO {
 
 		Query q = em.createQuery("select m " + "from User m "
 				+ "where m.tipoUser LIKE '" + "paciente" + "%'");
+		@SuppressWarnings("unchecked")
 		List<User> res = q.getResultList();
 		em.close();
 		return res;
@@ -152,6 +161,7 @@ public class UserDAOImpl implements UserDAO {
 		Query q = em.createQuery("SELECT m " + "FROM User m "
 				+ "  WHERE m.email = '" + email
 				+ "' AND m.tipoUser = 'paciente'");
+		@SuppressWarnings("unchecked")
 		List<User> res = q.getResultList();
 		em.close();
 
@@ -188,6 +198,7 @@ public class UserDAOImpl implements UserDAO {
 		Query q = em.createQuery("SELECT m " + "FROM User m "
 				+ "  WHERE m.email = '" + emailPaciente
 				+ "' AND m.medicoAsociado= '" + email + "'");
+		@SuppressWarnings("unchecked")
 		List<User> res = q.getResultList();
 		em.close();
 

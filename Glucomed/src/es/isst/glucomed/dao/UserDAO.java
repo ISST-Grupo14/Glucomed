@@ -2,7 +2,6 @@ package es.isst.glucomed.dao;
 
 import java.util.List;
 
-import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
 public interface UserDAO {

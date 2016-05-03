@@ -46,10 +46,10 @@
 				Medicos</a> 
 			</c:if>	
 			
-			<a href="guardar" class="boton-menu"><span
+			<a href="download" class="boton-menu"><span
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
-				Descargar csv</a>
+				Descargar CSV</a>
 				
 				
 			<a href="pruebaUser" class="boton-menu"><span

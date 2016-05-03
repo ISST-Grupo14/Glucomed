@@ -38,6 +38,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 		//hay que usar el email para filtrar en la query
 		EntityManager em = EMFService.get().createEntityManager();
 		Query q = em.createQuery("select m " + "from Paciente m " + "where m.email LIKE '" + email + "%'");
+		@SuppressWarnings("unchecked")
 		List<Paciente> res = q.getResultList();
 		em.close();
 		return res;
@@ -49,9 +50,21 @@ public class PacienteDAOImpl implements PacienteDAO {
 		//hay que usar el email para filtrar en la query
 		EntityManager em = EMFService.get().createEntityManager();
 		Query q = em.createQuery("select m " + "from Paciente m " + "where m.email LIKE '" + emailPaciente + "%'");
+		@SuppressWarnings("unchecked")
 		List<Paciente> res = q.getResultList();
 		em.close();
 		return res;
 	
 	}
+	
+	public void eliminarDatosPaciente (String email) {
+	
+		EntityManager em = EMFService.get().createEntityManager();
+		Query query = em.createQuery("DELETE FROM Paciente m WHERE m.email LIKE '" + email + "%'");
+		// int deletedCount = query.executeUpdate();
+		query.executeUpdate();
+		em.close();
+	
+	}
+	
 }	

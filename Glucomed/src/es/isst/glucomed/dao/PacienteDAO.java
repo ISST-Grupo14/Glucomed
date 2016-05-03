@@ -8,4 +8,5 @@ public interface PacienteDAO {
 	public boolean insertData (String email, String fecha, String hora, String valorGlucosa);
 	public List<Paciente> viewData(String email);
 	public List<Paciente> viewDataFromMedico(String emailMedico, String emailPaciente);
+	public void eliminarDatosPaciente (String email);
 }

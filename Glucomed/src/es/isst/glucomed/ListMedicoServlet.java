@@ -11,11 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import es.isst.glucomed.dao.PacienteDAO;
-import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
-import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
 @SuppressWarnings("serial")

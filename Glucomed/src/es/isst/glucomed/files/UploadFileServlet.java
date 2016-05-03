@@ -18,6 +18,7 @@ import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
 
+@SuppressWarnings("serial")
 public class UploadFileServlet extends HttpServlet {
     private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 

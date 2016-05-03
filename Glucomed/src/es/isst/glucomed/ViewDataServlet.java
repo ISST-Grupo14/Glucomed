@@ -50,20 +50,16 @@ public class ViewDataServlet extends HttpServlet {
 		String tipoUser = dao2.tipoUser(email);
 		session.setAttribute("tipoUser", tipoUser);
 
-		if (tipoUser == "paciente") {
+		String emailConsulta = email;
 
-			
-			List<Paciente> pacienteDatos = dao.viewData(email);
-			session.setAttribute("pacienteDatos", new ArrayList<Paciente>(
-					pacienteDatos));
-		}else{
+		if (tipoUser != "paciente") {
 			String emailPaciente = (String) session.getAttribute("emailPaciente");
-			List<Paciente> pacienteDatos = dao.viewData(emailPaciente);
+			emailConsulta = emailPaciente;
 			System.out.println(emailPaciente);
-			session.setAttribute("pacienteDatos", new ArrayList<Paciente>(
-					pacienteDatos));
-
 		}
+
+		List<Paciente> pacienteDatos = dao.viewData(emailConsulta);
+		session.setAttribute("pacienteDatos", new ArrayList<Paciente>(pacienteDatos));
 
 		RequestDispatcher view = req.getRequestDispatcher(url);
 

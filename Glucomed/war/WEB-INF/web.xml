@@ -68,12 +68,31 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</servlet-mapping>
 
 	<servlet>
+		<servlet-name>Download</servlet-name>
+		<servlet-class>es.isst.glucomed.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Download</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>Guardar</servlet-name>
 		<servlet-class>es.isst.glucomed.DescargarServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Guardar</servlet-name>
 		<url-pattern>/guardar</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Subir</servlet-name>
+		<servlet-class>es.isst.glucomed.SubirServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Subir</servlet-name>
+		<url-pattern>/subir</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

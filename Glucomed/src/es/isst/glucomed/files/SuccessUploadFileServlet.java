@@ -3,8 +3,6 @@ package es.isst.glucomed.files;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,13 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.appengine.api.blobstore.BlobKey;
 import com.google.appengine.api.blobstore.BlobstoreInputStream;
-import com.google.appengine.api.blobstore.BlobstoreService;
-import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 import com.opencsv.CSVReader;
 
+@SuppressWarnings("serial")
 public class SuccessUploadFileServlet extends HttpServlet {
-	private BlobstoreService blobstoreService = BlobstoreServiceFactory
-			.getBlobstoreService();
+	
+	// private BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
 
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse res)
