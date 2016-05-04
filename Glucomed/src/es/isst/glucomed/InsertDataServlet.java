@@ -67,7 +67,7 @@ public class InsertDataServlet extends HttpServlet {
 		session.setAttribute("error_code_registro", "Rellena todos los campos");
 		resp.sendRedirect("insertData");
 		
-		} else if ( !fecha.matches("([0-9]{2}/[0-9]{2}/[0-9]{4})")) {
+		} else if ( !fecha.matches("([0-9]{4}-[0-9]{2}-[0-9]{2})")) {
 			session.setAttribute("error_code_registro", "Introduce la fecha dd/mm/aaaa");
 			resp.sendRedirect("insertData");
 			

@@ -56,6 +56,11 @@
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medicos</a> 
+				
+			<a href="grafica" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Grafica</a>	
 			</c:if>	
 			
 			<a href="download" class="boton-menu"><span

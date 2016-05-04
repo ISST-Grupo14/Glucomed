@@ -67,7 +67,7 @@ public class DescargarServlet extends HttpServlet {
 				
 				Paciente paciente = pacienteDatos.get(i);
 
-				csv_string = csv_string + paciente.getEmail() + ",";
+				//csv_string = csv_string + paciente.getEmail() + ",";
 				csv_string = csv_string + paciente.getFecha() + ",";
 				csv_string = csv_string + paciente.getHora() + ",";
 				csv_string = csv_string + paciente.getValorGlucosa();

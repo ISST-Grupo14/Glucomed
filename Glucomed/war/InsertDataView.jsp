@@ -54,6 +54,11 @@ BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService(
 				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
 				class="only-movil" /> 
 				Medicos</a> 
+				
+			<a href="grafica" class="boton-menu"><span
+				class="only-movil"><i class="fa fa-area-chart small"></i></span><br
+				class="only-movil" /> 
+				Grafica</a>	
 			</c:if>	
 			
 			<a href="download" class="boton-menu"><span
@@ -93,7 +98,7 @@ BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService(
 		    
 		    	<div class="col-4">
 		    	<form method="post" action="insertData">
-		        	<p class="input-titulo"> Fecha:<input type="text" name="fecha" value="" placeholder="dd/mm/aaaa"></p>
+		        	<p class="input-titulo"> Fecha:<input type="text" name="fecha" value="" placeholder="aaaa-mm-dd"></p>
 					<p class="input-titulo"> Hora: <input type="text" name="hora" value="" placeholder="hh:mm"></p>
 					<p class="input-titulo"> Valor(mg/l): <input type="text" name="valorGlucosa" value="" placeholder="105"></p>
 		        	<p class="submit">
