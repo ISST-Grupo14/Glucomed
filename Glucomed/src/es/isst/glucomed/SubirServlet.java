@@ -6,8 +6,6 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +17,6 @@ import com.google.appengine.api.blobstore.BlobstoreInputStream;
 import com.google.appengine.api.blobstore.BlobstoreService;
 import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
 
-import es.isst.glucomed.dao.EMFService;
 import es.isst.glucomed.dao.PacienteDAO;
 import es.isst.glucomed.dao.PacienteDAOImpl;
 
@@ -110,6 +107,8 @@ public class SubirServlet extends HttpServlet {
 		        }
 		        
 		        reader.close();
+		        
+		        blobKeys.clear();
 		        
 		        resp.sendRedirect("/");
 	        

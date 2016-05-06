@@ -66,16 +66,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>ListMedico</servlet-name>
 		<url-pattern>/listMedico</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
-		<servlet-name>Download</servlet-name>
-		<servlet-class>es.isst.glucomed.DownloadServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Download</servlet-name>
-		<url-pattern>/download</url-pattern>
-	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>Guardar</servlet-name>
 		<servlet-class>es.isst.glucomed.DescargarServlet</servlet-class>
@@ -83,9 +73,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>Guardar</servlet-name>
 		<url-pattern>/guardar</url-pattern>
-	</servlet-mapping>
-	
-	
+	</servlet-mapping>	
 	<servlet>
 		<servlet-name>Subir</servlet-name>
 		<servlet-class>es.isst.glucomed.SubirServlet</servlet-class>
@@ -94,7 +82,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>Subir</servlet-name>
 		<url-pattern>/subir</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet>
 		<servlet-name>pruebaUser</servlet-name>
 		<servlet-class>es.isst.glucomed.pruebaListUserServlet</servlet-class>
@@ -103,52 +91,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>pruebaUser</servlet-name>
 		<url-pattern>/pruebaUser</url-pattern>
 	</servlet-mapping>
-
-
 	
-	
-	
-	
-	<!-- PARA UPLOAD FILES -->
-	
-	
-	
-	<servlet>
-		<servlet-name>UploadFileServlet</servlet-name>
-		<servlet-class>es.isst.glucomed.files.UploadFileServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UploadFileServlet</servlet-name>
-		<url-pattern>/upload</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>ServeFileServlet</servlet-name>
-		<servlet-class>es.isst.glucomed.files.ServeFileServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ServeFileServlet</servlet-name>
-		<url-pattern>/serve</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>SuccessUploadFileServlet</servlet-name>
-		<servlet-class>es.isst.glucomed.files.SuccessUploadFileServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>SuccessUploadFileServlet</servlet-name>
-		<url-pattern>/successupload</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>GraficaServlet</servlet-name>
-		<servlet-class>es.isst.glucomed.GraficaServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GraficaServlet</servlet-name>
-		<url-pattern>/grafica</url-pattern>
-	</servlet-mapping>
-	
-
-
 	<welcome-file-list>
 		<welcome-file>login</welcome-file>
 	</welcome-file-list>
