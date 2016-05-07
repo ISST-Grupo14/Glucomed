@@ -91,6 +91,14 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>pruebaUser</servlet-name>
 		<url-pattern>/pruebaUser</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>GraficaServlet</servlet-name>
+		<servlet-class>es.isst.glucomed.GraficaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GraficaServlet</servlet-name>
+		<url-pattern>/grafica</url-pattern>
+	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>login</welcome-file>
