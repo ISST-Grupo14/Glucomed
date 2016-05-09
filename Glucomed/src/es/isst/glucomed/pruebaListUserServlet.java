@@ -40,7 +40,7 @@ public class pruebaListUserServlet extends HttpServlet{
 
 		UserDAO dao = UserDAOImpl.getInstance();
 			
-		List<User> viewUser = dao.viewUser();
+		List<User> viewUser = dao.viewPacientes();
 			
 		session.setAttribute( "viewUser" , new ArrayList<User>( viewUser ));
 	

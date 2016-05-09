@@ -13,6 +13,7 @@ import es.isst.glucomed.dao.PacienteDAO;
 import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
+import es.isst.glucomed.model.DatosPaciente;
 import es.isst.glucomed.model.Paciente;
 
 @SuppressWarnings("serial")
@@ -51,7 +52,7 @@ public class DescargarServlet extends HttpServlet {
 				System.out.println(emailPaciente);
 			}
 			
-			List<Paciente> pacienteDatos = dao.viewData(emailConsulta);
+			List<DatosPaciente> datosPaciente = dao.viewData(emailConsulta);
 	
 			String csv_string = "";
 			String file_name = "data.csv";
@@ -63,14 +64,14 @@ public class DescargarServlet extends HttpServlet {
 			
 			PrintWriter outx = resp.getWriter();
 
-			for (int i = 0; i < pacienteDatos.size(); i++) {
+			for (int i = 0; i < datosPaciente.size(); i++) {
 				
-				Paciente paciente = pacienteDatos.get(i);
+				DatosPaciente datos = datosPaciente.get(i);
 
-				//csv_string = csv_string + paciente.getEmail() + ",";
-				csv_string = csv_string + paciente.getFecha() + ",";
-				csv_string = csv_string + paciente.getHora() + ",";
-				csv_string = csv_string + paciente.getValorGlucosa();
+				//csv_string = csv_string + datos.getEmail() + ",";
+				csv_string = csv_string + datos.getFecha() + ",";
+				csv_string = csv_string + datos.getHora() + ",";
+				csv_string = csv_string + datos.getValorGlucosa();
 				outx.println(csv_string);
 				csv_string = "";
 				

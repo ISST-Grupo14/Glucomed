@@ -83,24 +83,27 @@
 		        </table>
 		        	
 	      			<p class="submit">
-	      				<br>
-	      				<input type="button" value="Guardar" onclick="window.location.href = 'saveFile.jsp';"/> 
+	      				<br> 
 		   				<input type="button" name="commit" value="Descargar CSV" onclick="window.location.href = '/guardar';"/ >
 				    </p>
+				    
+				    <c:if test="${'paciente' == tipoUser}">
 					    
-		        	<form action="<%= blobstoreService.createUploadUrl("/subir") %>" method="post" enctype="multipart/form-data">
-		        						    
-						<p class="submit">
-			       		<br>
-						<input type="file" name="myFile">
-						</p>
+			        	<form action="<%= blobstoreService.createUploadUrl("/subir") %>" method="post" enctype="multipart/form-data">
+			        						    
+							<p class="submit">
+				       		<br>
+							<input type="file" name="myFile">
+							</p>
+							
+							<p class="submit">
+							<br>
+							<input type="submit" value="Subir CSV">
+							</p>
+							
+						</form>
 						
-						<p class="submit">
-						<br>
-						<input type="submit" value="Subir CSV">
-						</p>
-						
-					</form>
+					</c:if>
 
 		    	</div>
 				

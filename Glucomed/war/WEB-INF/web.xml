@@ -59,13 +59,23 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>ListMedico</servlet-name>
-		<servlet-class>es.isst.glucomed.ListMedicoServlet</servlet-class>
+		<servlet-name>MiMedico</servlet-name>
+		<servlet-class>es.isst.glucomed.MiMedicoServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>ListMedico</servlet-name>
-		<url-pattern>/listMedico</url-pattern>
+		<servlet-name>MiMedico</servlet-name>
+		<url-pattern>/miMedico</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MisPacientes</servlet-name>
+		<servlet-class>es.isst.glucomed.MisPacientesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MisPacientes</servlet-name>
+		<url-pattern>/misPacientes</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>Guardar</servlet-name>
 		<servlet-class>es.isst.glucomed.DescargarServlet</servlet-class>

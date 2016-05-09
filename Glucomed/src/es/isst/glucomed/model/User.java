@@ -7,14 +7,15 @@ import javax.persistence.Id;
 
 @Entity
 public class User implements Serializable {
+	
 	private static final long serialVersionUID = 01L;
+	
 	@Id
 	private String email;
 	private String nombre;
 	private String apellidos;
 	private String tipoUser;
 	private String password;
-	private String medicoAsociado;
 	private String blobKey;
 		
 public User (String nombre, String apellidos, String tipoUser,
@@ -24,7 +25,6 @@ public User (String nombre, String apellidos, String tipoUser,
 	this.apellidos=apellidos;
 	this.tipoUser = tipoUser;
 	this.password = password;
-	this.medicoAsociado = " Sin asignar";
 	this.blobKey = "";
 		
 }
@@ -67,14 +67,6 @@ public String getEmail() {
 
 public void setEmail(String email) {
 	this.email = email;
-}
-
-public void setmedicoAsociado(String medicoAsociado) {
-	this.medicoAsociado = medicoAsociado ;
-}
-
-public String getmedicoAsociado() {
-	return medicoAsociado;
 }
 
 public String getBlobKey() {

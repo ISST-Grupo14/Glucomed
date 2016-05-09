@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
 public class UserDAOImpl implements UserDAO {
@@ -23,10 +24,12 @@ public class UserDAOImpl implements UserDAO {
 	public boolean createUser(String nombre, String apellidos, String tipoUser,
 			String password, String email) {
 
-		EntityManager em = EMFService.get().createEntityManager();
 		User u = new User(nombre, apellidos, tipoUser, password, email);
 		boolean testUser = SuccessRegister(email);
 		boolean resultado;
+		
+		EntityManager em = EMFService.get().createEntityManager();
+		
 		// boolean testUser = false;
 
 		if (testUser == false) {
@@ -77,7 +80,26 @@ public class UserDAOImpl implements UserDAO {
 		}
 
 	}
+	
+	public List<User> viewListaMedicos (String email) {
 
+		List<User> listaMedicos;
+		
+		EntityManager em = EMFService.get().createEntityManager();
+		Query w = em.createQuery("select m " + "from User m "
+				+ "where m.tipoUser LIKE '" + "medico" + "%'");
+		
+		@SuppressWarnings("unchecked")
+		
+		List<User> result = w.getResultList();
+		
+		em.close();
+		
+		return result;
+
+	}
+	
+	/*
 	public List<User> viewMedico(String email) {
 
 		// buscamos el tipo usuario primero para mostrar una lista o otra
@@ -110,38 +132,23 @@ public class UserDAOImpl implements UserDAO {
 			return result;
 		}
 	}
-
-	public boolean addMedico(String medicoMail, String emailSession) {
-
+	*/
+	
+	public User viewUser(String email) {
+		
 		EntityManager em = EMFService.get().createEntityManager();
-		Query w = em
-				.createQuery("select item from User item where item.email = :email ");
-		w.setParameter("email", medicoMail);
-		if (w.getResultList().isEmpty()) {
-			// El médico no esta en la lista o se introducido mal el mail
-			em.close();
-			return false;
-
-		} else {
-			// El medico esta registrado procedemos al cambio
-			Query q = em.createQuery("select m " + "from User m "
-					+ "where m.email LIKE '" + emailSession + "%'");
-			
-			@SuppressWarnings("unchecked")
-			List<User> res = q.getResultList();
-			User update = null;
-			if (res.size() > 0) {
-				update = (User) (q.getResultList().get(0));
-			}
-			update.setmedicoAsociado(medicoMail);
-			em.merge(update);
-			em.close();
-			return true;
-		}
+		
+		User datosUser = em.find(User.class, email);
+		
+		em.close();
+		
+		return datosUser;
+		
+		
 	}
 
 	// Prueba de lista de usuarios
-	public List<User> viewUser() {
+	public List<User> viewPacientes() {
 		// String tipoUser = User.getTipoUser();
 		// hay que usar el email para filtrar en la query
 		EntityManager em = EMFService.get().createEntityManager();

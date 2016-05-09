@@ -9,10 +9,10 @@ public interface UserDAO {
 	public boolean createUser (String nombre, String apellidos,String tipoUser, String password, String email);
 	public boolean SuccessLogin (String email, String password);
 	public boolean SuccessRegister (String email);
-	public List<User> viewMedico(String email);
-	public List<User> viewUser();
+	public List<User> viewListaMedicos (String email);
+	public List<User> viewPacientes();
+	public User viewUser(String email);
 	public String tipoUser(String email) ;
-	public boolean addMedico(String medicoMail, String emailSession);
 	public void addBlobKey(String email, String blobKey);
 	public boolean viewDataFromMedico(String email, String emailPaciente);
 	public String readBlobKey(String email);

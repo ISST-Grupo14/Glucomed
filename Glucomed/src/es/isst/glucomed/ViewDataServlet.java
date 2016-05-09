@@ -15,6 +15,7 @@ import es.isst.glucomed.dao.PacienteDAO;
 import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
+import es.isst.glucomed.model.DatosPaciente;
 import es.isst.glucomed.model.Paciente;
 
 @SuppressWarnings("serial")
@@ -48,18 +49,22 @@ public class ViewDataServlet extends HttpServlet {
 
 		UserDAO dao2 = UserDAOImpl.getInstance();
 		String tipoUser = dao2.tipoUser(email);
-		session.setAttribute("tipoUser", tipoUser);
 
 		String emailConsulta = email;
 
+		
+		/* No puedes ser medico y llegar aqui !
+		 
 		if (tipoUser != "paciente") {
 			String emailPaciente = (String) session.getAttribute("emailPaciente");
 			emailConsulta = emailPaciente;
 			System.out.println(emailPaciente);
 		}
+		
+		*/
 
-		List<Paciente> pacienteDatos = dao.viewData(emailConsulta);
-		session.setAttribute("pacienteDatos", new ArrayList<Paciente>(pacienteDatos));
+		List<DatosPaciente> pacienteDatos = dao.viewData(emailConsulta);
+		session.setAttribute("pacienteDatos", new ArrayList<DatosPaciente>(pacienteDatos));
 
 		RequestDispatcher view = req.getRequestDispatcher(url);
 
@@ -71,6 +76,55 @@ public class ViewDataServlet extends HttpServlet {
 
 			e.printStackTrace();
 		}
+		
 	}
+	
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException {
+
+		HttpSession session = req.getSession();
+		String urlLogueado = "DataView.jsp";
+		String urlNoLogueado = "LoginView.jsp";
+		String url = "";
+		String email = (String) session.getAttribute("email");
+		// System.out.println(email);
+		if (session.getAttribute("email") == null) {
+			// System.out.println("sin loguear");
+			url = urlNoLogueado;
+		} else {
+			// System.out.println("logueado");
+			url = urlLogueado;
+		}
+		
+		String emailPaciente = req.getParameter("emailPaciente");
+		String accion        = req.getParameter("accion");
+		
+		if (!accion.equals("ver")) {
+			
+			// TODO: Situacion de error
+			
+		} else {
+			
+			// Mostramos datos paciente
+			
+			PacienteDAO dao = PacienteDAOImpl.getInstance();
+
+			List<DatosPaciente> pacienteDatos = dao.viewData(emailPaciente);
+			session.setAttribute("pacienteDatos", new ArrayList<DatosPaciente>(pacienteDatos));
+
+		}
+		
+		RequestDispatcher view = req.getRequestDispatcher(url);
+
+		try {
+			// Con el view, devolvemos una vez ejecutada la peticion, el contral
+			// al servlet que la envio.
+			view.forward(req, resp);
+		} catch (ServletException e) {
+
+			e.printStackTrace();
+		}
+	}
+	
 
 }

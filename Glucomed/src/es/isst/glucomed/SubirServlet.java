@@ -93,16 +93,15 @@ public class SubirServlet extends HttpServlet {
 	
 		        	String[] csvLine = line.split(cvsSplitBy);
 		        	
-		        	String emailCSV = csvLine[0];
-		        	String fechaCSV = csvLine[1];
-		        	String horaCSV = csvLine[2];
-		        	String valorGlucosaCSV = csvLine[3];
+		        	String fechaCSV = csvLine[0];
+		        	String horaCSV = csvLine[1];
+		        	String valorGlucosaCSV = csvLine[2];
 		        	
 		        	// Ignoramos todos los campos que se encuentren a partir del elemento 3
 		        	                	
 		        	// Insertamos los datos en la Base de datos
 		        	
-		    		dao.insertData(emailCSV, fechaCSV, horaCSV, valorGlucosaCSV);
+		    		dao.insertData(email, fechaCSV, horaCSV, valorGlucosaCSV);
 	
 		        }
 		        

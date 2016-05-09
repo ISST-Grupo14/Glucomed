@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import es.isst.glucomed.dao.MedicoDAO;
+import es.isst.glucomed.dao.MedicoDAOImpl;
+import es.isst.glucomed.dao.PacienteDAO;
+import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
 import es.isst.glucomed.utilities.Utilities;
@@ -57,7 +61,7 @@ public class RegisterServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
-		UserDAO dao = UserDAOImpl.getInstance();
+		UserDAO daoUser = UserDAOImpl.getInstance();
 		
 		String nombre = req.getParameter("nombre");
 		String apellidos = req.getParameter("apellidos");
@@ -88,8 +92,29 @@ public class RegisterServlet extends HttpServlet {
 			resp.sendRedirect("registro");
 			
 		}else{
-			boolean result = dao.createUser(nombre, apellidos, tipoUser, passCifrado, email);
 			
+			// Creamos el usuario
+			
+			boolean result = daoUser.createUser(nombre, apellidos, tipoUser, passCifrado, email);
+			
+			// En funcion del tipo de usuario creamos el modelo Paciente o Medico asociado al usuario
+			
+			if ((result) && (tipoUser.equals("paciente"))) {
+				
+				PacienteDAO daoPaciente = PacienteDAOImpl.getInstance();
+				daoPaciente.createPaciente (email);
+				
+			} else if ((result) && (tipoUser.equals("medico"))) {
+				
+				MedicoDAO daoMedico = MedicoDAOImpl.getInstance();
+				daoMedico.createMedico (email);
+				
+			} else {
+				
+				result = false; // situacion de error
+				
+			}
+
 			if (result) {
 				session.setAttribute("error_code_registro", "");
 				resp.sendRedirect("login");

@@ -65,6 +65,12 @@ public class LoginServlet extends HttpServlet {
 		if(dao.SuccessLogin(email, password2)){
 			session.setAttribute("email", email);
 			session.setAttribute("password",password2);
+			
+			UserDAO dao2 = UserDAOImpl.getInstance();
+			String tipoUser = dao2.tipoUser(email);
+			
+			session.setAttribute("tipoUser", tipoUser);
+			
 			resp.sendRedirect("dashboard");
 			session.setAttribute("error_code_login", "");
 		}else{
