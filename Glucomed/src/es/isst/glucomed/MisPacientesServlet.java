@@ -58,9 +58,9 @@ public class MisPacientesServlet extends HttpServlet {
 			
 			// Devolvemos la lista de pacientes
 			
-			UserDAO dao = UserDAOImpl.getInstance();
+			PacienteDAO dao = PacienteDAOImpl.getInstance();
 
-			List<User> viewListaPacientes = dao.viewPacientes();
+			List<User> viewListaPacientes = dao.viewPacientesDeMedico(email);
 
 			session.setAttribute("viewListaPacientes", new ArrayList<User>(viewListaPacientes));
 			

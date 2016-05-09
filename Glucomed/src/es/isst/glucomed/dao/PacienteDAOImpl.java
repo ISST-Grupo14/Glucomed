@@ -105,6 +105,26 @@ public class PacienteDAOImpl implements PacienteDAO {
 		
 	}
 	
+	public List<User> viewPacientesDeMedico(String medicoAsociado) {
+		// String tipoUser = User.getTipoUser();
+		// hay que usar el email para filtrar en la query
+		
+		EntityManager em = EMFService.get().createEntityManager();
+
+		Query q = em.createQuery("select m " + "from Paciente m "
+				+ "where m.medicoAsociado LIKE '" + medicoAsociado + "%'");
+		@SuppressWarnings("unchecked")
+		List<Paciente> pacientes = q.getResultList();
+		List<User> listaUsuarios= new ArrayList <User>();
+		for (int i = 0; i < pacientes.size(); i++) {
+			Paciente paciente = pacientes.get(i);
+			UserDAO dao =  UserDAOImpl.getInstance();
+			listaUsuarios.add(dao.viewUser(paciente.getEmail()));
+		}
+		em.close();
+		return listaUsuarios;
+	}
+	
 	public List<Paciente> viewDataFromMedico(String emailMedico, String emailPaciente) {
 
 		//hay que usar el email para filtrar en la query

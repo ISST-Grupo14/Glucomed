@@ -4,6 +4,7 @@ import java.util.List;
 
 import es.isst.glucomed.model.DatosPaciente;
 import es.isst.glucomed.model.Paciente;
+import es.isst.glucomed.model.User;
 
 public interface PacienteDAO {
 	public boolean createPaciente (String email);
@@ -14,4 +15,5 @@ public interface PacienteDAO {
 	public String getMedicoAsociado (String email);
 	public boolean addMedico(String medicoMail, String emailSession);
 	public boolean eliminarMedico(String emailMedico, String emailSession);
+	public List<User> viewPacientesDeMedico(String medicoAsociado);
 }
