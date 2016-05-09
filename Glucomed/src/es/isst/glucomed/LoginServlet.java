@@ -61,10 +61,14 @@ public class LoginServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		String password2 = Utilities.cifradoMD5(password);
 		UserDAO dao = UserDAOImpl.getInstance();
+		
+		String nombre = dao.viewUser(email).getNombre();
 	
 		if(dao.SuccessLogin(email, password2)){
 			session.setAttribute("email", email);
 			session.setAttribute("password",password2);
+			
+			session.setAttribute("nombre", nombre);
 			
 			UserDAO dao2 = UserDAOImpl.getInstance();
 			String tipoUser = dao2.tipoUser(email);

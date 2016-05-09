@@ -66,8 +66,8 @@ public class InsertDataServlet extends HttpServlet {
 		if(fecha.equals("") || hora.equals("") || valorGlucosa.equals("") ){
 			session.setAttribute("error_code_registro", "Rellena todos los campos");
 			resp.sendRedirect("insertData");
-		} else if ( !fecha.matches("([0-9]{2}/[0-9]{2}/[0-9]{4})")) {
-			session.setAttribute("error_code_registro", "Introduce la fecha dd/mm/aaaa");
+		} else if ( !fecha.matches("([0-9]{4}-[0-9]{2}-[0-9]{2})")) {
+			session.setAttribute("error_code_registro", "Introduce la fecha aaaa-mm-dd");
 			resp.sendRedirect("insertData");
 		} else if ( !hora.matches("[0-9]{2}:[0-9]{2}")) {
 			session.setAttribute("error_code_registro", "Introduce la hora hh:mm");

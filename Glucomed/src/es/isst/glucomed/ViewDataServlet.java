@@ -41,7 +41,8 @@ public class ViewDataServlet extends HttpServlet {
 			// System.out.println("logueado");
 			url = urlLogueado;
 		}
-
+		
+		
 		// ==================================================
 
 		// HttpSession session = req.getSession();
@@ -49,20 +50,9 @@ public class ViewDataServlet extends HttpServlet {
 
 		UserDAO dao2 = UserDAOImpl.getInstance();
 		String tipoUser = dao2.tipoUser(email);
-
+		
 		String emailConsulta = email;
-
-		
-		/* No puedes ser medico y llegar aqui !
-		 
-		if (tipoUser != "paciente") {
-			String emailPaciente = (String) session.getAttribute("emailPaciente");
-			emailConsulta = emailPaciente;
-			System.out.println(emailPaciente);
-		}
-		
-		*/
-
+				
 		List<DatosPaciente> pacienteDatos = dao.viewData(emailConsulta);
 		session.setAttribute("pacienteDatos", new ArrayList<DatosPaciente>(pacienteDatos));
 
@@ -98,7 +88,11 @@ public class ViewDataServlet extends HttpServlet {
 		
 		String emailPaciente = req.getParameter("emailPaciente");
 		String accion        = req.getParameter("accion");
+			
+		// Si soy medico el correo bueno es el almacenado en el input "emailPaciente"
 		
+		session.setAttribute("emailPacienteDeMedico", emailPaciente);
+
 		if (!accion.equals("ver")) {
 			
 			// TODO: Situacion de error

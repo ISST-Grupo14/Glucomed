@@ -47,7 +47,7 @@ public class DescargarServlet extends HttpServlet {
 			String emailConsulta = email;
 			
 			if (tipoUser != "paciente") {
-				String emailPaciente = (String) session.getAttribute("emailPaciente");
+				String emailPaciente = (String) session.getAttribute("emailPacienteDeMedico");
 				emailConsulta = emailPaciente;
 				System.out.println(emailPaciente);
 			}

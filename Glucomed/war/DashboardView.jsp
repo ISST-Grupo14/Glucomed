@@ -46,7 +46,7 @@
 		    
 		    	<div class="col-4">
 		    	
-		    	<h1 style="text-align:center; color:#253A7A">Bienvenido a: </h1>
+		    	<h1 style="text-align:center; color:#253A7A">Hola <c:out value = "${nombre}"/>, Bienvenido a: </h1>
 				
 				<img alt="" src="img/logo.png" style="width:100%;">
 		    	</div>
