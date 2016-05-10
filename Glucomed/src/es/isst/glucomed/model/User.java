@@ -16,64 +16,55 @@ public class User implements Serializable {
 	private String apellidos;
 	private String tipoUser;
 	private String password;
-	private String blobKey;
 		
-public User (String nombre, String apellidos, String tipoUser,
-		String password, String email){
-	this.email=email;
-	this.nombre=nombre;
-	this.apellidos=apellidos;
-	this.tipoUser = tipoUser;
-	this.password = password;
-	this.blobKey = "";
+	public User (String nombre, String apellidos, String tipoUser, String password, String email){
 		
-}
+		this.email=email;
+		this.nombre=nombre;
+		this.apellidos=apellidos;
+		this.tipoUser = tipoUser;
+		this.password = password;
+			
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public String getApellidos() {
+		return apellidos;
+	}
+	
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+	
+	public String getTipoUser() {
+		return tipoUser;
+	}
+	
+	public void setTipoUser (String tipoUser){
+		this.nombre = tipoUser;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-public String getNombre() {
-	return nombre;
-}
-
-public void setNombre(String nombre) {
-	this.nombre = nombre;
-}
-
-public String getApellidos() {
-	return apellidos;
-}
-
-public void setApellidos(String apellidos) {
-	this.apellidos = apellidos;
-}
-
-public String getTipoUser() {
-	return tipoUser;
-}
-
-public void setTipoUser (String tipoUser){
-	this.nombre = tipoUser;
-}
-
-public String getPassword() {
-	return password;
-}
-
-public void setPassword(String password) {
-	this.password = password;
-}
-
-public String getEmail() {
-	return email;
-}
-
-public void setEmail(String email) {
-	this.email = email;
-}
-
-public String getBlobKey() {
-	return blobKey;
-}
-
-public void setBlobKey(String blobKey) {
-	this.blobKey = blobKey;
-}
 }

@@ -13,6 +13,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>DashboardServlet</servlet-name>
 		<url-pattern>/dashboard</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>Login</servlet-name>
 		<servlet-class>es.isst.glucomed.LoginServlet</servlet-class>
@@ -83,7 +84,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<servlet-mapping>
 		<servlet-name>Guardar</servlet-name>
 		<url-pattern>/guardar</url-pattern>
-	</servlet-mapping>	
+	</servlet-mapping>
+		
 	<servlet>
 		<servlet-name>Subir</servlet-name>
 		<servlet-class>es.isst.glucomed.SubirServlet</servlet-class>
@@ -93,14 +95,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<url-pattern>/subir</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>pruebaUser</servlet-name>
-		<servlet-class>es.isst.glucomed.pruebaListUserServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>pruebaUser</servlet-name>
-		<url-pattern>/pruebaUser</url-pattern>
-	</servlet-mapping>
 	<servlet>
 		<servlet-name>GraficaServlet</servlet-name>
 		<servlet-class>es.isst.glucomed.GraficaServlet</servlet-class>
@@ -113,4 +107,5 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	<welcome-file-list>
 		<welcome-file>login</welcome-file>
 	</welcome-file-list>
+	
 </web-app>

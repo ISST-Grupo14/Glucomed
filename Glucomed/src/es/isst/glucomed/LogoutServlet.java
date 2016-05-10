@@ -20,4 +20,5 @@ public class LogoutServlet extends HttpServlet {
 		System.out.println("LOGOUT");
 		
 	}
+	
 }

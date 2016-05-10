@@ -105,41 +105,8 @@ public class PacienteDAOImpl implements PacienteDAO {
 		
 	}
 	
-	public List<User> viewPacientesDeMedico(String medicoAsociado) {
-		// String tipoUser = User.getTipoUser();
-		// hay que usar el email para filtrar en la query
-		
-		EntityManager em = EMFService.get().createEntityManager();
-
-		Query q = em.createQuery("select m " + "from Paciente m "
-				+ "where m.medicoAsociado LIKE '" + medicoAsociado + "%'");
-		@SuppressWarnings("unchecked")
-		List<Paciente> pacientes = q.getResultList();
-		List<User> listaUsuarios= new ArrayList <User>();
-		for (int i = 0; i < pacientes.size(); i++) {
-			Paciente paciente = pacientes.get(i);
-			UserDAO dao =  UserDAOImpl.getInstance();
-			listaUsuarios.add(dao.viewUser(paciente.getEmail()));
-		}
-		em.close();
-		return listaUsuarios;
-	}
-	
-	public List<Paciente> viewDataFromMedico(String emailMedico, String emailPaciente) {
-
-		//hay que usar el email para filtrar en la query
-		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em.createQuery("select m " + "from Paciente m " + "where m.email LIKE '" + emailPaciente + "%'");
-		@SuppressWarnings("unchecked")
-		List<Paciente> res = q.getResultList();
-		em.close();
-		return res;
-	
-	}
-	
 	public void eliminarDatosPaciente (String email) {
-		
-		
+
 		EntityManager em = EMFService.get().createEntityManager();
 		
 		Paciente paciente = em.find(Paciente.class, email);
@@ -159,36 +126,6 @@ public class PacienteDAOImpl implements PacienteDAO {
 	
 	}
 	
-	public String getMedicoAsociado (String email) {
-		
-		String medicoAsociado;
-		
-		EntityManager em = EMFService.get().createEntityManager();
-		
-		Paciente paciente = em.find(Paciente.class, email);
-		
-		if (paciente != null) {
-			
-			medicoAsociado = paciente.getMedicoAsociado();
-			em.close();
-			
-			return medicoAsociado;
-			
-		} else {
-			
-			// TODO: Esto sería un error!!
-			// Sin Asignar implica que el paciente existe pero no tiene medico
-			// null implica que el paciente no existe
-			
-			medicoAsociado = null;
-			em.close();
-			
-			return medicoAsociado;
-			
-		}	
-		
-	}
-
 	@Override
 	public boolean addMedico(String emailMedico, String emailSession) {
 		
@@ -237,34 +174,59 @@ public class PacienteDAOImpl implements PacienteDAO {
 
 	}
 	
-	/*
-	public boolean addMedico(String medicoMail, String emailSession) {
-
+	public String getMedicoAsociado (String email) {
+		
+		String medicoAsociado;
+		
 		EntityManager em = EMFService.get().createEntityManager();
-		Query w = em
-				.createQuery("select item from User item where item.email = :email ");
-		w.setParameter("email", medicoMail);
-		if (w.getResultList().isEmpty()) {
-			// El médico no esta en la lista o se introducido mal el mail
-			em.close();
-			return false;
-
-		} else {
-			// El medico esta registrado procedemos al cambio
-			Query q = em.createQuery("select m " + "from User m "
-					+ "where m.email LIKE '" + emailSession + "%'");
+		
+		Paciente paciente = em.find(Paciente.class, email);
+		
+		if (paciente != null) {
 			
-			@SuppressWarnings("unchecked")
-			List<User> res = q.getResultList();
-			User update = null;
-			if (res.size() > 0) {
-				update = (User) (q.getResultList().get(0));
-			}
-			update.setmedicoAsociado(medicoMail);
-			em.merge(update);
+			medicoAsociado = paciente.getMedicoAsociado();
 			em.close();
-			return true;
-		}
-	} */
+			
+			return medicoAsociado;
+			
+		} else {
+			
+			// TODO: Esto sería un error!!
+			// Sin Asignar implica que el paciente existe pero no tiene medico
+			// null implica que el paciente no existe
+			
+			medicoAsociado = null;
+			em.close();
+			
+			return medicoAsociado;
+			
+		}	
+		
+	}
 	
+	public List<User> viewPacientesDeMedico(String medicoAsociado) {
+		
+		// String tipoUser = User.getTipoUser();
+		// hay que usar el email para filtrar en la query
+		
+		EntityManager em = EMFService.get().createEntityManager();
+
+		Query q = em.createQuery("select m " + "from Paciente m "
+				+ "where m.medicoAsociado LIKE '" + medicoAsociado + "%'");
+		@SuppressWarnings("unchecked")
+		List<Paciente> pacientes = q.getResultList();
+		List<User> listaUsuarios= new ArrayList <User>();
+		
+		for (int i = 0; i < pacientes.size(); i++) {
+			Paciente paciente = pacientes.get(i);
+			UserDAO dao =  UserDAOImpl.getInstance();
+			listaUsuarios.add(dao.viewUser(paciente.getEmail()));
+		}
+		
+		em.close();
+		
+		return listaUsuarios;
+		
+	}
+		
 }	

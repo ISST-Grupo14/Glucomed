@@ -14,7 +14,6 @@ import es.isst.glucomed.dao.PacienteDAOImpl;
 import es.isst.glucomed.dao.UserDAO;
 import es.isst.glucomed.dao.UserDAOImpl;
 import es.isst.glucomed.model.DatosPaciente;
-import es.isst.glucomed.model.Paciente;
 
 @SuppressWarnings("serial")
 public class DescargarServlet extends HttpServlet {
@@ -22,66 +21,49 @@ public class DescargarServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
-		//String urlLogueado="DownloadDataView.jsp";
-		//String urlLogueado="DataView.jsp";
-		//String urlNoLogueado="LoginView.jsp";
-		//String url = "";
 		
 		String email = (String) session.getAttribute("email");
 		
-		if (email == null){
-			
-			//System.out.println("sin loguear");
-			//url = urlNoLogueado;
-			
-		}else{
-			
-			//System.out.println("logueado");
-			//url = urlLogueado;
+		PacienteDAO dao = PacienteDAOImpl.getInstance();
 
-			PacienteDAO dao = PacienteDAOImpl.getInstance();
-	
-			UserDAO dao2 = UserDAOImpl.getInstance();
-			String tipoUser = dao2.tipoUser(email);	
-			
-			String emailConsulta = email;
-			
-			if (tipoUser != "paciente") {
-				String emailPaciente = (String) session.getAttribute("emailPacienteDeMedico");
-				emailConsulta = emailPaciente;
-				System.out.println(emailPaciente);
-			}
-			
-			List<DatosPaciente> datosPaciente = dao.viewData(emailConsulta);
-	
-			String csv_string = "";
-			String file_name = "data.csv";
-			
-			if(file_name.length() == 0) file_name = "data.csv";
-			
-			resp.setContentType("application/csv");
-			resp.setHeader("content-disposition","filename="+file_name); // Filename
-			
-			PrintWriter outx = resp.getWriter();
-
-			for (int i = 0; i < datosPaciente.size(); i++) {
-				
-				DatosPaciente datos = datosPaciente.get(i);
-
-				//csv_string = csv_string + datos.getEmail() + ",";
-				csv_string = csv_string + datos.getFecha() + ",";
-				csv_string = csv_string + datos.getHora() + ",";
-				csv_string = csv_string + datos.getValorGlucosa();
-				outx.println(csv_string);
-				csv_string = "";
-				
-			}
-	
-			outx.flush();
-			outx.close();
+		UserDAO dao2 = UserDAOImpl.getInstance();
+		String tipoUser = dao2.tipoUser(email);	
 		
+		String emailConsulta = email;
+		
+		if (tipoUser != "paciente") {
+			String emailPaciente = (String) session.getAttribute("emailPacienteDeMedico");
+			emailConsulta = emailPaciente;
+			System.out.println(emailPaciente);
 		}
-				
+		
+		List<DatosPaciente> datosPaciente = dao.viewData(emailConsulta);
+
+		String csv_string = "";
+		String file_name = "data.csv";
+		
+		if(file_name.length() == 0) file_name = "data.csv";
+		
+		resp.setContentType("application/csv");
+		resp.setHeader("content-disposition","filename="+file_name); // Filename
+		
+		PrintWriter outx = resp.getWriter();
+
+		for (int i = 0; i < datosPaciente.size(); i++) {
+			
+			DatosPaciente datos = datosPaciente.get(i);
+
+			csv_string = csv_string + datos.getFecha() + ",";
+			csv_string = csv_string + datos.getHora() + ",";
+			csv_string = csv_string + datos.getValorGlucosa();
+			outx.println(csv_string);
+			csv_string = "";
+			
+		}
+
+		outx.flush();
+		outx.close();
+						
 	}
 	
 }

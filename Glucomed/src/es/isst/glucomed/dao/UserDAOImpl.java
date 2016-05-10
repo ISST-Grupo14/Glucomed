@@ -2,9 +2,9 @@ package es.isst.glucomed.dao;
 
 import java.util.List;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
-import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
 public class UserDAOImpl implements UserDAO {
@@ -47,8 +47,7 @@ public class UserDAOImpl implements UserDAO {
 	public boolean SuccessRegister(String email) {
 
 		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em
-				.createQuery("select item from User item where item.email = :email");
+		Query q = em.createQuery("select item from User item where item.email = :email");
 
 		q.setParameter("email", email);
 
@@ -64,77 +63,30 @@ public class UserDAOImpl implements UserDAO {
 	public boolean SuccessLogin(String email, String password) {
 
 		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em
-				.createQuery("select item from User item where item.email = :email and item.password = :password");
+		Query q = em.createQuery("select item from User item where item.email = :email and item.password = :password");
 		q.setParameter("email", email);
 		q.setParameter("password", password);
 
 		if (q.getResultList().isEmpty()) {
+			
+			// si no tiene ninguno de los dos campos devuelve false
+			
 			em.close();
-			return false; // si no tiene ninguno de los dos campos devuelve
-							// false
+			
+			return false;
+			
 		}else{
+			
+			// si alguno de los dos campos esta relleno devuelve true
+			
 			em.close();
-			return true; // si alguno de los dos campos esta relleno devuelve
-							// true
+			
+			return true; 
 		}
 
 	}
 	
-	public List<User> viewListaMedicos (String email) {
-
-		List<User> listaMedicos;
-		
-		EntityManager em = EMFService.get().createEntityManager();
-		Query w = em.createQuery("select m " + "from User m "
-				+ "where m.tipoUser LIKE '" + "medico" + "%'");
-		
-		@SuppressWarnings("unchecked")
-		
-		List<User> result = w.getResultList();
-		
-		em.close();
-		
-		return result;
-
-	}
-	
-	/*
-	public List<User> viewMedico(String email) {
-
-		// buscamos el tipo usuario primero para mostrar una lista o otra
-		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em.createQuery("SELECT m " + "FROM User m "
-				+ "  WHERE m.email = '" + email
-				+ "' AND m.tipoUser = 'paciente'");
-		
-		@SuppressWarnings("unchecked")
-		List<User> res = q.getResultList();
-
-		if (res.size() > 0) {
-			// res es mayor que cero se ha encontrado un paciente con ese email,
-			// asi que mostramos medicos
-			Query w = em.createQuery("select m " + "from User m "
-					+ "where m.tipoUser LIKE '" + "medico" + "%'");
-			
-			@SuppressWarnings("unchecked")
-			List<User> result = w.getResultList();
-			em.close();
-			return result;
-		} else {
-			// como es un medico mostramos los pacientes que tiene asignados
-			Query w = em.createQuery("select m " + "from User m "
-					+ "  WHERE m.medicoAsociado = '" + email + "'");
-			
-			@SuppressWarnings("unchecked")
-			List<User> result = w.getResultList();
-			em.close();
-			return result;
-		}
-	}
-	*/
-	
-	public User viewUser(String email) {
+	public User viewUser (String email) {
 		
 		EntityManager em = EMFService.get().createEntityManager();
 		
@@ -144,21 +96,6 @@ public class UserDAOImpl implements UserDAO {
 		
 		return datosUser;
 		
-		
-	}
-
-	// Prueba de lista de usuarios
-	public List<User> viewPacientes() {
-		// String tipoUser = User.getTipoUser();
-		// hay que usar el email para filtrar en la query
-		EntityManager em = EMFService.get().createEntityManager();
-
-		Query q = em.createQuery("select m " + "from User m "
-				+ "where m.tipoUser LIKE '" + "paciente" + "%'");
-		@SuppressWarnings("unchecked")
-		List<User> res = q.getResultList();
-		em.close();
-		return res;
 	}
 
 	public String tipoUser(String email) {
@@ -168,8 +105,10 @@ public class UserDAOImpl implements UserDAO {
 		Query q = em.createQuery("SELECT m " + "FROM User m "
 				+ "  WHERE m.email = '" + email
 				+ "' AND m.tipoUser = 'paciente'");
+		
 		@SuppressWarnings("unchecked")
 		List<User> res = q.getResultList();
+		
 		em.close();
 
 		if (res.size() > 0) {
@@ -177,43 +116,22 @@ public class UserDAOImpl implements UserDAO {
 		} else {
 			return "medico";
 		}
+		
 	}
-
-	@Override
-	public void addBlobKey(String email, String blobKey) {
+	
+	public List<User> viewListaMedicos (String email) {
+		
 		EntityManager em = EMFService.get().createEntityManager();
-		User update = em.find(User.class, email);
-		update.setBlobKey(blobKey);
-		em.merge(update);
-		em.close();
-	}
-
-	@Override
-	public String readBlobKey(String email) {
-		EntityManager em = EMFService.get().createEntityManager();
-		User findKey = em.find(User.class, email);
-		String result = findKey.getBlobKey();
-		em.close();
-		System.out.println("Blob almacenada(metodo readFile): " + result);
-		return result;
-	}
-
-	public boolean viewDataFromMedico(String email, String emailPaciente) {
-		// email corresponde a la de la sesion
-
-		EntityManager em = EMFService.get().createEntityManager();
-		Query q = em.createQuery("SELECT m " + "FROM User m "
-				+ "  WHERE m.email = '" + emailPaciente
-				+ "' AND m.medicoAsociado= '" + email + "'");
+		
+		Query w = em.createQuery("select m " + "from User m " + "where m.tipoUser LIKE '" + "medico" + "%'");
+		
 		@SuppressWarnings("unchecked")
-		List<User> res = q.getResultList();
+		
+		List<User> result = w.getResultList();
+		
 		em.close();
-
-		if (res.size() > 0) { // medico autorizado
-			return true;
-		} else {
-			return false;
-		}
+		
+		return result;
 
 	}
 

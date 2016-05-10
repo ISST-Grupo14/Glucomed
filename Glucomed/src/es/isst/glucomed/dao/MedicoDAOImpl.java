@@ -1,13 +1,8 @@
 package es.isst.glucomed.dao;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
 import es.isst.glucomed.model.Medico;
-import es.isst.glucomed.model.Paciente;
-import es.isst.glucomed.model.User;
 
 public class MedicoDAOImpl implements MedicoDAO {
 

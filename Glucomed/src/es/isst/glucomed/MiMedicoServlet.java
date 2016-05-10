@@ -24,8 +24,7 @@ public class MiMedicoServlet extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		HttpSession session = req.getSession();
 		String urlLogueado = "MiMedicoView.jsp";
@@ -33,16 +32,11 @@ public class MiMedicoServlet extends HttpServlet {
 		String url = "";
 		String email = (String) session.getAttribute("email");
 
-		// System.out.println(email);
 		if (session.getAttribute("email") == null) {
-			// System.out.println("sin loguear");
 			url = urlNoLogueado;
 		} else {
-			// System.out.println("logueado");
 			url = urlLogueado;
 		}
-
-		// ==================================================
 		
 		// Primero verificamos si el usuario es un paciente y si ya tiene medico
 		
@@ -76,8 +70,7 @@ public class MiMedicoServlet extends HttpServlet {
 		RequestDispatcher view = req.getRequestDispatcher(url);
 
 		try {
-			// Con el view, devolvemos una vez ejecutada la peticion, el contral
-			// al servlet que la envio.
+			// Con el view, devolvemos una vez ejecutada la peticion, el control al servlet que la envio.
 			view.forward(req, resp);
 		} catch (ServletException e) {
 
@@ -93,19 +86,17 @@ public class MiMedicoServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		
 		String emailSession = session.getAttribute("email").toString();
+		
 		String emailMedico  = req.getParameter("emailMedico");
 		String accion  = req.getParameter("accion");
 		
 		if (accion.equals("Eliminar")) {
-			
-			UserDAO userDAO = UserDAOImpl.getInstance();
+
 			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
-			
-			String tipoUser = userDAO.tipoUser(emailSession);
-			
+
 			String medicoAsociado = pacienteDAO.getMedicoAsociado(session.getAttribute("email").toString());
 			
-			if ((medicoAsociado != null) && (!medicoAsociado.equals("Sin Asignar"))) {
+			if (medicoAsociado != null) {
 				
 				// Eliminamos el medico
 				
@@ -123,14 +114,12 @@ public class MiMedicoServlet extends HttpServlet {
 			
 		} else if (accion.equals("Seleccionar")) {
 			
-			UserDAO userDAO = UserDAOImpl.getInstance();
+			
 			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
-			
-			String tipoUser = userDAO.tipoUser(emailSession);
-			
+
 			String medicoAsociado = pacienteDAO.getMedicoAsociado(session.getAttribute("email").toString());
 			
-			if ((medicoAsociado == null) || (medicoAsociado.equals("Sin Asignar"))) {
+			if (medicoAsociado == null) {
 				
 				// Asignamos nuevo Medico
 				
@@ -153,4 +142,5 @@ public class MiMedicoServlet extends HttpServlet {
 		}
 
 	}
+	
 }

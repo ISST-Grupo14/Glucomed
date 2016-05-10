@@ -23,9 +23,9 @@ public class RegisterServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
 		
-		/*Comprobamos con el email session si el usuario esta logueado
+		/* Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
+		 * Comprobamos con el email session si el usuario esta logueado
 		 * 		si esta logueado va a un sitio
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
@@ -39,23 +39,21 @@ public class RegisterServlet extends HttpServlet {
 		//System.out.println(email);
 		
 		if(email == null){
-			//System.out.println("sin loguear");
 			url = urlNoLogueado;
 		}else{
-			
-			//System.out.println("logueado");
 			url = urlLogueado;
 		}
 		
 		RequestDispatcher view = req.getRequestDispatcher(url);
 		
 		try {
-			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
-		view.forward(req, resp);
+			// Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
+			view.forward(req, resp);
 		} catch (ServletException e) {
 			
 			e.printStackTrace();	
 		}
+		
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -73,21 +71,19 @@ public class RegisterServlet extends HttpServlet {
 		
 		HttpSession session = req.getSession();
 		
-		/*Habilitar este metodo si se quiere comprobar el cifrado de la contraseña
-		System.out.println("contraseña cifrada: "+ passCifrado);
-		*/
-			
 		if ( !password.equals(password2) ){
 			
 			session.setAttribute("error_code_registro", "Introduce passwords iguales");
 			resp.sendRedirect("registro");
 			
-		} else if(nombre.equals("") || apellidos.equals("") || password.equals("") || password2.equals("") 
-					|| email.equals("")	|| tipoUser.equals("")){
+		} else if(nombre.equals("")  || apellidos.equals("") || password.equals("") || 
+				password2.equals("") || email.equals("")	 || tipoUser.equals("")) {
+			
 			session.setAttribute("error_code_registro", "Rellena todos los campos");
 			resp.sendRedirect("registro");
 			
 		}else if (!email.matches("[-\\w\\.]+@\\w+\\.\\w+") ){
+			
 			session.setAttribute("error_code_registro", "mail no valido");
 			resp.sendRedirect("registro");
 			
@@ -121,10 +117,11 @@ public class RegisterServlet extends HttpServlet {
 			} else {
 				session.setAttribute("error_code_registro", "Error Registro. El usuario " + email + " ya existe en la base de datos !!");
 				resp.sendRedirect("registro");
-				//resp.getWriter().println("Error Registro. El usuario " + nombre + " ya existe en la base de datos !!");
 			}
+			
 		}
 
 	}
+	
 }
 	

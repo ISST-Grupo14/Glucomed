@@ -13,11 +13,13 @@ import es.isst.glucomed.dao.UserDAOImpl;
 public class DashboardServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
+		
 		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
 		/*Comprobamos con el email session si el usuario esta logueado
 		 * 		si esta logueado va a un sitio
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
+		
 		HttpSession session = req.getSession();
 		String urlLogueado="DashboardView.jsp";
 		String urlNoLogueado="LoginView.jsp";
@@ -33,13 +35,14 @@ public class DashboardServlet extends HttpServlet {
 		}
 		
 		RequestDispatcher view = req.getRequestDispatcher(url);
+		
 		try {
 			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
 			view.forward(req, resp);
-		} catch (ServletException e) {
-			
+		} catch (ServletException e) {			
 			e.printStackTrace();
-				
 		}
+		
 	}
+	
 }

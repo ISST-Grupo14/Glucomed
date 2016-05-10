@@ -16,28 +16,23 @@ import es.isst.glucomed.utilities.*;
 @SuppressWarnings("serial")
 public class LoginServlet extends HttpServlet {
 	
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
-		//Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
-		
-		/*Comprobamos con el user session si el usuario esta logueado
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+
+		/* Usamos un Dispacher para redireccionar al servlet hacia la pagina en cuestion
+		 * Comprobamos con el user session si el usuario esta logueado
 		 * 		si esta logueado va a un sitio
 		 * 		si no esta logueado va a login o registro dependiendo
 		 * */
-		HttpSession session = req.getSession();
-		String urlLogueado="DashboardView.jsp";
-		String urlNoLogueado="LoginView.jsp";
-		String url="";
+		HttpSession session  = req.getSession();
+		String urlLogueado   ="DashboardView.jsp";
+		String urlNoLogueado ="LoginView.jsp";
+		String url           = "";
 		
 		String email = (String) session.getAttribute("email");
-		//System.out.println(email);
 		
 		if(email == null){
-			//System.out.println("sin loguear");
 			url = urlNoLogueado;
 		}else{
-			
-			//System.out.println("logueado");
 			url = urlLogueado;
 		}
 			
@@ -45,7 +40,7 @@ public class LoginServlet extends HttpServlet {
 		RequestDispatcher view = req.getRequestDispatcher(url);		
 		
 		try {
-			//Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
+			// Con el view, devolvemos una vez ejecutada la peticion, el contral al servlet que la envio.
 			view.forward(req, resp);
 		} catch (ServletException e) {
 			e.printStackTrace();
@@ -53,8 +48,7 @@ public class LoginServlet extends HttpServlet {
 
 	}
 	
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		HttpSession session = req.getSession();
 		String email = req.getParameter("email");
@@ -65,6 +59,7 @@ public class LoginServlet extends HttpServlet {
 		String nombre = dao.viewUser(email).getNombre();
 	
 		if(dao.SuccessLogin(email, password2)){
+			
 			session.setAttribute("email", email);
 			session.setAttribute("password",password2);
 			
@@ -77,9 +72,12 @@ public class LoginServlet extends HttpServlet {
 			
 			resp.sendRedirect("dashboard");
 			session.setAttribute("error_code_login", "");
+			
 		}else{
+			
 			session.setAttribute("error_code_login", "Usuario / Password no Valido");
-			resp.sendRedirect("login");			
+			resp.sendRedirect("login");
+			
 		}
 
 	}
