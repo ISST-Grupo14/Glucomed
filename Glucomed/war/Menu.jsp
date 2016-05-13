@@ -48,7 +48,14 @@
 			</span>
 			<br class="only-movil" /> 
 			Grafica</a>	
-		</c:if>	
+		</c:if>
+		
+		<a href="buzon" class="boton-menu">
+		<span class="only-movil">
+			<i class="fa fa-area-chart small"></i>
+		</span>
+		<br class="only-movil" /> 
+		Mensajes</a> 
 
 		<a href="salir" class="boton-menu">
 		<span class="only-movil">

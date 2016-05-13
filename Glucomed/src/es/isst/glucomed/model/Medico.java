@@ -1,7 +1,6 @@
 package es.isst.glucomed.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,11 +12,9 @@ public class Medico implements Serializable{
 	
 	@Id
 	private String email;
-	private List<String> listaPacientes;
 
 	public Medico (String email) {
-		this.email=email;
-		this.setListaPacientes(null);
+		this.email              = email;
 	}
 	
 	public String getEmail() {
@@ -26,14 +23,6 @@ public class Medico implements Serializable{
 
 	public void setEmail(String nombre) {
 		this.email = nombre;
-	}
-
-	public List<String> getListaPacientes() {
-		return listaPacientes;
-	}
-
-	public void setListaPacientes(List<String> listaPacientes) {
-		this.listaPacientes = listaPacientes;
 	}
 
 }

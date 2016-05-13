@@ -94,8 +94,12 @@ public class UserDAOImpl implements UserDAO {
 		
 		em.close();
 		
-		return datosUser;
-		
+		if (datosUser == null) {
+			return null;
+		} else {
+			return datosUser;	
+		}
+
 	}
 
 	public String tipoUser(String email) {

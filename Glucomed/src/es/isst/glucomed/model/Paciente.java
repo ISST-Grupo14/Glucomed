@@ -14,16 +14,17 @@ public class Paciente implements Serializable{
 	
 	@Id
 	private String email;
-
+	private String medicoAsociado;
+	
 	private List <String> datosPaciente;
 
-	private String medicoAsociado;
-
 	public Paciente (String email) {
-		this.email=email;
-		this.datosPaciente = new ArrayList<String>();
-		this.medicoAsociado = null;
+		this.email            = email;
+		this.medicoAsociado   = null;
+		this.datosPaciente    = new ArrayList<String>();
 	}
+	
+	// Funciones Generales
 	
 	public String getEmail() {
 		return email;
@@ -33,7 +34,17 @@ public class Paciente implements Serializable{
 		this.email = nombre;
 	}
 	
-	public DatosPaciente getDatosFromString ( String datos ) {
+	public void setMedicoAsociado(String medicoAsociado) {
+		this.medicoAsociado = medicoAsociado ;
+	}
+
+	public String getMedicoAsociado() {
+		return medicoAsociado;
+	}
+	
+	// Funciones para la manipulacion de datos de paciente
+	
+	public DatosPaciente getDatosFromDatosString ( String datos ) {
 
     	String SplitBy = ",";
 
@@ -47,7 +58,7 @@ public class Paciente implements Serializable{
 		
 	}
 	
-	public String getFechaFromString ( String datos ) {
+	public String getFechaFromDatosString ( String datos ) {
 		
     	String SplitBy = ",";
 
@@ -57,7 +68,7 @@ public class Paciente implements Serializable{
 		
 	}
 	
-	public String getHoraFromString ( String datos ) {
+	public String getHoraFromDatosString ( String datos ) {
 		
     	String SplitBy = ",";
 
@@ -67,7 +78,7 @@ public class Paciente implements Serializable{
 		
 	}
 	
-	public String getValorGlucosaFromString ( String datos ) {
+	public String getValorGlucosaFromDatosString ( String datos ) {
 		
     	String SplitBy = ",";
 
@@ -91,12 +102,13 @@ public class Paciente implements Serializable{
 			
 			String datosString = datosPaciente.get(i);
 
-			DatosPaciente datos = getDatosFromString(datosString);
+			DatosPaciente datos = getDatosFromDatosString(datosString);
 			
 			listaDatosPacientes.add(datos);
 		}
 		
 	    return listaDatosPacientes;
+	    
 	}
 
 	public void setDatosPaciente(List <DatosPaciente> datosPaciente) {
@@ -121,14 +133,6 @@ public class Paciente implements Serializable{
 	
 	public void addDatosPaciente(DatosPaciente datos) {
 		this.datosPaciente.add(datos.getFecha() + "," + datos.getHora() + "," + datos.getValorGlucosa());
-	}
-	
-	public void setMedicoAsociado(String medicoAsociado) {
-		this.medicoAsociado = medicoAsociado ;
-	}
-
-	public String getMedicoAsociado() {
-		return medicoAsociado;
 	}
 
 }
