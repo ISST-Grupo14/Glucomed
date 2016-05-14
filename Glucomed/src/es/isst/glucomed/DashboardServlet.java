@@ -29,6 +29,8 @@ public class DashboardServlet extends HttpServlet {
 			url = urlNoLogueado;
 		}else{
 			url = urlLogueado;
+			
+			//SOLO SI ESTA LOGUEADO
 			UserDAO dao = UserDAOImpl.getInstance();
 			String tipoUser = dao.tipoUser(session.getAttribute("email").toString());
 			session.setAttribute("tipoUser", tipoUser);

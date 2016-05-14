@@ -30,14 +30,16 @@ public class ViewDataServlet extends HttpServlet {
 			url = urlNoLogueado;
 		} else {
 			url = urlLogueado;
+			
+			//SOLO SI ESTA LOGUEADO
+			PacienteDAO dao = PacienteDAOImpl.getInstance();
+			
+			String emailConsulta = email;
+					
+			List<DatosPaciente> pacienteDatos = dao.viewData(emailConsulta);
+			session.setAttribute("pacienteDatos", new ArrayList<DatosPaciente>(pacienteDatos));
+			
 		}
-
-		PacienteDAO dao = PacienteDAOImpl.getInstance();
-		
-		String emailConsulta = email;
-				
-		List<DatosPaciente> pacienteDatos = dao.viewData(emailConsulta);
-		session.setAttribute("pacienteDatos", new ArrayList<DatosPaciente>(pacienteDatos));
 
 		RequestDispatcher view = req.getRequestDispatcher(url);
 

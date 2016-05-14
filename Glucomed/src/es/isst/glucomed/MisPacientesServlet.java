@@ -32,28 +32,22 @@ public class MisPacientesServlet extends HttpServlet {
 			url = urlNoLogueado;
 		} else {
 			url = urlLogueado;
-		}
-		
-		// Primero verificamos si el usuario es un medico
-		
-		UserDAO userDAO = UserDAOImpl.getInstance();
-		
-		String tipoUsuario = userDAO.tipoUser(email);
-				
-		if (!tipoUsuario.equals("medico")) {
-		
-			// TODO: Situacion de error
-		
-		} else {
 			
-			// Devolvemos la lista de pacientes
+			//SOLO SI ESTA LOGUEADO
 			
-			PacienteDAO dao = PacienteDAOImpl.getInstance();
-
-			List<User> viewListaPacientes = dao.viewPacientesDeMedico(email);
-
-			session.setAttribute("viewListaPacientes", new ArrayList<User>(viewListaPacientes));
+			// Primero verificamos si el usuario es un medico
 			
+			UserDAO userDAO = UserDAOImpl.getInstance();
+			String tipoUsuario = userDAO.tipoUser(email);
+					
+			if (!tipoUsuario.equals("medico")) {
+				// TODO: Situacion de error
+			} else {
+				// Devolvemos la lista de pacientes
+				PacienteDAO dao = PacienteDAOImpl.getInstance();
+				List<User> viewListaPacientes = dao.viewPacientesDeMedico(email);
+				session.setAttribute("viewListaPacientes", new ArrayList<User>(viewListaPacientes));
+			}
 		}
 
 		RequestDispatcher view = req.getRequestDispatcher(url);

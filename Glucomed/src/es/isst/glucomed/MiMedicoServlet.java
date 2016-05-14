@@ -24,7 +24,8 @@ public class MiMedicoServlet extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws IOException {
 
 		HttpSession session = req.getSession();
 		String urlLogueado = "MiMedicoView.jsp";
@@ -36,41 +37,47 @@ public class MiMedicoServlet extends HttpServlet {
 			url = urlNoLogueado;
 		} else {
 			url = urlLogueado;
-		}
-		
-		// Primero verificamos si el usuario es un paciente y si ya tiene medico
-		
-		PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
-		
-		String emailMedicoAsignado = pacienteDAO.getMedicoAsociado(email);
-				
-		if ((emailMedicoAsignado != null) && (!emailMedicoAsignado.equals("Sin asignar"))) {
-		
-			// si tiene medico activamos variable de sesion para que el jsp muestre datos del medico asociado
-			
-			UserDAO dao = UserDAOImpl.getInstance();
-			User medico = dao.viewUser(emailMedicoAsignado);
-			
-			session.setAttribute("viewMedico", medico);
-			session.setAttribute("hayMedico", true);
-		
-		} else {
-			
-			// Si no tiene medico mostramos la lista de medicos para que pueda seleccionar uno
-			
-			UserDAO dao = UserDAOImpl.getInstance();
 
-			List<User> viewListaMedico = dao.viewListaMedicos(email);
+			// Primero verificamos si el usuario es un paciente y si ya tiene
+			// medico
 
-			session.setAttribute("viewListaMedico", new ArrayList<User>(viewListaMedico));
-			session.setAttribute("hayMedico", false);
-			
+			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
+
+			String emailMedicoAsignado = pacienteDAO.getMedicoAsociado(email);
+
+			if ((emailMedicoAsignado != null)
+					&& (!emailMedicoAsignado.equals("Sin asignar"))) {
+
+				// si tiene medico activamos variable de sesion para que el jsp
+				// muestre datos del medico asociado
+
+				UserDAO dao = UserDAOImpl.getInstance();
+				User medico = dao.viewUser(emailMedicoAsignado);
+
+				session.setAttribute("viewMedico", medico);
+				session.setAttribute("hayMedico", true);
+
+			} else {
+
+				// Si no tiene medico mostramos la lista de medicos para que
+				// pueda seleccionar uno
+
+				UserDAO dao = UserDAOImpl.getInstance();
+
+				List<User> viewListaMedico = dao.viewListaMedicos(email);
+
+				session.setAttribute("viewListaMedico", new ArrayList<User>(
+						viewListaMedico));
+				session.setAttribute("hayMedico", false);
+
+			}
 		}
 
 		RequestDispatcher view = req.getRequestDispatcher(url);
 
 		try {
-			// Con el view, devolvemos una vez ejecutada la peticion, el control al servlet que la envio.
+			// Con el view, devolvemos una vez ejecutada la peticion, el control
+			// al servlet que la envio.
 			view.forward(req, resp);
 		} catch (ServletException e) {
 
@@ -84,63 +91,64 @@ public class MiMedicoServlet extends HttpServlet {
 			throws IOException {
 
 		HttpSession session = req.getSession();
-		
+
 		String emailSession = session.getAttribute("email").toString();
-		
-		String emailMedico  = req.getParameter("emailMedico");
-		String accion  = req.getParameter("accion");
-		
+
+		String emailMedico = req.getParameter("emailMedico");
+		String accion = req.getParameter("accion");
+
 		if (accion.equals("Eliminar")) {
 
 			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
 
-			String medicoAsociado = pacienteDAO.getMedicoAsociado(session.getAttribute("email").toString());
-			
+			String medicoAsociado = pacienteDAO.getMedicoAsociado(session
+					.getAttribute("email").toString());
+
 			if (medicoAsociado != null) {
-				
+
 				// Eliminamos el medico
-				
+
 				pacienteDAO.eliminarMedico(emailMedico, emailSession);
-				
+
 				resp.sendRedirect("/");
-				
+
 			} else {
-				
+
 				// TODO: Situacion de error.
-				
+
 				resp.sendRedirect("/");
-				
+
 			}
-			
+
 		} else if (accion.equals("Seleccionar")) {
-			
-			
+
 			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
 
-			String medicoAsociado = pacienteDAO.getMedicoAsociado(session.getAttribute("email").toString());
-			
+			String medicoAsociado = pacienteDAO.getMedicoAsociado(session
+					.getAttribute("email").toString());
+
 			if (medicoAsociado == null) {
-				
+
 				// Asignamos nuevo Medico
-				
+
 				pacienteDAO.addMedico(emailMedico, emailSession);
-				
+
 				resp.sendRedirect("/");
-				
+
 			} else {
-				
+
 				// El usuario ya tiene un medico asignado
 				// TODO: Situacion de error.
-				
+
 				resp.sendRedirect("/");
-				
+
 			}
-			
+
 		} else {
-			
+
 			// TODO: Estado de error!
 		}
 
 	}
-	
+
 }
