@@ -109,7 +109,9 @@
 					
 						<div class="top_block usuario_destino">
 							<div class="content">
-								<p><br><a href="buzon?accionEspecial=borrar&eMailPaciente=${destino}"><c:out value = "${destino}"/> </a></p>
+								<p><br><a href="buzon?accionEspecial=borrar&eMailPaciente=${destino}">
+								<c:out value = "Chateando con: "/>
+								<c:out value = "${destino}"/> </a></p>
 							</div>
 						</div>
 						
@@ -122,9 +124,14 @@
 									
 									<c:if test="${mensaje.origen == origen}">
 										<div class="mensaje_derecha">
-											<p> <c:out value = "${mensaje.origen}"/>:   </p>
-											<p> <c:out value = "${mensaje.contenido}"/> </p>
-	 										<p> (<c:out value = "${mensaje.fecha}"/>)   </p>
+										
+											
+											<div class="mensaje_derecha">
+											<p> 
+												<c:out value = "${mensaje.contenido}"/> 
+												<c:out value = "${mensaje.fecha}"/> 
+											</p>
+	 										
 	 										<br>
 										</div>
 									</c:if>
@@ -132,9 +139,11 @@
 									<c:if test="${mensaje.origen != origen}">
 										<div class="mensaje_izquierda">
 							
-											<p> <c:out value = "${mensaje.origen}"/>:   </p>
-											<p> <c:out value = "${mensaje.contenido}"/> </p> 
-											<p> (<c:out value = "${mensaje.fecha}"/>)   </p>
+											
+											<p> 
+												<c:out value = "${mensaje.contenido}"/> 
+												<c:out value = "${mensaje.fecha}"/> 
+											</p>
 											<br> 
 
 										</div>
@@ -155,12 +164,12 @@
 									<div class="background enviar_mensaje">
 									</div>
 									<div class="right_block enviar_mensaje">
-										<div class="content">
+										
 											<!-- <p> Enviar </p> -->
 											<input type="hidden" name="origen" value="${origen}">
 											<input type="hidden" name="destino" value="${destino}">
 											<input type=image src="/img/icon-send.png" value="enviar" width="30" height="30">
-										</div>
+										
 									</div>
 								</form>
 							</div>
@@ -175,9 +184,7 @@
 			
 			<br><br>
 			
-		    <div class="footer col-12">
-				<p></p>
-			</div>
+		   
 	</div>
 	</div>
 
