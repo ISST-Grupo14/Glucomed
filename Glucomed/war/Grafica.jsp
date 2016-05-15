@@ -71,7 +71,7 @@ div.clearfix {
 			</div>
 
 			<div class="caja-titulo col-12">
-				<span class="titulo">Dashboard</span>
+				<span class="titulo">Grafica</span>
 			</div>
 
 			<div class="section col-12">

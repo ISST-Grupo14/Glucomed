@@ -24,33 +24,24 @@
 	<script type="text/javascript" src="js/paginacion.js"></script>
 	
 	<script type='text/javascript'>//<![CDATA[
-		$(window).load(function(){
-			
-			setTimeout(function(){
-				window.location.reload(1);
-			}, 10000);
-			
-			$(".ver_mensajes").animate({ scrollTop: $(document).height() }, 0);
-			
-			<c:if test="${comment_done == false}">
-		        var message= sessionStorage.getItem('comment_data');
-		        if (message!== null) $('#commentdata').val(message);
-		        $('#commentdata').focus();
-			</c:if>	
-			
-			<c:if test="${comment_done == true}">
-				<c:set var="comment_done" scope="session" value="${false}"/>
-			</c:if>	
-			
-		  	return false;
-		  	
-		});//]]> 
-	
-	    // Before refreshing the page, save the form data to sessionStorage
-	    window.onbeforeunload = function() {
-	        sessionStorage.setItem("comment_data", $('#commentdata').val());
-	    }
-	
+	$(window).load(function(){
+
+	    setInterval(function() {
+	    	
+	        $.get("buzon?accionEspecial=refresh", function (result_refresh) {
+	            $('#mensajes_buzon').html(result_refresh);
+				$(".ver_mensajes").animate({ scrollTop: $(document).height() }, 0);
+				$("#mensajes_buzon").animate({ scrollTop: $(document).height() }, 0);
+			    $('#commentdata').focus();
+	        });
+	        
+	    }, 10000);
+				
+		$(".ver_mensajes").animate({ scrollTop: $(document).height() }, 0);
+		$("#mensajes_buzon").animate({ scrollTop: $(document).height() }, 0);
+	    $('#commentdata').focus();
+	  	
+	});
 	
 	</script>
 
@@ -76,6 +67,10 @@
 		    	<img class="image-header only-movil" src="img/logo-movil.png" />
 		    	<img class="image-header only-screen" src="img/logo-screen.png" />
     		</div>
+    		
+			
+				<span class="titulo">Comentarios</span>
+			
 
 		    <!-- ==========AQUI VA TODO======== -->
 			<br>
@@ -109,14 +104,18 @@
 					
 						<div class="top_block usuario_destino">
 							<div class="content">
-								<p><br><a href="buzon?accionEspecial=borrar&eMailPaciente=${destino}">
-								<c:out value = "Chateando con: "/>
-								<c:out value = "${destino}"/> </a></p>
+								<p>
+									<br>
+									<a href="buzon?accionEspecial=borrar&eMailPaciente=${destino}">
+										<c:out value = "Chateando con: "/>
+										<c:out value = "${destino}"/> 
+									</a>
+								</p>
 							</div>
 						</div>
 						
 						<div class="center_block ver_mensajes">
-							<div class="content">
+							<div class="content" id="mensajes_buzon">
 							
 								<!-- Mensajes -->
 														
@@ -124,28 +123,23 @@
 									
 									<c:if test="${mensaje.origen == origen}">
 										<div class="mensaje_derecha">
-										
-											
-											<div class="mensaje_derecha">
-											<p> 
-												<c:out value = "${mensaje.contenido}"/> 
-												<c:out value = "${mensaje.fecha}"/> 
-											</p>
-	 										
+											<p> <c:out value = "${mensaje.origen}"/>:
+											<br>   
+											 <c:out value = "${mensaje.contenido}"/>
+											 <br> 
+	 										 (<c:out value = "${mensaje.fecha}"/>)   </p>
 	 										<br>
 										</div>
 									</c:if>
 									
 									<c:if test="${mensaje.origen != origen}">
 										<div class="mensaje_izquierda">
-							
-											
-											<p> 
-												<c:out value = "${mensaje.contenido}"/> 
-												<c:out value = "${mensaje.fecha}"/> 
-											</p>
+											<p> <c:out value = "${mensaje.origen}"/>:
+											<br>   
+											 <c:out value = "${mensaje.contenido}"/>
+											 <br>  
+											(<c:out value = "${mensaje.fecha}"/>)   </p>
 											<br> 
-
 										</div>
 									</c:if>	
 
@@ -164,12 +158,12 @@
 									<div class="background enviar_mensaje">
 									</div>
 									<div class="right_block enviar_mensaje">
-										
+										<div class="content">
 											<!-- <p> Enviar </p> -->
 											<input type="hidden" name="origen" value="${origen}">
 											<input type="hidden" name="destino" value="${destino}">
 											<input type=image src="/img/icon-send.png" value="enviar" width="30" height="30">
-										
+										</div>
 									</div>
 								</form>
 							</div>
@@ -184,8 +178,12 @@
 			
 			<br><br>
 			
-		   
+		    <div class="footer col-12">
+				<p></p>
+			</div>
+
 	</div>
 	</div>
 
 </body>
+</html>

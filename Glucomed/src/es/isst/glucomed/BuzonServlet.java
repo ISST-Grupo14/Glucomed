@@ -24,9 +24,8 @@ import es.isst.glucomed.model.User;
 
 @SuppressWarnings("serial")
 public class BuzonServlet extends HttpServlet {
-
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+	
+	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		HttpSession session = req.getSession();
 		String urlLogueado = "MensajesView.jsp";
@@ -40,156 +39,190 @@ public class BuzonServlet extends HttpServlet {
 			url = urlLogueado;
 
 			// SOLO SI ESTA LOGUEADO
-
-			UserDAO userDAO = UserDAOImpl.getInstance();
-
-			String tipoUser = userDAO.tipoUser(email);
-			String nombreUser = userDAO.viewUser(email).getNombre();
-			String emailMedico = "";
-			String emailPaciente = "";
-
-			PacienteDAO pacienteDAO = PacienteDAOImpl.getInstance();
-
-			// Construimos lista de pacientes si el user es un medico
-
-			if (tipoUser.equals("medico")) {
-
-				emailMedico = email;
-				emailPaciente = req.getParameter("eMailPaciente");
-
-				if (emailPaciente == null) {
-					emailPaciente = (String) session
-							.getAttribute("eMailPaciente");
-				}
-
-				List<User> listaPacientes = pacienteDAO
-						.viewPacientesDeMedico(emailMedico);
-
-				session.setAttribute("origenNombre", nombreUser);
-				session.setAttribute("origen", emailMedico);
-				session.setAttribute("destino", emailPaciente);
-
-				// creamos la variable de sesion
-
-				session.setAttribute("listaPacientes", new ArrayList<User>(
-						listaPacientes));
-
+		
+		UserDAO userDAO    = UserDAOImpl.getInstance();
+		
+		String tipoUser      = userDAO.tipoUser(email);
+		String nombreUser    = userDAO.viewUser(email).getNombre();
+		String emailMedico   = "";
+		String emailPaciente = "";
+		
+		String result_refresh = "";
+		String accionEspecial = req.getParameter("accionEspecial");
+		
+		PacienteDAO pacienteDAO    = PacienteDAOImpl.getInstance();
+		
+		// Construimos lista de pacientes si el user es un medico
+		
+		if (tipoUser.equals("medico")) {
+			
+			emailMedico   = email;
+			emailPaciente = req.getParameter("eMailPaciente");
+			
+			if (emailPaciente == null) {
+				emailPaciente = (String) session.getAttribute("eMailPaciente");
 			} else {
-
-				emailMedico = pacienteDAO.getMedicoAsociado(email);
-				emailPaciente = email;
-
-				session.setAttribute("origenNombre", nombreUser);
-				session.setAttribute("origen", email);
-				session.setAttribute("destino", emailMedico);
-
+				session.setAttribute("eMailPaciente", emailPaciente);
 			}
-
-			// Construimos buzon para todos los casos
-
-			List<Mensaje> mensajes = null;
-
-			if ((emailMedico != null) && (emailPaciente != null)) {
-
-				BuzonDAO buzonDAO = BuzonDAOImpl.getInstance();
-
-				String accionEspecial = req.getParameter("accionEspecial");
-
-				if (accionEspecial == null) {
-					mensajes = buzonDAO.getMensajesBuzon(emailPaciente,
-							emailMedico);
-				} else {
-					if (accionEspecial.equals("borrar")) {
-						mensajes = buzonDAO.eliminarMensajes(emailPaciente,
-								emailMedico);
-					}
-				}
-
-			} else {
-
-				mensajes = new ArrayList<Mensaje>();
-
-			}
-
+			
+			List<User> listaPacientes = pacienteDAO.viewPacientesDeMedico(emailMedico);
+			
+			session.setAttribute("origenNombre", nombreUser);
+			session.setAttribute("origen", emailMedico);
+			session.setAttribute("destino", emailPaciente);
+			
 			// creamos la variable de sesion
-
-			session.setAttribute("mensajes", new ArrayList<Mensaje>(mensajes));
-
+			
+			session.setAttribute("listaPacientes", new ArrayList<User>(listaPacientes));
+			
+		} else {
+			
+			emailMedico   = pacienteDAO.getMedicoAsociado(email);
+			emailPaciente = email;
+			
+			session.setAttribute("origenNombre", nombreUser);
+			session.setAttribute("origen", email);
+			session.setAttribute("destino", emailMedico);
+			
 		}
+		
+		// Construimos buzon para todos los casos
+		
+		List<Mensaje> mensajes = null;
+		
+		if ((emailMedico != null) && (emailPaciente != null)) {
+			
+			BuzonDAO buzonDAO = BuzonDAOImpl.getInstance();
 
-		RequestDispatcher view = req.getRequestDispatcher(url);
+			if ((accionEspecial == null) || accionEspecial.equals("refresh")) {
+				mensajes = buzonDAO.getMensajesBuzon(emailPaciente, emailMedico);
+			} else {			
+				if (accionEspecial.equals("borrar")) {
+					mensajes = buzonDAO.eliminarMensajes(emailPaciente, emailMedico);				
+				}
+			}
+			
+		} else {
+			
+			mensajes = new ArrayList<Mensaje>();
+			
+		}
+		
+		// creamos la variable de sesion
+		
+		session.setAttribute("mensajes", new ArrayList<Mensaje>(mensajes));
+		
+		// Codigo especial para refrescar el div de mensajes
+		
+		if ((accionEspecial != null) && (accionEspecial.equals("refresh"))) {
 
-		try {
-			// Con el view, devolvemos una vez ejecutada la peticion, el control
-			// al servlet que la envio.
-			view.forward(req, resp);
-		} catch (ServletException e) {
-
-			e.printStackTrace();
-
+				result_refresh = "";
+				
+				for (int i = 0; i < mensajes.size(); i++) {
+					Mensaje mensaje = mensajes.get(i);
+					
+					if (mensaje.getOrigen().equals(email)){
+						
+						result_refresh += "<div class=\"mensaje_derecha\">";
+						
+					} else {
+						
+						result_refresh += "<div class=\"mensaje_izquierda\">";
+						
+					}
+					
+					result_refresh += "<p>"  + mensaje.getOrigen()    + ": "
+							+ "<br>"
+									+ mensaje.getContenido()
+									+ "<br>"
+									+ " (" + mensaje.getFecha()     + ")</p>"
+									+ "<br>"
+									+ "</div>";
+					
+					
+				}
+								
+				resp.setContentType("text/html");
+				//resp.setCharacterEncoding("UTF-8");
+				resp.getWriter().write(result_refresh);
+			
+		} else {
+			
+			RequestDispatcher view = req.getRequestDispatcher(url);
+	
+			try {
+				// Con el view, devolvemos una vez ejecutada la peticion, el control al servlet que la envio.
+				view.forward(req, resp);
+			} catch (ServletException e) {
+	
+				e.printStackTrace();
+	
+			}
+		
 		}
 
 	}
 
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws IOException {
+	}
+
+	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
 		HttpSession session = req.getSession();
-
+		
 		String email = (String) session.getAttribute("email");
 
-		String origen = req.getParameter("origen");
-		String destino = req.getParameter("destino");
+		String origen    = req.getParameter("origen");
+		String destino   = req.getParameter("destino");
 		String contenido = req.getParameter("comment");
-		String fecha = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
-
+		String fecha     = new SimpleDateFormat("dd/MM/yyyy HH:MM").format(new Date());
+		
 		String emailPaciente = "";
-		String emailMedico = "";
-
-		UserDAO userDAO = UserDAOImpl.getInstance();
-
-		String tipoUser = userDAO.tipoUser(email);
+		String emailMedico   = "";
+		
+		UserDAO userDAO    = UserDAOImpl.getInstance();
+		
+		String tipoUser      = userDAO.tipoUser(email);
 
 		if (tipoUser.equals("medico")) {
-
+			
 			emailPaciente = destino;
-			emailMedico = origen;
-
+			emailMedico   = origen;
+			
 		} else {
-
+			
 			emailPaciente = origen;
-			emailMedico = destino;
-
+			emailMedico   = destino;
+			
 		}
 
 		BuzonDAO dao = BuzonDAOImpl.getInstance();
-
-		Mensaje mensaje = new Mensaje(origen, destino, contenido, fecha);
-
+		
+		Mensaje mensaje = new Mensaje (origen, destino, contenido, fecha);
+		
 		dao.addMensajeEnBuzon(mensaje, emailPaciente, emailMedico);
-
+		
 		if (tipoUser.equals("medico")) {
-
-			String nombreUser = userDAO.viewUser(emailMedico).getNombre();
-
+			
+			String nombreUser    = userDAO.viewUser(emailMedico).getNombre();
+			
 			session.setAttribute("origenNombre", nombreUser);
 			session.setAttribute("origen", emailMedico);
 			session.setAttribute("destino", emailPaciente);
 			session.setAttribute("eMailPaciente", emailPaciente);
-
+			
 		} else {
-
-			String nombreUser = userDAO.viewUser(emailPaciente).getNombre();
-
+			
+			String nombreUser    = userDAO.viewUser(emailPaciente).getNombre();
+			
 			session.setAttribute("origenNombre", nombreUser);
 			session.setAttribute("origen", emailPaciente);
 			session.setAttribute("destino", emailMedico);
 		}
-
+		
 		session.setAttribute("comment_done", true);
-
+		
 		resp.sendRedirect("/buzon");
-
+		
 	}
 
 }
