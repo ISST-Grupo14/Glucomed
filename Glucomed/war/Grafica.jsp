@@ -84,7 +84,7 @@ div.clearfix {
 
 							<form name="formDatos">
 								<input type="hidden" id="string_datos" name="string_datos"
-									value=<c:out value="${datos_string}"/>>
+									value=<c:out value="${datosString}"/>>
 								<!--  <button onclick="mostrarAlert()">Try it</button> -->
 							</form>
 
