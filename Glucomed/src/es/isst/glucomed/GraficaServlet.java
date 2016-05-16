@@ -38,24 +38,24 @@ public class GraficaServlet extends HttpServlet {
 			UserDAO dao2 = UserDAOImpl.getInstance();
 			String tipoUser = dao2.tipoUser(email);	
 			String emailConsulta = email;
-			String datos_string = "";
+			String datosString = "";
 			
 			if (tipoUser != "paciente") {
 				String emailPaciente = (String) session.getAttribute("emailPacienteDeMedico");
 				emailConsulta = emailPaciente;
-				System.out.println(emailPaciente);
+				
 			}
 			
 			List<DatosPaciente> datosPaciente = dao.viewData(emailConsulta);
 			for (int i = 0; i < datosPaciente.size(); i++) {
 				DatosPaciente datos = datosPaciente.get(i);
-				datos_string += datos.getFecha() + ",";
-				datos_string += datos.getHora() + ",";
-				datos_string += datos.getValorGlucosa();
-				datos_string += ";";
+				datosString += datos.getFecha() + ",";
+				datosString += datos.getHora() + ",";
+				datosString += datos.getValorGlucosa();
+				datosString += ";";
 			}			
 			
-			session.setAttribute("datos_string", datos_string);
+			session.setAttribute("datosString", datosString);
 			//System.out.println("String csv: "+"\n"+ session.getAttribute("string_csv"));
 
 		}

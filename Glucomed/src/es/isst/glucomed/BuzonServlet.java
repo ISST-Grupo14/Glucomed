@@ -47,7 +47,7 @@ public class BuzonServlet extends HttpServlet {
 		String emailMedico   = "";
 		String emailPaciente = "";
 		
-		String result_refresh = "";
+		String resultrefresh = "";
 		String accionEspecial = req.getParameter("accionEspecial");
 		
 		PacienteDAO pacienteDAO    = PacienteDAOImpl.getInstance();
@@ -90,11 +90,11 @@ public class BuzonServlet extends HttpServlet {
 		
 		List<Mensaje> mensajes = null;
 		
-		if ((emailMedico != null) && (emailPaciente != null)) {
+		if (emailMedico != null && emailPaciente != null) {
 			
 			BuzonDAO buzonDAO = BuzonDAOImpl.getInstance();
 
-			if ((accionEspecial == null) || accionEspecial.equals("refresh")) {
+			if (accionEspecial == null || accionEspecial.equals("refresh")) {
 				mensajes = buzonDAO.getMensajesBuzon(emailPaciente, emailMedico);
 			} else {			
 				if (accionEspecial.equals("borrar")) {
@@ -114,24 +114,24 @@ public class BuzonServlet extends HttpServlet {
 		
 		// Codigo especial para refrescar el div de mensajes
 		
-		if ((accionEspecial != null) && (accionEspecial.equals("refresh"))) {
+		if (accionEspecial != null && accionEspecial.equals("refresh")) {
 
-				result_refresh = "";
+				resultrefresh = "";
 				
 				for (int i = 0; i < mensajes.size(); i++) {
 					Mensaje mensaje = mensajes.get(i);
 					
 					if (mensaje.getOrigen().equals(email)){
 						
-						result_refresh += "<div class=\"mensaje_derecha\">";
+						resultrefresh += "<div class=\"mensaje_derecha\">";
 						
 					} else {
 						
-						result_refresh += "<div class=\"mensaje_izquierda\">";
+						resultrefresh += "<div class=\"mensaje_izquierda\">";
 						
 					}
 					
-					result_refresh += "<p>"  + mensaje.getOrigen()    + ": "
+					resultrefresh += "<p>"  + mensaje.getOrigen()    + ": "
 							+ "<br>"
 									+ mensaje.getContenido()
 									+ "<br>"
@@ -144,7 +144,7 @@ public class BuzonServlet extends HttpServlet {
 								
 				resp.setContentType("text/html");
 				//resp.setCharacterEncoding("UTF-8");
-				resp.getWriter().write(result_refresh);
+				resp.getWriter().write(resultrefresh);
 			
 		} else {
 			

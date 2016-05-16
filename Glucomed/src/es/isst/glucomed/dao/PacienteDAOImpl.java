@@ -10,7 +10,7 @@ import es.isst.glucomed.model.DatosPaciente;
 import es.isst.glucomed.model.Paciente;
 import es.isst.glucomed.model.User;
 
-public class PacienteDAOImpl implements PacienteDAO {
+public final class PacienteDAOImpl implements PacienteDAO {
 
 	private static PacienteDAOImpl instance;
 	
@@ -95,7 +95,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 			
 		} else {
 			
-			// TODO: Esto sería un error!!
+			// TODO: Esto serï¿½a un error!!
 			
 			em.close();
 			
@@ -118,7 +118,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 			
 		} else {
 			
-			// TODO: Esto sería un error!!
+			// TODO: Esto serï¿½a un error!!
 			
 			em.close();
 			
@@ -142,7 +142,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 			
 		} else {
 			
-			// TODO: Esto sería un error!!
+			// TODO: Esto serï¿½a un error!!
 
 			return false;
 			
@@ -166,7 +166,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 			
 		} else {
 			
-			// TODO: Esto sería un error!!
+			// TODO: Esto serï¿½a un error!!
 
 			return false;
 			
@@ -191,7 +191,7 @@ public class PacienteDAOImpl implements PacienteDAO {
 			
 		} else {
 			
-			// TODO: Esto sería un error!!
+			// TODO: Esto serï¿½a un error!!
 			// Sin Asignar implica que el paciente existe pero no tiene medico
 			// null implica que el paciente no existe
 			

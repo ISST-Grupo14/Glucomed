@@ -7,7 +7,7 @@ import javax.persistence.Query;
 
 import es.isst.glucomed.model.User;
 
-public class UserDAOImpl implements UserDAO {
+public final class UserDAOImpl implements UserDAO {
 
 	private static UserDAOImpl instance;
 
@@ -25,7 +25,7 @@ public class UserDAOImpl implements UserDAO {
 			String password, String email) {
 
 		User u = new User(nombre, apellidos, tipoUser, password, email);
-		boolean testUser = SuccessRegister(email);
+		boolean testUser = successRegister(email);
 		boolean resultado;
 		
 		EntityManager em = EMFService.get().createEntityManager();
@@ -44,7 +44,7 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
-	public boolean SuccessRegister(String email) {
+	public boolean successRegister(String email) {
 
 		EntityManager em = EMFService.get().createEntityManager();
 		Query q = em.createQuery("select item from User item where item.email = :email");
@@ -60,7 +60,7 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
-	public boolean SuccessLogin(String email, String password) {
+	public boolean successLogin(String email, String password) {
 
 		EntityManager em = EMFService.get().createEntityManager();
 		Query q = em.createQuery("select item from User item where item.email = :email and item.password = :password");

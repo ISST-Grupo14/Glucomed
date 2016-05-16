@@ -10,8 +10,8 @@ public interface UserDAO {
 	
 	public boolean createUser (String nombre, String apellidos,String tipoUser, String password, String email);
 	
-	public boolean SuccessRegister (String email);
-	public boolean SuccessLogin (String email, String password);
+	public boolean successRegister (String email);
+	public boolean successLogin (String email, String password);
 	
 	// Carcateristicas User
 	

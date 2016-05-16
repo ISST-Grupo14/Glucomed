@@ -45,8 +45,7 @@ public class MiMedicoServlet extends HttpServlet {
 
 			String emailMedicoAsignado = pacienteDAO.getMedicoAsociado(email);
 
-			if ((emailMedicoAsignado != null)
-					&& (!emailMedicoAsignado.equals("Sin asignar"))) {
+			if (emailMedicoAsignado != null && !emailMedicoAsignado.equals("Sin asignar")) {
 
 				// si tiene medico activamos variable de sesion para que el jsp
 				// muestre datos del medico asociado

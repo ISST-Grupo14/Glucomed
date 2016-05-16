@@ -95,12 +95,12 @@ public class RegisterServlet extends HttpServlet {
 			
 			// En funcion del tipo de usuario creamos el modelo Paciente o Medico asociado al usuario
 			
-			if ((result) && (tipoUser.equals("paciente"))) {
+			if (result && tipoUser.equals("paciente")) {
 				
 				PacienteDAO daoPaciente = PacienteDAOImpl.getInstance();
 				daoPaciente.createPaciente (email);
 				
-			} else if ((result) && (tipoUser.equals("medico"))) {
+			} else if (result && tipoUser.equals("medico")) {
 				
 				MedicoDAO daoMedico = MedicoDAOImpl.getInstance();
 				daoMedico.createMedico (email);

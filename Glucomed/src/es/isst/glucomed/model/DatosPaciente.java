@@ -2,7 +2,7 @@ package es.isst.glucomed.model;
 
 import java.io.Serializable;
 
-public class DatosPaciente implements Serializable {
+public final class DatosPaciente implements Serializable {
 	
 	static final long serialVersionUID = 01L;
 	

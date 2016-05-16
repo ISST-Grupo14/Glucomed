@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import es.isst.glucomed.model.Medico;
 
-public class MedicoDAOImpl implements MedicoDAO {
+public final class MedicoDAOImpl implements MedicoDAO {
 
 	private static MedicoDAOImpl instance;
 	

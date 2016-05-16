@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import es.isst.glucomed.model.Buzon;
 import es.isst.glucomed.model.Mensaje;
 
-public class BuzonDAOImpl implements BuzonDAO {
+public final class BuzonDAOImpl implements BuzonDAO {
 
 	private static BuzonDAOImpl instance;
 	
@@ -61,7 +61,7 @@ public class BuzonDAOImpl implements BuzonDAO {
 			
 		} else {
 			
-			// Ya hay un buzon existente. Añadimos el mensaje
+			// Ya hay un buzon existente. Aï¿½adimos el mensaje
 			
 			buzon.addMensajeEnBuzon(mensaje);
 			

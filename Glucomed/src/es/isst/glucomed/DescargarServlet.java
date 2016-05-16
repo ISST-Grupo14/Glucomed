@@ -34,18 +34,18 @@ public class DescargarServlet extends HttpServlet {
 		if (tipoUser != "paciente") {
 			String emailPaciente = (String) session.getAttribute("emailPacienteDeMedico");
 			emailConsulta = emailPaciente;
-			System.out.println(emailPaciente);
+	
 		}
 		
 		List<DatosPaciente> datosPaciente = dao.viewData(emailConsulta);
 
-		String csv_string = "";
-		String file_name = "data.csv";
+		String csvString = "";
+		String fileName = "data.csv";
 		
-		if(file_name.length() == 0) file_name = "data.csv";
+		if(fileName.length() == 0) fileName = "data.csv";
 		
 		resp.setContentType("application/csv");
-		resp.setHeader("content-disposition","filename="+file_name); // Filename
+		resp.setHeader("content-disposition","filename="+fileName); // Filename
 		
 		PrintWriter outx = resp.getWriter();
 
@@ -53,11 +53,11 @@ public class DescargarServlet extends HttpServlet {
 			
 			DatosPaciente datos = datosPaciente.get(i);
 
-			csv_string = csv_string + datos.getFecha() + ",";
-			csv_string = csv_string + datos.getHora() + ",";
-			csv_string = csv_string + datos.getValorGlucosa();
-			outx.println(csv_string);
-			csv_string = "";
+			csvString = csvString + datos.getFecha() + ",";
+			csvString = csvString + datos.getHora() + ",";
+			csvString = csvString + datos.getValorGlucosa();
+			outx.println(csvString);
+			csvString = "";
 			
 		}
 

@@ -1,183 +1,318 @@
+src/es/isst/glucomed/BuzonServlet.java:26:	Each class should declare at least one constructor
+src/es/isst/glucomed/BuzonServlet.java:26:	The class 'BuzonServlet' has a Cyclomatic Complexity of 9 (Highest = 14).
+src/es/isst/glucomed/BuzonServlet.java:26:	The class 'BuzonServlet' has a Modified Cyclomatic Complexity of 8 (Highest = 11).
+src/es/isst/glucomed/BuzonServlet.java:26:	The class 'BuzonServlet' has a Standard Cyclomatic Complexity of 8 (Highest = 11).
+src/es/isst/glucomed/BuzonServlet.java:26:	headerCommentRequirement Required
+src/es/isst/glucomed/BuzonServlet.java:28:	Avoid really long methods.
+src/es/isst/glucomed/BuzonServlet.java:28:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/BuzonServlet.java:28:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/BuzonServlet.java:28:	The method 'doGet' has a Cyclomatic Complexity of 14.
+src/es/isst/glucomed/BuzonServlet.java:28:	The method 'doGet' has a Modified Cyclomatic Complexity of 11.
+src/es/isst/glucomed/BuzonServlet.java:28:	The method 'doGet' has a Standard Cyclomatic Complexity of 11.
+src/es/isst/glucomed/BuzonServlet.java:28:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/BuzonServlet.java:30:	Local variable 'session' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:31:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '31'-'166').
+src/es/isst/glucomed/BuzonServlet.java:31:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:32:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '32'-'166').
+src/es/isst/glucomed/BuzonServlet.java:32:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'37').
+src/es/isst/glucomed/BuzonServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'39').
+src/es/isst/glucomed/BuzonServlet.java:34:	Local variable 'email' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:34:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:37:	Found 'DU'-anomaly for variable 'url' (lines '37'-'166').
+src/es/isst/glucomed/BuzonServlet.java:39:	Found 'DU'-anomaly for variable 'url' (lines '39'-'166').
+src/es/isst/glucomed/BuzonServlet.java:43:	Local variable 'userDAO' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:45:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:45:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:46:	Local variable 'nombreUser' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:46:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/BuzonServlet.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:47:	Found 'DD'-anomaly for variable 'emailMedico' (lines '47'-'59').
+src/es/isst/glucomed/BuzonServlet.java:47:	Found 'DD'-anomaly for variable 'emailMedico' (lines '47'-'80').
+src/es/isst/glucomed/BuzonServlet.java:48:	Found 'DD'-anomaly for variable 'emailPaciente' (lines '48'-'60').
+src/es/isst/glucomed/BuzonServlet.java:48:	Found 'DD'-anomaly for variable 'emailPaciente' (lines '48'-'81').
+src/es/isst/glucomed/BuzonServlet.java:50:	Found 'DD'-anomaly for variable 'resultrefresh' (lines '50'-'119').
+src/es/isst/glucomed/BuzonServlet.java:50:	Found 'DU'-anomaly for variable 'resultrefresh' (lines '50'-'166').
+src/es/isst/glucomed/BuzonServlet.java:51:	Local variable 'accionEspecial' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:53:	Local variable 'pacienteDAO' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:57:	Position literals first in String comparisons
+src/es/isst/glucomed/BuzonServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:60:	The String literal "eMailPaciente" appears 4 times in this file; the first occurrence is on line 60
+src/es/isst/glucomed/BuzonServlet.java:63:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:68:	Local variable 'listaPacientes' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:70:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:70:	The String literal "origenNombre" appears 4 times in this file; the first occurrence is on line 70
+src/es/isst/glucomed/BuzonServlet.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:71:	The String literal "origen" appears 5 times in this file; the first occurrence is on line 71
+src/es/isst/glucomed/BuzonServlet.java:72:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:72:	The String literal "destino" appears 5 times in this file; the first occurrence is on line 72
+src/es/isst/glucomed/BuzonServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:83:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:84:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:85:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:91:	Found 'DD'-anomaly for variable 'mensajes' (lines '91'-'101').
+src/es/isst/glucomed/BuzonServlet.java:91:	Found 'DD'-anomaly for variable 'mensajes' (lines '91'-'107').
+src/es/isst/glucomed/BuzonServlet.java:91:	Found 'DD'-anomaly for variable 'mensajes' (lines '91'-'98').
+src/es/isst/glucomed/BuzonServlet.java:93:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/BuzonServlet.java:95:	Found 'DU'-anomaly for variable 'buzonDAO' (lines '95'-'166').
+src/es/isst/glucomed/BuzonServlet.java:95:	Local variable 'buzonDAO' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:97:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:100:	Position literals first in String comparisons
+src/es/isst/glucomed/BuzonServlet.java:100:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:101:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:117:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:122:	Local variable 'mensaje' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:122:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:124:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/BuzonServlet.java:124:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:126:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/BuzonServlet.java:130:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/BuzonServlet.java:134:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:134:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/BuzonServlet.java:136:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:138:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:147:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/BuzonServlet.java:151:	Local variable 'view' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:154:	Comment is too large: Line too long
+src/es/isst/glucomed/BuzonServlet.java:155:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:158:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/BuzonServlet.java:158:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:168:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/BuzonServlet.java:168:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/BuzonServlet.java:168:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/BuzonServlet.java:170:	Local variable 'session' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:172:	Local variable 'email' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:172:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:174:	Local variable 'origen' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:175:	Local variable 'destino' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:176:	Local variable 'contenido' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:177:	Local variable 'fecha' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:177:	When instantiating a SimpleDateFormat object, specify a Locale
+src/es/isst/glucomed/BuzonServlet.java:179:	Found 'DD'-anomaly for variable 'emailPaciente' (lines '179'-'188').
+src/es/isst/glucomed/BuzonServlet.java:179:	Found 'DD'-anomaly for variable 'emailPaciente' (lines '179'-'193').
+src/es/isst/glucomed/BuzonServlet.java:180:	Found 'DD'-anomaly for variable 'emailMedico' (lines '180'-'189').
+src/es/isst/glucomed/BuzonServlet.java:180:	Found 'DD'-anomaly for variable 'emailMedico' (lines '180'-'194').
+src/es/isst/glucomed/BuzonServlet.java:182:	Local variable 'userDAO' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:184:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:184:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:186:	Position literals first in String comparisons
+src/es/isst/glucomed/BuzonServlet.java:186:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:198:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:200:	Local variable 'mensaje' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:202:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:204:	Position literals first in String comparisons
+src/es/isst/glucomed/BuzonServlet.java:204:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:206:	Local variable 'nombreUser' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:206:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/BuzonServlet.java:206:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:208:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:209:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:210:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:211:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:215:	Local variable 'nombreUser' could be declared final
+src/es/isst/glucomed/BuzonServlet.java:215:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/BuzonServlet.java:215:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:217:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:218:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:219:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/BuzonServlet.java:222:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/DashboardServlet.java:13:	Each class should declare at least one constructor
 src/es/isst/glucomed/DashboardServlet.java:13:	headerCommentRequirement Required
 src/es/isst/glucomed/DashboardServlet.java:14:	Parameter 'req' is not assigned and could be declared final
 src/es/isst/glucomed/DashboardServlet.java:14:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/DashboardServlet.java:14:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/DashboardServlet.java:21:	Local variable 'session' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:22:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '22'-'44').
-src/es/isst/glucomed/DashboardServlet.java:22:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:23:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '23'-'44').
-src/es/isst/glucomed/DashboardServlet.java:23:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:24:	Found 'DD'-anomaly for variable 'url' (lines '24'-'27').
-src/es/isst/glucomed/DashboardServlet.java:24:	Found 'DD'-anomaly for variable 'url' (lines '24'-'29').
-src/es/isst/glucomed/DashboardServlet.java:26:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DashboardServlet.java:30:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:31:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:31:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/DashboardServlet.java:31:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/DashboardServlet.java:31:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DashboardServlet.java:31:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DashboardServlet.java:32:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DashboardServlet.java:35:	Local variable 'view' could be declared final
-src/es/isst/glucomed/DashboardServlet.java:37:	Comment is too large: Line too long
-src/es/isst/glucomed/DashboardServlet.java:38:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DashboardServlet.java:41:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/DashboardServlet.java:41:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:17:	Avoid unused imports such as 'es.isst.glucomed.model.Paciente'
-src/es/isst/glucomed/DescargarServlet.java:20:	Each class should declare at least one constructor
-src/es/isst/glucomed/DescargarServlet.java:20:	headerCommentRequirement Required
-src/es/isst/glucomed/DescargarServlet.java:22:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/DescargarServlet.java:22:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/DescargarServlet.java:22:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/DescargarServlet.java:24:	Local variable 'session' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:30:	Local variable 'email' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:23:	Local variable 'session' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:24:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '24'-'48').
+src/es/isst/glucomed/DashboardServlet.java:24:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:25:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '25'-'48').
+src/es/isst/glucomed/DashboardServlet.java:25:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:26:	Found 'DD'-anomaly for variable 'url' (lines '26'-'29').
+src/es/isst/glucomed/DashboardServlet.java:26:	Found 'DD'-anomaly for variable 'url' (lines '26'-'31').
+src/es/isst/glucomed/DashboardServlet.java:28:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DashboardServlet.java:34:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:35:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:35:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/DashboardServlet.java:35:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/DashboardServlet.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DashboardServlet.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DashboardServlet.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DashboardServlet.java:39:	Local variable 'view' could be declared final
+src/es/isst/glucomed/DashboardServlet.java:42:	Comment is too large: Line too long
+src/es/isst/glucomed/DashboardServlet.java:43:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DashboardServlet.java:45:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/DashboardServlet.java:45:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:19:	Each class should declare at least one constructor
+src/es/isst/glucomed/DescargarServlet.java:19:	headerCommentRequirement Required
+src/es/isst/glucomed/DescargarServlet.java:21:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/DescargarServlet.java:21:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/DescargarServlet.java:21:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/DescargarServlet.java:23:	Local variable 'session' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:25:	Local variable 'email' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:25:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:27:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:29:	Local variable 'dao2' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:30:	Local variable 'tipoUser' could be declared final
 src/es/isst/glucomed/DescargarServlet.java:30:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:32:	Avoid empty if statements
-src/es/isst/glucomed/DescargarServlet.java:32:	Avoid empty if statements
-src/es/isst/glucomed/DescargarServlet.java:32:	Avoid empty if statements
-src/es/isst/glucomed/DescargarServlet.java:42:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:44:	Local variable 'dao2' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:45:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:32:	Found 'DD'-anomaly for variable 'emailConsulta' (lines '32'-'36').
+src/es/isst/glucomed/DescargarServlet.java:34:	Avoid using Literals in Conditional Statements
+src/es/isst/glucomed/DescargarServlet.java:34:	Use equals() to compare strings instead of '==' or '!='
+src/es/isst/glucomed/DescargarServlet.java:35:	Local variable 'emailPaciente' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:40:	Local variable 'datosPaciente' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:40:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:42:	Found 'DD'-anomaly for variable 'csvString' (lines '42'-'56').
+src/es/isst/glucomed/DescargarServlet.java:42:	Found 'DU'-anomaly for variable 'csvString' (lines '42'-'67').
+src/es/isst/glucomed/DescargarServlet.java:45:	Avoid using if statements without curly braces
 src/es/isst/glucomed/DescargarServlet.java:45:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:47:	Found 'DD'-anomaly for variable 'emailConsulta' (lines '47'-'51').
-src/es/isst/glucomed/DescargarServlet.java:49:	Avoid using Literals in Conditional Statements
-src/es/isst/glucomed/DescargarServlet.java:49:	Use equals() to compare strings instead of '==' or '!='
-src/es/isst/glucomed/DescargarServlet.java:50:	Local variable 'emailPaciente' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:50:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:52:	System.out.println is used
-src/es/isst/glucomed/DescargarServlet.java:55:	Local variable 'datosPaciente' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:55:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:57:	Found 'DD'-anomaly for variable 'csv_string' (lines '57'-'72').
-src/es/isst/glucomed/DescargarServlet.java:57:	Found 'DU'-anomaly for variable 'csv_string' (lines '57'-'85').
-src/es/isst/glucomed/DescargarServlet.java:57:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'csv_string' is not final.
-src/es/isst/glucomed/DescargarServlet.java:58:	Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'file_name' is not final.
-src/es/isst/glucomed/DescargarServlet.java:60:	Avoid using if statements without curly braces
-src/es/isst/glucomed/DescargarServlet.java:60:	Avoid using if statements without curly braces
-src/es/isst/glucomed/DescargarServlet.java:60:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:65:	Local variable 'outx' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:67:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:69:	Local variable 'datos' could be declared final
-src/es/isst/glucomed/DescargarServlet.java:69:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:72:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:72:	Prefer StringBuffer over += for concatenating strings
-src/es/isst/glucomed/DescargarServlet.java:73:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:73:	Prefer StringBuffer over += for concatenating strings
-src/es/isst/glucomed/DescargarServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:74:	Prefer StringBuffer over += for concatenating strings
-src/es/isst/glucomed/DescargarServlet.java:75:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:76:	Found 'DD'-anomaly for variable 'csv_string' (lines '76'-'72').
-src/es/isst/glucomed/DescargarServlet.java:76:	Found 'DU'-anomaly for variable 'csv_string' (lines '76'-'85').
-src/es/isst/glucomed/DescargarServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/DescargarServlet.java:81:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/GraficaServlet.java:14:	Each class should declare at least one constructor
-src/es/isst/glucomed/GraficaServlet.java:14:	headerCommentRequirement Required
-src/es/isst/glucomed/GraficaServlet.java:16:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/GraficaServlet.java:16:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/GraficaServlet.java:16:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/GraficaServlet.java:19:	Local variable 'session' could be declared final
-src/es/isst/glucomed/GraficaServlet.java:20:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '20'-'42').
-src/es/isst/glucomed/GraficaServlet.java:20:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/GraficaServlet.java:21:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '21'-'42').
-src/es/isst/glucomed/GraficaServlet.java:21:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/GraficaServlet.java:22:	Found 'DD'-anomaly for variable 'url' (lines '22'-'27').
-src/es/isst/glucomed/GraficaServlet.java:22:	Found 'DD'-anomaly for variable 'url' (lines '22'-'30').
-src/es/isst/glucomed/GraficaServlet.java:25:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/GraficaServlet.java:33:	Local variable 'view' could be declared final
-src/es/isst/glucomed/GraficaServlet.java:35:	Comment is too large: Line too long
+src/es/isst/glucomed/DescargarServlet.java:50:	Local variable 'outx' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:52:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:54:	Local variable 'datos' could be declared final
+src/es/isst/glucomed/DescargarServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:56:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/DescargarServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:57:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/DescargarServlet.java:58:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:58:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/DescargarServlet.java:59:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:60:	Found 'DD'-anomaly for variable 'csvString' (lines '60'-'56').
+src/es/isst/glucomed/DescargarServlet.java:60:	Found 'DU'-anomaly for variable 'csvString' (lines '60'-'67').
+src/es/isst/glucomed/DescargarServlet.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/DescargarServlet.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:20:	Each class should declare at least one constructor
+src/es/isst/glucomed/GraficaServlet.java:20:	headerCommentRequirement Required
+src/es/isst/glucomed/GraficaServlet.java:22:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/GraficaServlet.java:22:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/GraficaServlet.java:22:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/GraficaServlet.java:25:	Local variable 'session' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:26:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '26'-'73').
+src/es/isst/glucomed/GraficaServlet.java:26:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:27:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '27'-'73').
+src/es/isst/glucomed/GraficaServlet.java:27:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'31').
+src/es/isst/glucomed/GraficaServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'33').
+src/es/isst/glucomed/GraficaServlet.java:30:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:36:	Local variable 'email' could be declared final
 src/es/isst/glucomed/GraficaServlet.java:36:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/GraficaServlet.java:39:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/GraficaServlet.java:37:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:38:	Local variable 'dao2' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:39:	Local variable 'tipoUser' could be declared final
 src/es/isst/glucomed/GraficaServlet.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:40:	Found 'DD'-anomaly for variable 'emailConsulta' (lines '40'-'45').
+src/es/isst/glucomed/GraficaServlet.java:43:	Avoid using Literals in Conditional Statements
+src/es/isst/glucomed/GraficaServlet.java:43:	Use equals() to compare strings instead of '==' or '!='
+src/es/isst/glucomed/GraficaServlet.java:44:	Local variable 'emailPaciente' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:44:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:49:	Local variable 'datosPaciente' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:49:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:50:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:51:	Local variable 'datos' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:52:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:52:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/GraficaServlet.java:53:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:53:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/GraficaServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:54:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/GraficaServlet.java:55:	Prefer StringBuffer over += for concatenating strings
+src/es/isst/glucomed/GraficaServlet.java:58:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:63:	Local variable 'view' could be declared final
+src/es/isst/glucomed/GraficaServlet.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/GraficaServlet.java:70:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/GraficaServlet.java:70:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/InsertDataServlet.java:16:	Each class should declare at least one constructor
 src/es/isst/glucomed/InsertDataServlet.java:16:	headerCommentRequirement Required
 src/es/isst/glucomed/InsertDataServlet.java:18:	Parameter 'req' is not assigned and could be declared final
 src/es/isst/glucomed/InsertDataServlet.java:18:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/InsertDataServlet.java:18:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/InsertDataServlet.java:25:	Local variable 'session' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:26:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '26'-'48').
-src/es/isst/glucomed/InsertDataServlet.java:26:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:27:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '27'-'48').
-src/es/isst/glucomed/InsertDataServlet.java:27:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'33').
-src/es/isst/glucomed/InsertDataServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'36').
+src/es/isst/glucomed/InsertDataServlet.java:26:	Local variable 'session' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:27:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '27'-'46').
+src/es/isst/glucomed/InsertDataServlet.java:27:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:28:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '28'-'46').
+src/es/isst/glucomed/InsertDataServlet.java:28:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:29:	Found 'DD'-anomaly for variable 'url' (lines '29'-'32').
+src/es/isst/glucomed/InsertDataServlet.java:29:	Found 'DD'-anomaly for variable 'url' (lines '29'-'34').
 src/es/isst/glucomed/InsertDataServlet.java:31:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:39:	Local variable 'view' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:41:	Comment is too large: Line too long
-src/es/isst/glucomed/InsertDataServlet.java:42:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:45:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/InsertDataServlet.java:45:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:51:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:51:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:51:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/InsertDataServlet.java:54:	Found 'DU'-anomaly for variable 'dao' (lines '54'-'84').
-src/es/isst/glucomed/InsertDataServlet.java:54:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:55:	Local variable 'session' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:57:	Local variable 'emailSession' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:60:	Found 'DU'-anomaly for variable 'email' (lines '60'-'84').
-src/es/isst/glucomed/InsertDataServlet.java:60:	Local variable 'email' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:61:	Local variable 'fecha' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:62:	Local variable 'hora' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:63:	Local variable 'valorGlucosa' could be declared final
-src/es/isst/glucomed/InsertDataServlet.java:66:	Position literals first in String comparisons
-src/es/isst/glucomed/InsertDataServlet.java:66:	Position literals first in String comparisons
-src/es/isst/glucomed/InsertDataServlet.java:66:	Position literals first in String comparisons
-src/es/isst/glucomed/InsertDataServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:37:	Local variable 'view' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:40:	Comment is too large: Line too long
+src/es/isst/glucomed/InsertDataServlet.java:41:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:43:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/InsertDataServlet.java:43:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:48:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:48:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:48:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/InsertDataServlet.java:50:	Found 'DU'-anomaly for variable 'dao' (lines '50'-'78').
+src/es/isst/glucomed/InsertDataServlet.java:50:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:51:	Local variable 'session' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:53:	Local variable 'emailSession' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:53:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:55:	Found 'DU'-anomaly for variable 'email' (lines '55'-'78').
+src/es/isst/glucomed/InsertDataServlet.java:55:	Local variable 'email' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:56:	Local variable 'fecha' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:57:	Local variable 'hora' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:58:	Local variable 'valorGlucosa' could be declared final
+src/es/isst/glucomed/InsertDataServlet.java:61:	Position literals first in String comparisons
+src/es/isst/glucomed/InsertDataServlet.java:61:	Position literals first in String comparisons
+src/es/isst/glucomed/InsertDataServlet.java:61:	Position literals first in String comparisons
+src/es/isst/glucomed/InsertDataServlet.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:61:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:62:	The String literal "error_code_registro" appears 4 times in this file; the first occurrence is on line 62
+src/es/isst/glucomed/InsertDataServlet.java:63:	The String literal "insertData" appears 4 times in this file; the first occurrence is on line 63
+src/es/isst/glucomed/InsertDataServlet.java:64:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/InsertDataServlet.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:67:	Avoid if (x != y) ..; else ..;
 src/es/isst/glucomed/InsertDataServlet.java:67:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:67:	The String literal "error_code_registro" appears 4 times in this file; the first occurrence is on line 67
-src/es/isst/glucomed/InsertDataServlet.java:68:	The String literal "insertData" appears 4 times in this file; the first occurrence is on line 68
-src/es/isst/glucomed/InsertDataServlet.java:69:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/InsertDataServlet.java:69:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:70:	Avoid if (x != y) ..; else ..;
 src/es/isst/glucomed/InsertDataServlet.java:70:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:72:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/InsertDataServlet.java:72:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:73:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:75:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/InsertDataServlet.java:75:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:76:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/InsertDataServlet.java:80:	Comment is too large: Line too long
+src/es/isst/glucomed/InsertDataServlet.java:71:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/InsertDataServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LoginServlet.java:17:	Each class should declare at least one constructor
 src/es/isst/glucomed/LoginServlet.java:17:	headerCommentRequirement Required
 src/es/isst/glucomed/LoginServlet.java:19:	Parameter 'req' is not assigned and could be declared final
 src/es/isst/glucomed/LoginServlet.java:19:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/LoginServlet.java:19:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/LoginServlet.java:27:	Local variable 'session' could be declared final
-src/es/isst/glucomed/LoginServlet.java:28:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '28'-'54').
-src/es/isst/glucomed/LoginServlet.java:28:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/LoginServlet.java:29:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '29'-'54').
-src/es/isst/glucomed/LoginServlet.java:29:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/LoginServlet.java:30:	Found 'DD'-anomaly for variable 'url' (lines '30'-'37').
-src/es/isst/glucomed/LoginServlet.java:30:	Found 'DD'-anomaly for variable 'url' (lines '30'-'41').
-src/es/isst/glucomed/LoginServlet.java:32:	Local variable 'email' could be declared final
-src/es/isst/glucomed/LoginServlet.java:32:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:45:	Local variable 'view' could be declared final
-src/es/isst/glucomed/LoginServlet.java:48:	Comment is too large: Line too long
-src/es/isst/glucomed/LoginServlet.java:49:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:51:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/LoginServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:56:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/LoginServlet.java:56:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/LoginServlet.java:56:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/LoginServlet.java:59:	Local variable 'session' could be declared final
-src/es/isst/glucomed/LoginServlet.java:60:	Local variable 'email' could be declared final
-src/es/isst/glucomed/LoginServlet.java:61:	Local variable 'password' could be declared final
-src/es/isst/glucomed/LoginServlet.java:62:	Local variable 'password2' could be declared final
-src/es/isst/glucomed/LoginServlet.java:63:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/LoginServlet.java:65:	Found 'DU'-anomaly for variable 'nombre' (lines '65'-'85').
-src/es/isst/glucomed/LoginServlet.java:65:	Local variable 'nombre' could be declared final
-src/es/isst/glucomed/LoginServlet.java:65:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/LoginServlet.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:28:	Local variable 'session' could be declared final
+src/es/isst/glucomed/LoginServlet.java:29:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '29'-'51').
+src/es/isst/glucomed/LoginServlet.java:29:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/LoginServlet.java:30:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '30'-'51').
+src/es/isst/glucomed/LoginServlet.java:30:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/LoginServlet.java:31:	Found 'DD'-anomaly for variable 'url' (lines '31'-'36').
+src/es/isst/glucomed/LoginServlet.java:31:	Found 'DD'-anomaly for variable 'url' (lines '31'-'38').
+src/es/isst/glucomed/LoginServlet.java:33:	Local variable 'email' could be declared final
+src/es/isst/glucomed/LoginServlet.java:33:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:41:	Local variable 'view' could be declared final
+src/es/isst/glucomed/LoginServlet.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:48:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/LoginServlet.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:53:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/LoginServlet.java:53:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/LoginServlet.java:53:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/LoginServlet.java:56:	Local variable 'session' could be declared final
+src/es/isst/glucomed/LoginServlet.java:57:	Local variable 'email' could be declared final
+src/es/isst/glucomed/LoginServlet.java:58:	Local variable 'password' could be declared final
+src/es/isst/glucomed/LoginServlet.java:59:	Local variable 'password2' could be declared final
+src/es/isst/glucomed/LoginServlet.java:60:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/LoginServlet.java:62:	Found 'DU'-anomaly for variable 'nombre' (lines '62'-'87').
+src/es/isst/glucomed/LoginServlet.java:62:	Local variable 'nombre' could be declared final
+src/es/isst/glucomed/LoginServlet.java:62:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/LoginServlet.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LoginServlet.java:67:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:68:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LoginServlet.java:69:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:71:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:73:	Local variable 'dao2' could be declared final
-src/es/isst/glucomed/LoginServlet.java:74:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/LoginServlet.java:71:	Local variable 'dao2' could be declared final
+src/es/isst/glucomed/LoginServlet.java:72:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/LoginServlet.java:72:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LoginServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:76:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LoginServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/LoginServlet.java:77:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LoginServlet.java:81:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LogoutServlet.java:11:	Each class should declare at least one constructor
 src/es/isst/glucomed/LogoutServlet.java:11:	headerCommentRequirement Required
@@ -187,7 +322,6 @@ src/es/isst/glucomed/LogoutServlet.java:13:	publicMethodCommentRequirement Requi
 src/es/isst/glucomed/LogoutServlet.java:16:	Local variable 'session' could be declared final
 src/es/isst/glucomed/LogoutServlet.java:17:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/LogoutServlet.java:18:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/LogoutServlet.java:20:	System.out.println is used
 src/es/isst/glucomed/MiMedicoServlet.java:21:	headerCommentRequirement Required
 src/es/isst/glucomed/MiMedicoServlet.java:23:	Avoid unnecessary constructors - the compiler will generate these for you
 src/es/isst/glucomed/MiMedicoServlet.java:23:	It is a good practice to call super() in a constructor
@@ -196,422 +330,330 @@ src/es/isst/glucomed/MiMedicoServlet.java:27:	Parameter 'req' is not assigned an
 src/es/isst/glucomed/MiMedicoServlet.java:27:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/MiMedicoServlet.java:27:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/MiMedicoServlet.java:30:	Local variable 'session' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:31:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '31'-'88').
+src/es/isst/glucomed/MiMedicoServlet.java:31:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '31'-'87').
 src/es/isst/glucomed/MiMedicoServlet.java:31:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:32:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '32'-'88').
+src/es/isst/glucomed/MiMedicoServlet.java:32:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '32'-'87').
 src/es/isst/glucomed/MiMedicoServlet.java:32:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'37').
 src/es/isst/glucomed/MiMedicoServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'39').
-src/es/isst/glucomed/MiMedicoServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'42').
+src/es/isst/glucomed/MiMedicoServlet.java:34:	Found 'DU'-anomaly for variable 'email' (lines '34'-'87').
 src/es/isst/glucomed/MiMedicoServlet.java:34:	Local variable 'email' could be declared final
 src/es/isst/glucomed/MiMedicoServlet.java:34:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/MiMedicoServlet.java:34:	The String literal "email" appears 5 times in this file; the first occurrence is on line 34
-src/es/isst/glucomed/MiMedicoServlet.java:37:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:49:	Local variable 'pacienteDAO' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:51:	Avoid excessively long variable names like emailMedicoAsignado
-src/es/isst/glucomed/MiMedicoServlet.java:51:	Local variable 'emailMedicoAsignado' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:53:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:55:	Comment is too large: Line too long
-src/es/isst/glucomed/MiMedicoServlet.java:57:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:58:	Local variable 'medico' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:58:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:60:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:61:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:67:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:69:	Local variable 'viewListaMedico' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:69:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:72:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:76:	Local variable 'view' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:81:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:84:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/MiMedicoServlet.java:84:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:90:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:90:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:90:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/MiMedicoServlet.java:93:	Local variable 'session' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:95:	Found 'DU'-anomaly for variable 'emailSession' (lines '95'-'155').
-src/es/isst/glucomed/MiMedicoServlet.java:95:	Local variable 'emailSession' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:95:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MiMedicoServlet.java:95:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:96:	Found 'DU'-anomaly for variable 'emailMedico' (lines '96'-'155').
+src/es/isst/glucomed/MiMedicoServlet.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:44:	Local variable 'pacienteDAO' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:46:	Avoid excessively long variable names like emailMedicoAsignado
+src/es/isst/glucomed/MiMedicoServlet.java:46:	Local variable 'emailMedicoAsignado' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:48:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/MiMedicoServlet.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:53:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:54:	Local variable 'medico' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:64:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:66:	Local variable 'viewListaMedico' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:66:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:70:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:75:	Local variable 'view' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:83:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/MiMedicoServlet.java:83:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:89:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:89:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:89:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/MiMedicoServlet.java:92:	Local variable 'session' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:94:	Found 'DU'-anomaly for variable 'emailSession' (lines '94'-'151').
+src/es/isst/glucomed/MiMedicoServlet.java:94:	Local variable 'emailSession' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:94:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/MiMedicoServlet.java:94:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:96:	Found 'DU'-anomaly for variable 'emailMedico' (lines '96'-'151').
 src/es/isst/glucomed/MiMedicoServlet.java:96:	Local variable 'emailMedico' could be declared final
 src/es/isst/glucomed/MiMedicoServlet.java:97:	Local variable 'accion' could be declared final
 src/es/isst/glucomed/MiMedicoServlet.java:99:	Position literals first in String comparisons
 src/es/isst/glucomed/MiMedicoServlet.java:99:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:101:	Local variable 'userDAO' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:102:	Local variable 'pacienteDAO' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:104:	Avoid unused local variables such as 'tipoUser'.
-src/es/isst/glucomed/MiMedicoServlet.java:104:	Found 'DU'-anomaly for variable 'tipoUser' (lines '104'-'155').
-src/es/isst/glucomed/MiMedicoServlet.java:104:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:104:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:106:	Local variable 'medicoAsociado' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:106:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MiMedicoServlet.java:106:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MiMedicoServlet.java:106:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:106:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:108:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:112:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:124:	Position literals first in String comparisons
-src/es/isst/glucomed/MiMedicoServlet.java:124:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:126:	Local variable 'userDAO' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:127:	Local variable 'pacienteDAO' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:129:	Avoid unused local variables such as 'tipoUser'.
-src/es/isst/glucomed/MiMedicoServlet.java:129:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:129:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:131:	Local variable 'medicoAsociado' could be declared final
-src/es/isst/glucomed/MiMedicoServlet.java:131:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MiMedicoServlet.java:131:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MiMedicoServlet.java:131:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:131:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:101:	Local variable 'pacienteDAO' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:103:	Local variable 'medicoAsociado' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:103:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/MiMedicoServlet.java:103:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/MiMedicoServlet.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:106:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/MiMedicoServlet.java:110:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:122:	Position literals first in String comparisons
+src/es/isst/glucomed/MiMedicoServlet.java:122:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:124:	Local variable 'pacienteDAO' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:126:	Local variable 'medicoAsociado' could be declared final
+src/es/isst/glucomed/MiMedicoServlet.java:126:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/MiMedicoServlet.java:126:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/MiMedicoServlet.java:126:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MiMedicoServlet.java:126:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/MiMedicoServlet.java:133:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:133:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:133:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:133:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:133:	Useless parentheses.
-src/es/isst/glucomed/MiMedicoServlet.java:137:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MiMedicoServlet.java:150:	Avoid empty if statements
-src/es/isst/glucomed/MiMedicoServlet.java:150:	Avoid empty if statements
-src/es/isst/glucomed/MiMedicoServlet.java:150:	Avoid empty if statements
+src/es/isst/glucomed/MiMedicoServlet.java:146:	Avoid empty if statements
+src/es/isst/glucomed/MiMedicoServlet.java:146:	Avoid empty if statements
+src/es/isst/glucomed/MisPacientesServlet.java:21:	Each class should declare at least one constructor
 src/es/isst/glucomed/MisPacientesServlet.java:21:	headerCommentRequirement Required
-src/es/isst/glucomed/MisPacientesServlet.java:23:	Avoid unnecessary constructors - the compiler will generate these for you
-src/es/isst/glucomed/MisPacientesServlet.java:23:	It is a good practice to call super() in a constructor
+src/es/isst/glucomed/MisPacientesServlet.java:23:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:23:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/MisPacientesServlet.java:23:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/MisPacientesServlet.java:27:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:27:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:27:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/MisPacientesServlet.java:30:	Local variable 'session' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:31:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '31'-'81').
-src/es/isst/glucomed/MisPacientesServlet.java:31:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:32:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '32'-'81').
-src/es/isst/glucomed/MisPacientesServlet.java:32:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'39').
-src/es/isst/glucomed/MisPacientesServlet.java:33:	Found 'DD'-anomaly for variable 'url' (lines '33'-'42').
-src/es/isst/glucomed/MisPacientesServlet.java:34:	Local variable 'email' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:34:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:34:	The String literal "email" appears 5 times in this file; the first occurrence is on line 34
-src/es/isst/glucomed/MisPacientesServlet.java:37:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:49:	Local variable 'userDAO' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:51:	Local variable 'tipoUsuario' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Avoid empty if statements
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Avoid empty if statements
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Avoid empty if statements
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Position literals first in String comparisons
-src/es/isst/glucomed/MisPacientesServlet.java:53:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:61:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:63:	Avoid excessively long variable names like viewListaPacientes
-src/es/isst/glucomed/MisPacientesServlet.java:63:	Local variable 'viewListaPacientes' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:63:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:69:	Local variable 'view' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:77:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/MisPacientesServlet.java:77:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:83:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:83:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:83:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/MisPacientesServlet.java:86:	Local variable 'session' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:88:	Found 'DU'-anomaly for variable 'emailSession' (lines '88'-'148').
-src/es/isst/glucomed/MisPacientesServlet.java:88:	Local variable 'emailSession' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:88:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MisPacientesServlet.java:88:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:89:	Found 'DU'-anomaly for variable 'emailMedico' (lines '89'-'148').
-src/es/isst/glucomed/MisPacientesServlet.java:89:	Local variable 'emailMedico' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:90:	Local variable 'accion' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:92:	Position literals first in String comparisons
-src/es/isst/glucomed/MisPacientesServlet.java:92:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:94:	Local variable 'userDAO' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:95:	Local variable 'pacienteDAO' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:97:	Avoid unused local variables such as 'tipoUser'.
-src/es/isst/glucomed/MisPacientesServlet.java:97:	Found 'DU'-anomaly for variable 'tipoUser' (lines '97'-'148').
-src/es/isst/glucomed/MisPacientesServlet.java:97:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:97:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:99:	Local variable 'medicoAsociado' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:99:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MisPacientesServlet.java:99:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MisPacientesServlet.java:99:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:99:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:101:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:105:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:117:	Position literals first in String comparisons
-src/es/isst/glucomed/MisPacientesServlet.java:117:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:119:	Local variable 'userDAO' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:120:	Local variable 'pacienteDAO' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:122:	Avoid unused local variables such as 'tipoUser'.
-src/es/isst/glucomed/MisPacientesServlet.java:122:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:122:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:124:	Local variable 'medicoAsociado' could be declared final
-src/es/isst/glucomed/MisPacientesServlet.java:124:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MisPacientesServlet.java:124:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/MisPacientesServlet.java:124:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:124:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:126:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:126:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:126:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:126:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:126:	Useless parentheses.
-src/es/isst/glucomed/MisPacientesServlet.java:130:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/MisPacientesServlet.java:143:	Avoid empty if statements
-src/es/isst/glucomed/MisPacientesServlet.java:143:	Avoid empty if statements
-src/es/isst/glucomed/MisPacientesServlet.java:143:	Avoid empty if statements
+src/es/isst/glucomed/MisPacientesServlet.java:25:	Local variable 'session' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:26:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '26'-'62').
+src/es/isst/glucomed/MisPacientesServlet.java:26:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:27:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '27'-'62').
+src/es/isst/glucomed/MisPacientesServlet.java:27:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'32').
+src/es/isst/glucomed/MisPacientesServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'34').
+src/es/isst/glucomed/MisPacientesServlet.java:29:	Found 'DU'-anomaly for variable 'email' (lines '29'-'62').
+src/es/isst/glucomed/MisPacientesServlet.java:29:	Local variable 'email' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:29:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:31:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:40:	Local variable 'userDAO' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:41:	Local variable 'tipoUsuario' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:41:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:43:	Avoid empty if statements
+src/es/isst/glucomed/MisPacientesServlet.java:43:	Avoid empty if statements
+src/es/isst/glucomed/MisPacientesServlet.java:43:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/MisPacientesServlet.java:43:	Position literals first in String comparisons
+src/es/isst/glucomed/MisPacientesServlet.java:43:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:47:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:48:	Avoid excessively long variable names like viewListaPacientes
+src/es/isst/glucomed/MisPacientesServlet.java:48:	Local variable 'viewListaPacientes' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:53:	Local variable 'view' could be declared final
+src/es/isst/glucomed/MisPacientesServlet.java:56:	Comment is too large: Line too long
+src/es/isst/glucomed/MisPacientesServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/MisPacientesServlet.java:59:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/MisPacientesServlet.java:59:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/RegisterServlet.java:22:	Each class should declare at least one constructor
-src/es/isst/glucomed/RegisterServlet.java:22:	The class 'RegisterServlet' has a Cyclomatic Complexity of 9 (Highest = 14).
 src/es/isst/glucomed/RegisterServlet.java:22:	The class 'RegisterServlet' has a Cyclomatic Complexity of 9 (Highest = 14).
 src/es/isst/glucomed/RegisterServlet.java:22:	headerCommentRequirement Required
 src/es/isst/glucomed/RegisterServlet.java:24:	Parameter 'req' is not assigned and could be declared final
 src/es/isst/glucomed/RegisterServlet.java:24:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/RegisterServlet.java:24:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/RegisterServlet.java:33:	Local variable 'session' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:34:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '34'-'59').
+src/es/isst/glucomed/RegisterServlet.java:34:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '34'-'57').
 src/es/isst/glucomed/RegisterServlet.java:34:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:35:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '35'-'59').
+src/es/isst/glucomed/RegisterServlet.java:35:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '35'-'57').
 src/es/isst/glucomed/RegisterServlet.java:35:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:36:	Found 'DD'-anomaly for variable 'url' (lines '36'-'43').
-src/es/isst/glucomed/RegisterServlet.java:36:	Found 'DD'-anomaly for variable 'url' (lines '36'-'47').
+src/es/isst/glucomed/RegisterServlet.java:36:	Found 'DD'-anomaly for variable 'url' (lines '36'-'42').
+src/es/isst/glucomed/RegisterServlet.java:36:	Found 'DD'-anomaly for variable 'url' (lines '36'-'44').
 src/es/isst/glucomed/RegisterServlet.java:38:	Local variable 'email' could be declared final
 src/es/isst/glucomed/RegisterServlet.java:38:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:50:	Local variable 'view' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:53:	Comment is too large: Line too long
+src/es/isst/glucomed/RegisterServlet.java:47:	Local variable 'view' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:50:	Comment is too large: Line too long
+src/es/isst/glucomed/RegisterServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:54:	Avoid printStackTrace(); use a logger call instead.
 src/es/isst/glucomed/RegisterServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:57:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/RegisterServlet.java:57:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:61:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/RegisterServlet.java:61:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/RegisterServlet.java:61:	The method 'doPost' has a Cyclomatic Complexity of 14.
-src/es/isst/glucomed/RegisterServlet.java:61:	The method 'doPost' has a Cyclomatic Complexity of 14.
-src/es/isst/glucomed/RegisterServlet.java:61:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/RegisterServlet.java:64:	Found 'DU'-anomaly for variable 'daoUser' (lines '64'-'128').
-src/es/isst/glucomed/RegisterServlet.java:64:	Local variable 'daoUser' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:66:	Found 'DU'-anomaly for variable 'nombre' (lines '66'-'128').
-src/es/isst/glucomed/RegisterServlet.java:66:	Local variable 'nombre' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:67:	Found 'DU'-anomaly for variable 'apellidos' (lines '67'-'128').
-src/es/isst/glucomed/RegisterServlet.java:67:	Local variable 'apellidos' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:68:	Found 'DU'-anomaly for variable 'tipoUser' (lines '68'-'128').
-src/es/isst/glucomed/RegisterServlet.java:68:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:69:	Local variable 'password' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:70:	Local variable 'password2' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:71:	Found 'DU'-anomaly for variable 'passCifrado' (lines '71'-'128').
-src/es/isst/glucomed/RegisterServlet.java:71:	Local variable 'passCifrado' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:72:	Found 'DU'-anomaly for variable 'email' (lines '72'-'128').
-src/es/isst/glucomed/RegisterServlet.java:72:	Local variable 'email' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:74:	Local variable 'session' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:80:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/RegisterServlet.java:59:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/RegisterServlet.java:59:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/RegisterServlet.java:59:	The method 'doPost' has a Cyclomatic Complexity of 14.
+src/es/isst/glucomed/RegisterServlet.java:59:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/RegisterServlet.java:62:	Found 'DU'-anomaly for variable 'daoUser' (lines '62'-'124').
+src/es/isst/glucomed/RegisterServlet.java:62:	Local variable 'daoUser' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:64:	Found 'DU'-anomaly for variable 'nombre' (lines '64'-'124').
+src/es/isst/glucomed/RegisterServlet.java:64:	Local variable 'nombre' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:65:	Found 'DU'-anomaly for variable 'apellidos' (lines '65'-'124').
+src/es/isst/glucomed/RegisterServlet.java:65:	Local variable 'apellidos' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:66:	Found 'DU'-anomaly for variable 'tipoUser' (lines '66'-'124').
+src/es/isst/glucomed/RegisterServlet.java:66:	Local variable 'tipoUser' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:67:	Local variable 'password' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:68:	Local variable 'password2' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:69:	Found 'DU'-anomaly for variable 'passCifrado' (lines '69'-'124').
+src/es/isst/glucomed/RegisterServlet.java:69:	Local variable 'passCifrado' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:70:	Found 'DU'-anomaly for variable 'email' (lines '70'-'124').
+src/es/isst/glucomed/RegisterServlet.java:70:	Local variable 'email' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:72:	Local variable 'session' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:74:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/RegisterServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:76:	The String literal "error_code_registro" appears 5 times in this file; the first occurrence is on line 76
+src/es/isst/glucomed/RegisterServlet.java:77:	The String literal "registro" appears 4 times in this file; the first occurrence is on line 77
+src/es/isst/glucomed/RegisterServlet.java:79:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:79:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:79:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:80:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:80:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:80:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/RegisterServlet.java:80:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/RegisterServlet.java:82:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:82:	The String literal "error_code_registro" appears 5 times in this file; the first occurrence is on line 82
-src/es/isst/glucomed/RegisterServlet.java:83:	The String literal "registro" appears 4 times in this file; the first occurrence is on line 83
-src/es/isst/glucomed/RegisterServlet.java:85:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:85:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:85:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:85:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:85:	Avoid if (x != y) ..; else ..;
 src/es/isst/glucomed/RegisterServlet.java:85:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:85:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:85:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:85:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:86:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:86:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:86:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:86:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/RegisterServlet.java:87:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:90:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/RegisterServlet.java:90:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:91:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:94:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:96:	Comment is too large: Line too long
+src/es/isst/glucomed/RegisterServlet.java:98:	Position literals first in String comparisons
 src/es/isst/glucomed/RegisterServlet.java:98:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:100:	Comment is too large: Line too long
-src/es/isst/glucomed/RegisterServlet.java:102:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:102:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:102:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:102:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:102:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:102:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:104:	Local variable 'daoPaciente' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:105:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:107:	Position literals first in String comparisons
-src/es/isst/glucomed/RegisterServlet.java:107:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:107:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:107:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:107:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:107:	Useless parentheses.
-src/es/isst/glucomed/RegisterServlet.java:109:	Local variable 'daoMedico' could be declared final
-src/es/isst/glucomed/RegisterServlet.java:110:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:119:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:122:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/RegisterServlet.java:124:	Comment is too large: Line too long
+src/es/isst/glucomed/RegisterServlet.java:100:	Local variable 'daoPaciente' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:101:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:103:	Position literals first in String comparisons
+src/es/isst/glucomed/RegisterServlet.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:105:	Local variable 'daoMedico' could be declared final
+src/es/isst/glucomed/RegisterServlet.java:106:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:115:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/RegisterServlet.java:118:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/SubirServlet.java:25:	Each class should declare at least one constructor
 src/es/isst/glucomed/SubirServlet.java:25:	headerCommentRequirement Required
 src/es/isst/glucomed/SubirServlet.java:27:	Private field 'blobstoreService' could be made final; it is only initialized in the declaration or constructor.
 src/es/isst/glucomed/SubirServlet.java:27:	fieldCommentRequirement Required
-src/es/isst/glucomed/SubirServlet.java:29:	Avoid really long methods.
-src/es/isst/glucomed/SubirServlet.java:29:	Avoid really long methods.
 src/es/isst/glucomed/SubirServlet.java:29:	Parameter 'req' is not assigned and could be declared final
 src/es/isst/glucomed/SubirServlet.java:29:	Parameter 'resp' is not assigned and could be declared final
 src/es/isst/glucomed/SubirServlet.java:29:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/SubirServlet.java:32:	Local variable 'session' could be declared final
-src/es/isst/glucomed/SubirServlet.java:39:	Local variable 'email' could be declared final
-src/es/isst/glucomed/SubirServlet.java:39:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:43:	Avoid empty if statements
-src/es/isst/glucomed/SubirServlet.java:43:	Avoid empty if statements
-src/es/isst/glucomed/SubirServlet.java:43:	Avoid empty if statements
-src/es/isst/glucomed/SubirServlet.java:57:	Local variable 'blobs' could be declared final
-src/es/isst/glucomed/SubirServlet.java:58:	Local variable 'blobKeys' could be declared final
-src/es/isst/glucomed/SubirServlet.java:58:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:63:	Found 'DD'-anomaly for variable 'blobKey' (lines '63'-'71').
-src/es/isst/glucomed/SubirServlet.java:63:	Found 'DU'-anomaly for variable 'blobKey' (lines '63'-'210').
-src/es/isst/glucomed/SubirServlet.java:71:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:79:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/SubirServlet.java:83:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:87:	Local variable 'reader' could be declared final
-src/es/isst/glucomed/SubirServlet.java:89:	Found 'DD'-anomaly for variable 'line' (lines '89'-'92').
-src/es/isst/glucomed/SubirServlet.java:90:	Found 'DU'-anomaly for variable 'cvsSplitBy' (lines '90'-'210').
-src/es/isst/glucomed/SubirServlet.java:90:	Local variable 'cvsSplitBy' could be declared final
-src/es/isst/glucomed/SubirServlet.java:92:	Found 'DU'-anomaly for variable 'line' (lines '92'-'210').
+src/es/isst/glucomed/SubirServlet.java:34:	Found 'DU'-anomaly for variable 'email' (lines '34'-'98').
+src/es/isst/glucomed/SubirServlet.java:34:	Local variable 'email' could be declared final
+src/es/isst/glucomed/SubirServlet.java:34:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:38:	Local variable 'blobs' could be declared final
+src/es/isst/glucomed/SubirServlet.java:42:	Local variable 'blobKeys' could be declared final
+src/es/isst/glucomed/SubirServlet.java:42:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:44:	Found 'DD'-anomaly for variable 'blobKey' (lines '44'-'54').
+src/es/isst/glucomed/SubirServlet.java:44:	Found 'DU'-anomaly for variable 'blobKey' (lines '44'-'98').
+src/es/isst/glucomed/SubirServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:61:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/SubirServlet.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:69:	Local variable 'reader' could be declared final
+src/es/isst/glucomed/SubirServlet.java:71:	Found 'DD'-anomaly for variable 'line' (lines '71'-'74').
+src/es/isst/glucomed/SubirServlet.java:72:	Found 'DU'-anomaly for variable 'cvsSplitBy' (lines '72'-'98').
+src/es/isst/glucomed/SubirServlet.java:72:	Local variable 'cvsSplitBy' could be declared final
+src/es/isst/glucomed/SubirServlet.java:74:	Avoid assignments in operands
+src/es/isst/glucomed/SubirServlet.java:74:	Found 'DU'-anomaly for variable 'line' (lines '74'-'98').
+src/es/isst/glucomed/SubirServlet.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:76:	Local variable 'csvLine' could be declared final
+src/es/isst/glucomed/SubirServlet.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:78:	Local variable 'fechaCSV' could be declared final
+src/es/isst/glucomed/SubirServlet.java:79:	Local variable 'horaCSV' could be declared final
+src/es/isst/glucomed/SubirServlet.java:80:	Local variable 'valorGlucosaCSV' could be declared final
+src/es/isst/glucomed/SubirServlet.java:86:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/SubirServlet.java:90:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/SubirServlet.java:92:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:94:	Local variable 'csvLine' could be declared final
-src/es/isst/glucomed/SubirServlet.java:94:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:96:	Local variable 'fechaCSV' could be declared final
-src/es/isst/glucomed/SubirServlet.java:97:	Local variable 'horaCSV' could be declared final
-src/es/isst/glucomed/SubirServlet.java:98:	Local variable 'valorGlucosaCSV' could be declared final
-src/es/isst/glucomed/SubirServlet.java:104:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:108:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:110:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/SubirServlet.java:116:	Comment is too large: Too many lines
-src/es/isst/glucomed/SubirServlet.java:125:	Comment is too large: Line too long
-src/es/isst/glucomed/SubirServlet.java:129:	Comment is too large: Line too long
-src/es/isst/glucomed/SubirServlet.java:143:	Comment is too large: Line too long
-src/es/isst/glucomed/SubirServlet.java:192:	Comment is too large: Line too long
-src/es/isst/glucomed/SubirServlet.java:196:	Comment is too large: Too many lines
-src/es/isst/glucomed/SubirServlet.java:198:	Comment is too large: Line too long
-src/es/isst/glucomed/ViewDataServlet.java:19:	Avoid unused imports such as 'es.isst.glucomed.model.Paciente'
-src/es/isst/glucomed/ViewDataServlet.java:22:	headerCommentRequirement Required
-src/es/isst/glucomed/ViewDataServlet.java:24:	Avoid unnecessary constructors - the compiler will generate these for you
-src/es/isst/glucomed/ViewDataServlet.java:24:	It is a good practice to call super() in a constructor
-src/es/isst/glucomed/ViewDataServlet.java:24:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/ViewDataServlet.java:28:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:28:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:28:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/ViewDataServlet.java:31:	Local variable 'session' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:32:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '32'-'70').
-src/es/isst/glucomed/ViewDataServlet.java:32:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:33:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '33'-'70').
-src/es/isst/glucomed/ViewDataServlet.java:33:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:34:	Found 'DD'-anomaly for variable 'url' (lines '34'-'39').
-src/es/isst/glucomed/ViewDataServlet.java:34:	Found 'DD'-anomaly for variable 'url' (lines '34'-'42').
-src/es/isst/glucomed/ViewDataServlet.java:35:	Local variable 'email' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:35:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:35:	The String literal "email" appears 4 times in this file; the first occurrence is on line 35
-src/es/isst/glucomed/ViewDataServlet.java:37:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:49:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:51:	Local variable 'dao2' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:52:	Avoid unused local variables such as 'tipoUser'.
-src/es/isst/glucomed/ViewDataServlet.java:52:	Found 'DU'-anomaly for variable 'tipoUser' (lines '52'-'70').
-src/es/isst/glucomed/ViewDataServlet.java:52:	Local variable 'tipoUser' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:52:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:54:	Local variable 'emailConsulta' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:56:	Local variable 'pacienteDatos' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:56:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:59:	Local variable 'view' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:19:	Each class should declare at least one constructor
+src/es/isst/glucomed/ViewDataServlet.java:19:	headerCommentRequirement Required
+src/es/isst/glucomed/ViewDataServlet.java:21:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:21:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:21:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/ViewDataServlet.java:23:	Local variable 'session' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:24:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '24'-'54').
+src/es/isst/glucomed/ViewDataServlet.java:24:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:25:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '25'-'54').
+src/es/isst/glucomed/ViewDataServlet.java:25:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:26:	Found 'DD'-anomaly for variable 'url' (lines '26'-'30').
+src/es/isst/glucomed/ViewDataServlet.java:26:	Found 'DD'-anomaly for variable 'url' (lines '26'-'32').
+src/es/isst/glucomed/ViewDataServlet.java:27:	Found 'DU'-anomaly for variable 'email' (lines '27'-'54').
+src/es/isst/glucomed/ViewDataServlet.java:27:	Local variable 'email' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:27:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:29:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:35:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:37:	Local variable 'emailConsulta' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:39:	Local variable 'pacienteDatos' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:44:	Local variable 'view' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:47:	Comment is too large: Line too long
+src/es/isst/glucomed/ViewDataServlet.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:51:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/ViewDataServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:56:	Parameter 'req' is not assigned and could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:56:	Parameter 'resp' is not assigned and could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:56:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/ViewDataServlet.java:59:	Local variable 'session' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:60:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '60'-'101').
+src/es/isst/glucomed/ViewDataServlet.java:60:	Local variable 'urlLogueado' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:61:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '61'-'101').
+src/es/isst/glucomed/ViewDataServlet.java:61:	Local variable 'urlNoLogueado' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:62:	Found 'DD'-anomaly for variable 'url' (lines '62'-'65').
+src/es/isst/glucomed/ViewDataServlet.java:62:	Found 'DD'-anomaly for variable 'url' (lines '62'-'67').
 src/es/isst/glucomed/ViewDataServlet.java:64:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:67:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/ViewDataServlet.java:67:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:72:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:72:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:72:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/ViewDataServlet.java:75:	Local variable 'session' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:76:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '76'-'121').
-src/es/isst/glucomed/ViewDataServlet.java:76:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:77:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '77'-'121').
-src/es/isst/glucomed/ViewDataServlet.java:77:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:78:	Found 'DD'-anomaly for variable 'url' (lines '78'-'83').
-src/es/isst/glucomed/ViewDataServlet.java:78:	Found 'DD'-anomaly for variable 'url' (lines '78'-'86').
-src/es/isst/glucomed/ViewDataServlet.java:79:	Avoid unused local variables such as 'email'.
-src/es/isst/glucomed/ViewDataServlet.java:79:	Found 'DU'-anomaly for variable 'email' (lines '79'-'121').
-src/es/isst/glucomed/ViewDataServlet.java:79:	Local variable 'email' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:79:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:81:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:89:	Local variable 'emailPaciente' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:90:	Local variable 'accion' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:94:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:96:	Avoid empty if statements
-src/es/isst/glucomed/ViewDataServlet.java:96:	Avoid empty if statements
-src/es/isst/glucomed/ViewDataServlet.java:96:	Avoid empty if statements
-src/es/isst/glucomed/ViewDataServlet.java:96:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/ViewDataServlet.java:96:	Position literals first in String comparisons
+src/es/isst/glucomed/ViewDataServlet.java:70:	Local variable 'emailPaciente' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:71:	Local variable 'accion' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:77:	Avoid empty if statements
+src/es/isst/glucomed/ViewDataServlet.java:77:	Avoid empty if statements
+src/es/isst/glucomed/ViewDataServlet.java:77:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/ViewDataServlet.java:77:	Position literals first in String comparisons
+src/es/isst/glucomed/ViewDataServlet.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:85:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:87:	Local variable 'pacienteDatos' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:87:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/ViewDataServlet.java:92:	Local variable 'view' could be declared final
+src/es/isst/glucomed/ViewDataServlet.java:95:	Comment is too large: Line too long
 src/es/isst/glucomed/ViewDataServlet.java:96:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:104:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:106:	Local variable 'pacienteDatos' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:106:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:111:	Local variable 'view' could be declared final
-src/es/isst/glucomed/ViewDataServlet.java:116:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/ViewDataServlet.java:119:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/ViewDataServlet.java:119:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/EMFService.java:7:	A class which only has private constructors should be final
+src/es/isst/glucomed/ViewDataServlet.java:98:	Avoid printStackTrace(); use a logger call instead.
+src/es/isst/glucomed/ViewDataServlet.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/BuzonDAO.java:7:	headerCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAO.java:9:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/BuzonDAO.java:9:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAO.java:10:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/BuzonDAO.java:10:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAO.java:11:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/BuzonDAO.java:11:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:10:	headerCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:12:	fieldCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:16:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:17:	Avoid using if statements without curly braces
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:17:	Singleton is not thread safe
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:23:	Parameter 'emailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:23:	Parameter 'emailPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:23:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:25:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:25:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:25:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:46:	Parameter 'emailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:46:	Parameter 'emailPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:46:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:46:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:48:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:48:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:48:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:75:	Parameter 'emailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:75:	Parameter 'emailPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:75:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:77:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:77:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/BuzonDAOImpl.java:77:	Potential violation of Law of Demeter (method chain calls)
 src/es/isst/glucomed/dao/EMFService.java:7:	headerCommentRequirement Required
-src/es/isst/glucomed/dao/EMFService.java:8:	Variables that are final and static should be all capitals, 'emfInstance' is not all capitals.
-src/es/isst/glucomed/dao/EMFService.java:8:	fieldCommentRequirement Required
-src/es/isst/glucomed/dao/EMFService.java:14:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAO.java:3:	Avoid unused imports such as 'java.util.List'
-src/es/isst/glucomed/dao/MedicoDAO.java:5:	Avoid unused imports such as 'es.isst.glucomed.model.Paciente'
-src/es/isst/glucomed/dao/MedicoDAO.java:7:	headerCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAO.java:9:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/MedicoDAO.java:9:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:3:	Avoid unused imports such as 'java.util.List'
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:6:	Avoid unused imports such as 'javax.persistence.Query'
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:9:	Avoid unused imports such as 'es.isst.glucomed.model.Paciente'
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:10:	Avoid unused imports such as 'es.isst.glucomed.model.User'
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:12:	A class which only has private constructors should be final
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:12:	headerCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:14:	fieldCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:18:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:19:	Avoid using if statements without curly braces
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:19:	Avoid using if statements without curly braces
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:19:	Singleton is not thread safe
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:25:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:25:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:27:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:27:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:27:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:31:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/dao/MedicoDAOImpl.java:37:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/PacienteDAO.java:9:	headerCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAO.java:10:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/PacienteDAO.java:10:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAO.java:11:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/PacienteDAO.java:11:	Rather than using a lot of String arguments, consider using a container object for those values.
-src/es/isst/glucomed/dao/PacienteDAO.java:11:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/EMFService.java:9:	Variables that are final and static should be all capitals, 'emfInstance' is not all capitals.
+src/es/isst/glucomed/dao/EMFService.java:9:	fieldCommentRequirement Required
+src/es/isst/glucomed/dao/EMFService.java:15:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAO.java:3:	headerCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAO.java:5:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/MedicoDAO.java:5:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:7:	headerCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:9:	fieldCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:13:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:14:	Avoid using if statements without curly braces
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:14:	Singleton is not thread safe
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:20:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:20:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:22:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:22:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:22:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:26:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/dao/MedicoDAOImpl.java:32:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/PacienteDAO.java:8:	headerCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAO.java:12:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/PacienteDAO.java:12:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAO.java:13:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/PacienteDAO.java:13:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAO.java:14:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/PacienteDAO.java:14:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAO.java:15:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/PacienteDAO.java:15:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAO.java:16:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/PacienteDAO.java:16:	Rather than using a lot of String arguments, consider using a container object for those values.
 src/es/isst/glucomed/dao/PacienteDAO.java:16:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAO.java:17:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/PacienteDAO.java:17:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAO.java:18:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/PacienteDAO.java:18:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:13:	A class which only has private constructors should be final
+src/es/isst/glucomed/dao/PacienteDAO.java:22:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/PacienteDAO.java:22:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAO.java:23:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/PacienteDAO.java:23:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAO.java:24:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/PacienteDAO.java:24:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAO.java:28:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/PacienteDAO.java:28:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:13:	headerCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:15:	fieldCommentRequirement Required
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:19:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:20:	Avoid using if statements without curly braces
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:20:	Avoid using if statements without curly braces
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:20:	Singleton is not thread safe
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:26:	Parameter 'email' is not assigned and could be declared final
@@ -650,115 +692,89 @@ src/es/isst/glucomed/dao/PacienteDAOImpl.java:90:	Potential violation of Law of 
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:92:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:94:	A method should have only one exit point, and that should be the last statement in the method
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:100:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:108:	Parameter 'medicoAsociado' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:108:	Parameter 'email' is not assigned and could be declared final
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:108:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:112:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:112:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:112:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:114:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:114:	Local variable 'q' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:114:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:116:	Local variable 'pacientes' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:110:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:110:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:110:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:112:	Local variable 'paciente' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:112:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:114:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:116:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:117:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:118:	Local variable 'listaUsuarios' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:119:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:120:	Local variable 'paciente' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:120:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:121:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:122:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:122:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:124:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:128:	Parameter 'emailMedico' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:128:	Parameter 'emailPaciente' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:128:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:131:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:131:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:131:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Local variable 'q' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:133:	Local variable 'res' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:123:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:130:	Parameter 'emailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:130:	Parameter 'emailSession' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:130:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:132:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:134:	Local variable 'paciente' could be declared final
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:134:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:135:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:140:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:140:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:143:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:143:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:143:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:145:	Local variable 'paciente' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:145:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:147:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:149:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:150:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:156:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:162:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:162:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:166:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:166:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:166:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:168:	Local variable 'paciente' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:168:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:170:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:172:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:173:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:175:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:183:	Assigning an Object to null is a code smell.  Consider refactoring.
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:184:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:193:	Parameter 'emailMedico' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:193:	Parameter 'emailSession' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:193:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:195:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:195:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:195:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:197:	Local variable 'paciente' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:197:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:199:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:201:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:202:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:204:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:217:	Parameter 'emailMedico' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:217:	Parameter 'emailSession' is not assigned and could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:217:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:219:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:219:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:219:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:136:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:138:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:139:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:141:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:154:	Parameter 'emailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:154:	Parameter 'emailSession' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:154:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:156:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:156:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:156:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:158:	Local variable 'paciente' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:158:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:160:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:162:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:163:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:165:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:177:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:177:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:181:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:181:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:181:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:183:	Local variable 'paciente' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:183:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:185:	Avoid if (x != y) ..; else ..;
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:187:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:188:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:190:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:198:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:199:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:207:	Parameter 'medicoAsociado' is not assigned and could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:207:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:212:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:212:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:212:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:214:	Avoid variables with short names like q
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:214:	Local variable 'q' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:214:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:216:	Local variable 'pacientes' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:217:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:218:	Local variable 'listaUsuarios' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:220:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:221:	Local variable 'paciente' could be declared final
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:221:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:223:	Avoid if (x != y) ..; else ..;
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:225:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:222:	Local variable 'dao' could be declared final
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:223:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/PacienteDAOImpl.java:223:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/PacienteDAOImpl.java:226:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:228:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/PacienteDAOImpl.java:240:	Comment is too large: Too many lines
 src/es/isst/glucomed/dao/UserDAO.java:7:	headerCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:9:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:9:	Rather than using a lot of String arguments, consider using a container object for those values.
-src/es/isst/glucomed/dao/UserDAO.java:9:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:10:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:10:	Method names should not start with capital letters
-src/es/isst/glucomed/dao/UserDAO.java:10:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAO.java:11:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:11:	Method names should not start with capital letters
+src/es/isst/glucomed/dao/UserDAO.java:11:	Rather than using a lot of String arguments, consider using a container object for those values.
 src/es/isst/glucomed/dao/UserDAO.java:11:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:12:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:12:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAO.java:13:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/UserDAO.java:13:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAO.java:14:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/UserDAO.java:14:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:15:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:15:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:16:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:16:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAO.java:17:	Avoid modifiers which are implied by the context
-src/es/isst/glucomed/dao/UserDAO.java:17:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAO.java:18:	Avoid modifiers which are implied by the context
 src/es/isst/glucomed/dao/UserDAO.java:18:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:7:	Avoid unused imports such as 'es.isst.glucomed.model.Paciente'
-src/es/isst/glucomed/dao/UserDAOImpl.java:10:	A class which only has private constructors should be final
+src/es/isst/glucomed/dao/UserDAO.java:19:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/UserDAO.java:19:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAO.java:23:	Avoid modifiers which are implied by the context
+src/es/isst/glucomed/dao/UserDAO.java:23:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAOImpl.java:10:	headerCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAOImpl.java:12:	fieldCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAOImpl.java:17:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:18:	Avoid using if statements without curly braces
 src/es/isst/glucomed/dao/UserDAOImpl.java:18:	Avoid using if statements without curly braces
 src/es/isst/glucomed/dao/UserDAOImpl.java:18:	Singleton is not thread safe
 src/es/isst/glucomed/dao/UserDAOImpl.java:24:	Parameter 'apellidos' is not assigned and could be declared final
@@ -778,7 +794,6 @@ src/es/isst/glucomed/dao/UserDAOImpl.java:31:	Potential violation of Law of Deme
 src/es/isst/glucomed/dao/UserDAOImpl.java:35:	Avoid unnecessary comparisons in boolean expressions
 src/es/isst/glucomed/dao/UserDAOImpl.java:36:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/UserDAOImpl.java:42:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:47:	Method names should not start with capital letters
 src/es/isst/glucomed/dao/UserDAOImpl.java:47:	Parameter 'email' is not assigned and could be declared final
 src/es/isst/glucomed/dao/UserDAOImpl.java:47:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/dao/UserDAOImpl.java:49:	Avoid variables with short names like em
@@ -787,135 +802,123 @@ src/es/isst/glucomed/dao/UserDAOImpl.java:49:	Potential violation of Law of Deme
 src/es/isst/glucomed/dao/UserDAOImpl.java:50:	Avoid variables with short names like q
 src/es/isst/glucomed/dao/UserDAOImpl.java:50:	Local variable 'q' could be declared final
 src/es/isst/glucomed/dao/UserDAOImpl.java:50:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:53:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:55:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:52:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:54:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/UserDAOImpl.java:55:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:56:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:57:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/UserDAOImpl.java:59:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:64:	Method names should not start with capital letters
-src/es/isst/glucomed/dao/UserDAOImpl.java:64:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:64:	Parameter 'password' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:64:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:67:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/UserDAOImpl.java:67:	Local variable 'q' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:56:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/UserDAOImpl.java:58:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:63:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:63:	Parameter 'password' is not assigned and could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:63:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAOImpl.java:65:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/UserDAOImpl.java:65:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:65:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Avoid variables with short names like q
+src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Local variable 'q' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:66:	Potential violation of Law of Demeter (object not created locally)
 src/es/isst/glucomed/dao/UserDAOImpl.java:67:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:69:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:70:	Potential violation of Law of Demeter (method chain calls)
 src/es/isst/glucomed/dao/UserDAOImpl.java:70:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:72:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:72:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:73:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:74:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/UserDAOImpl.java:77:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:84:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:84:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:86:	Avoid declaring a variable if it is unreferenced before a possible exit point.
-src/es/isst/glucomed/dao/UserDAOImpl.java:86:	Avoid unused local variables such as 'listaMedicos'.
-src/es/isst/glucomed/dao/UserDAOImpl.java:86:	Local variable 'listaMedicos' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:88:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:88:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:88:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:89:	Avoid variables with short names like w
-src/es/isst/glucomed/dao/UserDAOImpl.java:89:	Local variable 'w' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:89:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:92:	Local variable 'result' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:92:	The String literal "unchecked" appears 4 times in this file; the first occurrence is on line 92
-src/es/isst/glucomed/dao/UserDAOImpl.java:94:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:96:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:102:	Comment is too large: Too many lines
-src/es/isst/glucomed/dao/UserDAOImpl.java:137:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:137:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:139:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:139:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:139:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:141:	Local variable 'datosUser' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:141:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:143:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:151:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:154:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:154:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:154:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:156:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/UserDAOImpl.java:156:	Local variable 'q' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:156:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:158:	Local variable 'res' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:159:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:160:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:164:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:164:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:167:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:167:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:167:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:168:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/UserDAOImpl.java:168:	Local variable 'q' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:168:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:171:	Local variable 'res' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:172:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:173:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:175:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:175:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
-src/es/isst/glucomed/dao/UserDAOImpl.java:176:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/dao/UserDAOImpl.java:183:	Parameter 'blobKey' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:183:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:183:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:184:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:184:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:184:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:185:	Local variable 'update' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:185:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:186:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:187:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:188:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:192:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:192:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:193:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:193:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:193:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:194:	Local variable 'findKey' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:194:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:195:	Local variable 'result' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:195:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:196:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:197:	System.out.println is used
-src/es/isst/glucomed/dao/UserDAOImpl.java:201:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:201:	Parameter 'emailPaciente' is not assigned and could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:201:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/dao/UserDAOImpl.java:204:	Avoid variables with short names like em
-src/es/isst/glucomed/dao/UserDAOImpl.java:204:	Local variable 'em' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:204:	Potential violation of Law of Demeter (method chain calls)
-src/es/isst/glucomed/dao/UserDAOImpl.java:205:	Avoid variables with short names like q
-src/es/isst/glucomed/dao/UserDAOImpl.java:205:	Local variable 'q' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:205:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:208:	Local variable 'res' could be declared final
-src/es/isst/glucomed/dao/UserDAOImpl.java:209:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:210:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:212:	Avoid unnecessary if..then..else statements when returning booleans
-src/es/isst/glucomed/dao/UserDAOImpl.java:212:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/dao/UserDAOImpl.java:212:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
-src/es/isst/glucomed/dao/UserDAOImpl.java:213:	A method should have only one exit point, and that should be the last statement in the method
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:9:	headerCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:14:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:16:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:18:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:20:	Parameter 'fecha' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:20:	Parameter 'hora' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:20:	Parameter 'valorGlucosa' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:20:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:21:	Overridable method 'setFecha' called during object construction
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:22:	Overridable method 'setHora' called during object construction
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:23:	Overridable method 'setValorGlucosa' called during object construction
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:26:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:30:	Parameter 'fecha' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:30:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:34:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:38:	Parameter 'hora' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:38:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:42:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:46:	Parameter 'valorGlucosa' is not assigned and could be declared final
-src/es/isst/glucomed/model/CopyOfDatosPaciente.java:46:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAOImpl.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:76:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/UserDAOImpl.java:82:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:89:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:89:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAOImpl.java:91:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/UserDAOImpl.java:91:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:93:	Local variable 'datosUser' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:93:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:95:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:98:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/UserDAOImpl.java:105:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:105:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAOImpl.java:108:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/UserDAOImpl.java:108:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:109:	Avoid variables with short names like q
+src/es/isst/glucomed/dao/UserDAOImpl.java:109:	Local variable 'q' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:109:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:113:	Local variable 'res' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:114:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:116:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:118:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:118:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+src/es/isst/glucomed/dao/UserDAOImpl.java:119:	A method should have only one exit point, and that should be the last statement in the method
+src/es/isst/glucomed/dao/UserDAOImpl.java:126:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:126:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/dao/UserDAOImpl.java:128:	Avoid variables with short names like em
+src/es/isst/glucomed/dao/UserDAOImpl.java:128:	Local variable 'em' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/es/isst/glucomed/dao/UserDAOImpl.java:130:	Avoid variables with short names like w
+src/es/isst/glucomed/dao/UserDAOImpl.java:130:	Local variable 'w' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:130:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:132:	Local variable 'result' could be declared final
+src/es/isst/glucomed/dao/UserDAOImpl.java:134:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/dao/UserDAOImpl.java:136:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Buzon.java:11:	headerCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:13:	Use explicit scoping instead of the default package private level
+src/es/isst/glucomed/model/Buzon.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/es/isst/glucomed/model/Buzon.java:18:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/es/isst/glucomed/model/Buzon.java:20:	It is somewhat confusing to have a field name matching the declaring class name
+src/es/isst/glucomed/model/Buzon.java:20:	Private field 'buzon' could be made final; it is only initialized in the declaration or constructor.
+src/es/isst/glucomed/model/Buzon.java:20:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:22:	Parameter 'mailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:22:	Parameter 'mailPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:22:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:27:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:31:	Parameter 'idMensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:31:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:35:	Parameter 'mailMedico' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:35:	Parameter 'mailPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:35:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:41:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:41:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:43:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Buzon.java:45:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Buzon.java:47:	Local variable 'origen' could be declared final
+src/es/isst/glucomed/model/Buzon.java:48:	Local variable 'destino' could be declared final
+src/es/isst/glucomed/model/Buzon.java:49:	Local variable 'contenido' could be declared final
+src/es/isst/glucomed/model/Buzon.java:50:	Local variable 'fecha' could be declared final
+src/es/isst/glucomed/model/Buzon.java:56:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:56:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:58:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Buzon.java:60:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Buzon.java:66:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:66:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:68:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Buzon.java:70:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Buzon.java:76:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:76:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:78:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Buzon.java:80:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Buzon.java:86:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:86:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:88:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Buzon.java:90:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Buzon.java:96:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:98:	Local variable 'mensajes' could be declared final
+src/es/isst/glucomed/model/Buzon.java:102:	Local variable 'datosString' could be declared final
+src/es/isst/glucomed/model/Buzon.java:104:	Local variable 'datos' could be declared final
+src/es/isst/glucomed/model/Buzon.java:113:	Parameter 'mensajes' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:113:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:119:	Local variable 'mensaje' could be declared final
+src/es/isst/glucomed/model/Buzon.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Buzon.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Buzon.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Buzon.java:121:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Buzon.java:127:	Parameter 'contenido' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:127:	Parameter 'destino' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:127:	Parameter 'fecha' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:127:	Parameter 'origen' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:127:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/es/isst/glucomed/model/Buzon.java:127:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:131:	Parameter 'mensaje' is not assigned and could be declared final
+src/es/isst/glucomed/model/Buzon.java:131:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Buzon.java:135:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/model/DatosPaciente.java:5:	headerCommentRequirement Required
 src/es/isst/glucomed/model/DatosPaciente.java:7:	Use explicit scoping instead of the default package private level
 src/es/isst/glucomed/model/DatosPaciente.java:9:	fieldCommentRequirement Required
@@ -925,9 +928,6 @@ src/es/isst/glucomed/model/DatosPaciente.java:13:	Parameter 'fecha' is not assig
 src/es/isst/glucomed/model/DatosPaciente.java:13:	Parameter 'hora' is not assigned and could be declared final
 src/es/isst/glucomed/model/DatosPaciente.java:13:	Parameter 'valorGlucosa' is not assigned and could be declared final
 src/es/isst/glucomed/model/DatosPaciente.java:13:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/DatosPaciente.java:14:	Overridable method 'setFecha' called during object construction
-src/es/isst/glucomed/model/DatosPaciente.java:15:	Overridable method 'setHora' called during object construction
-src/es/isst/glucomed/model/DatosPaciente.java:16:	Overridable method 'setValorGlucosa' called during object construction
 src/es/isst/glucomed/model/DatosPaciente.java:19:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/model/DatosPaciente.java:23:	Parameter 'fecha' is not assigned and could be declared final
 src/es/isst/glucomed/model/DatosPaciente.java:23:	publicMethodCommentRequirement Required
@@ -937,75 +937,87 @@ src/es/isst/glucomed/model/DatosPaciente.java:31:	publicMethodCommentRequirement
 src/es/isst/glucomed/model/DatosPaciente.java:35:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/model/DatosPaciente.java:39:	Parameter 'valorGlucosa' is not assigned and could be declared final
 src/es/isst/glucomed/model/DatosPaciente.java:39:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:10:	headerCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:15:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:16:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:18:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/model/Medico.java:18:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:23:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:27:	Parameter 'nombre' is not assigned and could be declared final
-src/es/isst/glucomed/model/Medico.java:27:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:31:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Medico.java:35:	Parameter 'listaPacientes' is not assigned and could be declared final
-src/es/isst/glucomed/model/Medico.java:35:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:7:	Avoid unused imports such as 'javax.persistence.Embedded'
-src/es/isst/glucomed/model/Paciente.java:10:	Avoid unused imports such as 'javax.persistence.OneToMany'
-src/es/isst/glucomed/model/Paciente.java:11:	Avoid unused imports such as 'javax.persistence.Transient'
-src/es/isst/glucomed/model/Paciente.java:14:	headerCommentRequirement Required
+src/es/isst/glucomed/model/Medico.java:9:	headerCommentRequirement Required
+src/es/isst/glucomed/model/Medico.java:14:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Medico.java:16:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/model/Medico.java:16:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Medico.java:20:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Medico.java:24:	Parameter 'nombre' is not assigned and could be declared final
+src/es/isst/glucomed/model/Medico.java:24:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:5:	headerCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:7:	Use explicit scoping instead of the default package private level
+src/es/isst/glucomed/model/Mensaje.java:9:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:10:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:11:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:12:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:14:	Parameter 'contenido' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:14:	Parameter 'destino' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:14:	Parameter 'fecha' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:14:	Parameter 'origen' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:14:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:21:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:25:	Parameter 'origen' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:25:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:29:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:33:	Parameter 'destino' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:33:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:37:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:41:	Parameter 'contenido' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:41:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:45:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Mensaje.java:49:	Parameter 'fecha' is not assigned and could be declared final
+src/es/isst/glucomed/model/Mensaje.java:49:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:11:	headerCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:16:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:17:	fieldCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:19:	Private field 'datosPaciente' could be made final; it is only initialized in the declaration or constructor.
 src/es/isst/glucomed/model/Paciente.java:19:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:21:	Private field 'datosPaciente' could be made final; it is only initialized in the declaration or constructor.
-src/es/isst/glucomed/model/Paciente.java:21:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:23:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:25:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:25:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:28:	Assigning an Object to null is a code smell.  Consider refactoring.
-src/es/isst/glucomed/model/Paciente.java:31:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:35:	Parameter 'nombre' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:35:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:39:	Parameter 'datos' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:39:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:41:	Local variable 'SplitBy' could be declared final
-src/es/isst/glucomed/model/Paciente.java:41:	Variables should start with a lowercase character, 'SplitBy' starts with uppercase character.
-src/es/isst/glucomed/model/Paciente.java:43:	Local variable 'splitLine' could be declared final
-src/es/isst/glucomed/model/Paciente.java:45:	Local variable 'fecha' could be declared final
-src/es/isst/glucomed/model/Paciente.java:46:	Local variable 'hora' could be declared final
-src/es/isst/glucomed/model/Paciente.java:47:	Local variable 'valorGlucosa' could be declared final
-src/es/isst/glucomed/model/Paciente.java:53:	Parameter 'datos' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:53:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:55:	Local variable 'SplitBy' could be declared final
-src/es/isst/glucomed/model/Paciente.java:55:	Variables should start with a lowercase character, 'SplitBy' starts with uppercase character.
-src/es/isst/glucomed/model/Paciente.java:57:	Local variable 'splitLine' could be declared final
-src/es/isst/glucomed/model/Paciente.java:63:	Parameter 'datos' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:63:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:65:	Local variable 'SplitBy' could be declared final
-src/es/isst/glucomed/model/Paciente.java:65:	Variables should start with a lowercase character, 'SplitBy' starts with uppercase character.
-src/es/isst/glucomed/model/Paciente.java:67:	Local variable 'splitLine' could be declared final
-src/es/isst/glucomed/model/Paciente.java:73:	Parameter 'datos' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:73:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:75:	Local variable 'SplitBy' could be declared final
-src/es/isst/glucomed/model/Paciente.java:75:	Variables should start with a lowercase character, 'SplitBy' starts with uppercase character.
-src/es/isst/glucomed/model/Paciente.java:77:	Local variable 'splitLine' could be declared final
-src/es/isst/glucomed/model/Paciente.java:83:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:89:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:91:	Avoid excessively long variable names like listaDatosPacientes
-src/es/isst/glucomed/model/Paciente.java:91:	Local variable 'listaDatosPacientes' could be declared final
-src/es/isst/glucomed/model/Paciente.java:95:	Local variable 'datosString' could be declared final
-src/es/isst/glucomed/model/Paciente.java:97:	Local variable 'datos' could be declared final
-src/es/isst/glucomed/model/Paciente.java:105:	Parameter 'datosPaciente' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:105:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:111:	Local variable 'datos' could be declared final
-src/es/isst/glucomed/model/Paciente.java:113:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/model/Paciente.java:113:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/model/Paciente.java:113:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/model/Paciente.java:119:	Parameter 'fecha' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:119:	Parameter 'hora' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:119:	Parameter 'valorGlucosa' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:119:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:125:	Parameter 'datos' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:125:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:129:	Parameter 'medicoAsociado' is not assigned and could be declared final
-src/es/isst/glucomed/model/Paciente.java:129:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/Paciente.java:133:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:21:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:21:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:23:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/es/isst/glucomed/model/Paciente.java:29:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:33:	Parameter 'nombre' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:33:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:37:	Parameter 'medicoAsociado' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:37:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:41:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:47:	Parameter 'datos' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:47:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:49:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Paciente.java:51:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Paciente.java:53:	Local variable 'fecha' could be declared final
+src/es/isst/glucomed/model/Paciente.java:54:	Local variable 'hora' could be declared final
+src/es/isst/glucomed/model/Paciente.java:55:	Local variable 'valorGlucosa' could be declared final
+src/es/isst/glucomed/model/Paciente.java:61:	Parameter 'datos' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:61:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:63:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Paciente.java:65:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Paciente.java:71:	Parameter 'datos' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:71:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:73:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Paciente.java:75:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Paciente.java:81:	Parameter 'datos' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:81:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:83:	Local variable 'splitBy' could be declared final
+src/es/isst/glucomed/model/Paciente.java:85:	Local variable 'splitLine' could be declared final
+src/es/isst/glucomed/model/Paciente.java:91:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:97:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:99:	Avoid excessively long variable names like listaDatosPacientes
+src/es/isst/glucomed/model/Paciente.java:99:	Local variable 'listaDatosPacientes' could be declared final
+src/es/isst/glucomed/model/Paciente.java:103:	Local variable 'datosString' could be declared final
+src/es/isst/glucomed/model/Paciente.java:105:	Local variable 'datos' could be declared final
+src/es/isst/glucomed/model/Paciente.java:114:	Parameter 'datosPaciente' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:114:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:120:	Local variable 'datos' could be declared final
+src/es/isst/glucomed/model/Paciente.java:122:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Paciente.java:122:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Paciente.java:122:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/Paciente.java:128:	Parameter 'fecha' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:128:	Parameter 'hora' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:128:	Parameter 'valorGlucosa' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:128:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/Paciente.java:134:	Parameter 'datos' is not assigned and could be declared final
+src/es/isst/glucomed/model/Paciente.java:134:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/model/User.java:9:	Avoid short class names like User
 src/es/isst/glucomed/model/User.java:9:	headerCommentRequirement Required
 src/es/isst/glucomed/model/User.java:14:	fieldCommentRequirement Required
@@ -1014,53 +1026,27 @@ src/es/isst/glucomed/model/User.java:16:	fieldCommentRequirement Required
 src/es/isst/glucomed/model/User.java:17:	Private field 'tipoUser' could be made final; it is only initialized in the declaration or constructor.
 src/es/isst/glucomed/model/User.java:17:	fieldCommentRequirement Required
 src/es/isst/glucomed/model/User.java:18:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/User.java:19:	fieldCommentRequirement Required
-src/es/isst/glucomed/model/User.java:21:	Parameter 'apellidos' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:21:	Parameter 'nombre' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:21:	Parameter 'tipoUser' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:21:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:22:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:22:	Parameter 'password' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:32:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:36:	Parameter 'nombre' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:36:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:40:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:44:	Parameter 'apellidos' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:44:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:48:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:52:	Parameter 'tipoUser' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:52:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:56:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:60:	Parameter 'password' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:60:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:64:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:68:	Parameter 'email' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:68:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:72:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/model/User.java:76:	Parameter 'blobKey' is not assigned and could be declared final
-src/es/isst/glucomed/model/User.java:76:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/pruebaListUserServlet.java:20:	Class names should begin with an uppercase character
-src/es/isst/glucomed/pruebaListUserServlet.java:20:	Each class should declare at least one constructor
-src/es/isst/glucomed/pruebaListUserServlet.java:20:	headerCommentRequirement Required
-src/es/isst/glucomed/pruebaListUserServlet.java:22:	Parameter 'req' is not assigned and could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:22:	Parameter 'resp' is not assigned and could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:22:	publicMethodCommentRequirement Required
-src/es/isst/glucomed/pruebaListUserServlet.java:25:	Local variable 'session' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:26:	Found 'DU'-anomaly for variable 'urlLogueado' (lines '26'-'58').
-src/es/isst/glucomed/pruebaListUserServlet.java:26:	Local variable 'urlLogueado' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:27:	Found 'DU'-anomaly for variable 'urlNoLogueado' (lines '27'-'58').
-src/es/isst/glucomed/pruebaListUserServlet.java:27:	Local variable 'urlNoLogueado' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'33').
-src/es/isst/glucomed/pruebaListUserServlet.java:28:	Found 'DD'-anomaly for variable 'url' (lines '28'-'36').
-src/es/isst/glucomed/pruebaListUserServlet.java:31:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/pruebaListUserServlet.java:41:	Local variable 'dao' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:43:	Local variable 'viewUser' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:43:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/pruebaListUserServlet.java:47:	Local variable 'view' could be declared final
-src/es/isst/glucomed/pruebaListUserServlet.java:50:	Comment is too large: Line too long
-src/es/isst/glucomed/pruebaListUserServlet.java:51:	Potential violation of Law of Demeter (object not created locally)
-src/es/isst/glucomed/pruebaListUserServlet.java:54:	Avoid printStackTrace(); use a logger call instead.
-src/es/isst/glucomed/pruebaListUserServlet.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/es/isst/glucomed/model/User.java:20:	Parameter 'apellidos' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:20:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:20:	Parameter 'nombre' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:20:	Parameter 'password' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:20:	Parameter 'tipoUser' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:20:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:30:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:34:	Parameter 'nombre' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:34:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:38:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:42:	Parameter 'apellidos' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:42:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:46:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:50:	Parameter 'tipoUser' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:50:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:54:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:58:	Parameter 'password' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:58:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:62:	publicMethodCommentRequirement Required
+src/es/isst/glucomed/model/User.java:66:	Parameter 'email' is not assigned and could be declared final
+src/es/isst/glucomed/model/User.java:66:	publicMethodCommentRequirement Required
 src/es/isst/glucomed/utilities/Utilities.java:6:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
 src/es/isst/glucomed/utilities/Utilities.java:6:	headerCommentRequirement Required
 src/es/isst/glucomed/utilities/Utilities.java:8:	Parameter 'passLimpia' is not assigned and could be declared final

@@ -17,7 +17,7 @@ public class LogoutServlet extends HttpServlet {
 		session.setAttribute("error_code", "Ha salido correctamente");
 		session.invalidate();
 		resp.sendRedirect("login");
-		System.out.println("LOGOUT");
+		
 		
 	}
 	

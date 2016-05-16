@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 
 		String nombre = dao.viewUser(email).getNombre();
 
-		if (dao.SuccessLogin(email, password2)) {
+		if (dao.successLogin(email, password2)) {
 
 			session.setAttribute("email", email);
 			session.setAttribute("password", password2);

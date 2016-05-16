@@ -15,34 +15,34 @@ public class Buzon implements Serializable {
 	// IDMensaje --> Tupla String PacienteMail, MedicoMail para identificar la entidad
 	
 	@Id
-	private String IDMensaje;
+	private String idMensaje;
 	
 	private List <String> buzon;
 	
 	public Buzon (String mailPaciente, String mailMedico) {
-		this.IDMensaje = mailPaciente + "," + mailMedico;
+		this.idMensaje = mailPaciente + "," + mailMedico;
 		this.buzon     = new ArrayList<String>();
 	}
 	
 	public String getIDMensaje() {
-		return IDMensaje;
+		return idMensaje;
 	}
 
-	public void setIDMensaje(String IDMensaje) {
-		this.IDMensaje = IDMensaje;
+	public void setIDMensaje(String idMensaje) {
+		this.idMensaje = idMensaje;
 	}
 	
 	public void setIDMensaje(String mailPaciente, String mailMedico) {
-		this.IDMensaje = mailPaciente + "," + mailMedico;
+		this.idMensaje = mailPaciente + "," + mailMedico;
 	}
 	
 	// Funciones para la manipulacion de mensajes
 	
 	public Mensaje getMensajeFromMensajeString ( String mensaje ) {
 
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = mensaje.split(SplitBy);
+    	String[] splitLine = mensaje.split(splitBy);
     	
     	String origen    = splitLine[0];
     	String destino   = splitLine[1];
@@ -55,9 +55,9 @@ public class Buzon implements Serializable {
 	
 	public String getOrigenFromMensajeString ( String mensaje ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = mensaje.split(SplitBy);
+    	String[] splitLine = mensaje.split(splitBy);
 
 		return splitLine[0];
 		
@@ -65,9 +65,9 @@ public class Buzon implements Serializable {
 	
 	public String getDestinoFromMensajeString ( String mensaje ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = mensaje.split(SplitBy);
+    	String[] splitLine = mensaje.split(splitBy);
 
 		return splitLine[1];
 		
@@ -75,9 +75,9 @@ public class Buzon implements Serializable {
 	
 	public String getContenidoFromMensajeString ( String mensaje ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = mensaje.split(SplitBy);
+    	String[] splitLine = mensaje.split(splitBy);
 
 		return splitLine[2];
 		
@@ -85,9 +85,9 @@ public class Buzon implements Serializable {
 	
 	public String getFechaFromMensajeString ( String mensaje ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = mensaje.split(SplitBy);
+    	String[] splitLine = mensaje.split(splitBy);
 
 		return splitLine[3];
 		

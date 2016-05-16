@@ -46,9 +46,9 @@ public class Paciente implements Serializable{
 	
 	public DatosPaciente getDatosFromDatosString ( String datos ) {
 
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = datos.split(SplitBy);
+    	String[] splitLine = datos.split(splitBy);
     	
     	String fecha        = splitLine[0];
     	String hora         = splitLine[1];
@@ -60,9 +60,9 @@ public class Paciente implements Serializable{
 	
 	public String getFechaFromDatosString ( String datos ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = datos.split(SplitBy);
+    	String[] splitLine = datos.split(splitBy);
 
 		return splitLine[0];
 		
@@ -70,9 +70,9 @@ public class Paciente implements Serializable{
 	
 	public String getHoraFromDatosString ( String datos ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = datos.split(SplitBy);
+    	String[] splitLine = datos.split(splitBy);
 
 		return splitLine[1];
 		
@@ -80,9 +80,9 @@ public class Paciente implements Serializable{
 	
 	public String getValorGlucosaFromDatosString ( String datos ) {
 		
-    	String SplitBy = ",";
+    	String splitBy = ",";
 
-    	String[] splitLine = datos.split(SplitBy);
+    	String[] splitLine = datos.split(splitBy);
 
 		return splitLine[2];
 		
